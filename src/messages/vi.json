@@ -56,18 +56,22 @@
     },
     "process": {
       "title": "Quy trình làm việc",
-      "lead": "Một quy trình rõ ràng gồm ba giai đoạn — từ lần khảo sát đầu tiên đến nhiều năm hỗ trợ sau lắp đặt.",
+      "lead": "Một quy trình rõ ràng gồm bốn giai đoạn — từ lần trò chuyện đầu tiên đến nhiều năm hỗ trợ sau lắp đặt.",
       "step1": {
-        "title": "Thiết kế & Cung cấp",
-        "body": "Chúng tôi bắt đầu bằng khảo sát hiện trạng và đo lượng điện tiêu thụ — diện tích mái, mức tiêu thụ điện trung bình hàng tháng, tình trạng lưới điện. Từ đó, chúng tôi thiết kế hệ thống đúng công suất và cung cấp tấm pin, inverter nhập từ Nhật Bản kèm đầy đủ hồ sơ bảo hành."
+        "title": "Tư vấn",
+        "body": "Một buổi trò chuyện đầu tiên không áp lực — về hóa đơn tiền điện trung bình, loại hình nhà ở và quyền sở hữu mái nhà. Chúng tôi nói thẳng liệu điện mặt trời có phù hợp với tình huống của bạn ngay lúc này hay không."
       },
       "step2": {
-        "title": "Lắp đặt",
-        "body": "Đội thi công của chúng tôi — không qua nhà thầu phụ — đảm nhận toàn bộ việc lắp khung trên mái, đi dây, đấu nối inverter, hòa lưới điện và vận hành thử, sử dụng phụ kiện lắp đặt chuẩn Nhật Bản và đi dây đúng quy chuẩn."
+        "title": "Thiết kế",
+        "body": "Khảo sát hiện trạng miễn phí bao gồm diện tích mái, hướng nắng, kết cấu và tủ điện phân phối. Sau đó chúng tôi thiết kế hệ thống — chọn tấm pin và inverter, đường đi dây, phương án lắp khung — và gửi bạn báo giá bằng văn bản với một mức giá trọn gói duy nhất."
       },
       "step3": {
-        "title": "Hỗ trợ sau lắp đặt & Bảo trì",
-        "body": "Hệ thống điện mặt trời hoạt động hơn 25 năm. Chúng tôi cài đặt ứng dụng giám sát ngay trong ngày lắp đặt, có gói kiểm tra và vệ sinh hàng năm, và hỗ trợ kỹ thuật miễn phí trong 12 tháng đầu."
+        "title": "Lắp đặt",
+        "body": "Đội thi công của chúng tôi — không qua nhà thầu phụ — đảm nhận việc lắp khung trên mái, đi dây, đấu nối inverter và vận hành thử trong 2–4 ngày, sử dụng phụ kiện lắp đặt chuẩn Nhật Bản và đi dây đúng quy chuẩn. Chúng tôi cũng nộp hồ sơ thông báo DOIT và làm thủ tục hòa lưới EVN cho bạn."
+      },
+      "step4": {
+        "title": "Hỗ trợ",
+        "body": "Khi nghiệm thu, bạn nhận đầy đủ hồ sơ bảo hành và thông tin đăng nhập ứng dụng giám sát. 12 tháng đầu, mọi lượt hỗ trợ kỹ thuật đều miễn phí, và chúng tôi theo dõi sản lượng hệ thống của bạn để phát hiện vấn đề trước khi bạn nhận ra."
       }
     },
     "projects": {
@@ -127,6 +131,49 @@
       "title": "Sẵn sàng khảo sát miễn phí?",
       "body": "Cho chúng tôi biết về mái nhà và hóa đơn tiền điện của bạn. Chúng tôi sẽ tính toán hệ thống phù hợp — không áp lực, không hứa hẹn thổi phồng.",
       "button": "Khảo sát miễn phí"
+    },
+    "warranty": {
+      "title": "Bảo hành & Hậu mãi",
+      "lead": "Mỗi hệ thống lắp đặt đều có bảo hành nhiều tầng — bảo hành từ nhà sản xuất kết hợp với cam kết về chất lượng thi công của chúng tôi — cùng 12 tháng hỗ trợ miễn phí ngay từ ngày đầu.",
+      "support12mo": "Trong 12 tháng đầu sau khi nghiệm thu, mọi lượt hỗ trợ kỹ thuật đều miễn phí. Đây là tiêu chuẩn của chúng tôi, không phải ưu đãi.",
+      "note": "Từ năm thứ 2, bạn có thể đăng ký gói bảo trì hàng năm bao gồm hai lần vệ sinh tấm pin và một lần kiểm tra kỹ thuật toàn diện. Liên hệ chúng tôi để biết mức giá hiện tại.",
+      "headers": {
+        "component": "Thành phần",
+        "provider": "Đơn vị bảo hành",
+        "duration": "Thời hạn",
+        "coverage": "Phạm vi bảo hành"
+      },
+      "row1": {
+        "component": "Tấm pin năng lượng mặt trời",
+        "provider": "Nhà sản xuất (Panasonic / Sharp / Kyocera)",
+        "duration": "25 năm",
+        "coverage": "Bảo hành sản lượng tuyến tính — suy giảm ≤0,45%/năm; đạt ≥89% công suất định mức ở năm thứ 25"
+      },
+      "row2": {
+        "component": "Inverter",
+        "provider": "Nhà sản xuất (theo từng model)",
+        "duration": "5–10 năm",
+        "coverage": "Linh kiện và công sửa chữa cho lỗi sản xuất"
+      },
+      "row3": {
+        "component": "Khung lắp đặt",
+        "provider": "SolarTNP",
+        "duration": "10 năm",
+        "coverage": "Độ bền kết cấu — không hỏng do ăn mòn hoặc lỗi vật liệu"
+      },
+      "row4": {
+        "component": "Chất lượng thi công",
+        "provider": "SolarTNP",
+        "duration": "2 năm",
+        "coverage": "Mọi lỗi phát sinh từ việc lắp đặt — đi dây, đấu nối, lắp ráp"
+      },
+      "row5": {
+        "component": "Chống thấm mái nhà",
+        "provider": "SolarTNP",
+        "duration": "2 năm",
+        "coverage": "Mọi sự cố thấm nước do quá trình lắp đặt gây ra — vị trí xuyên mái, viền chống thấm, điểm cố định"
+      },
+      "imageAlt": "Kỹ thuật viên SolarTNP đang bảo trì hệ thống điện mặt trời đã lắp đặt"
     }
   },
   "pricing": {
@@ -280,7 +327,8 @@
     },
     "sidebar": {
       "direct": {
-        "title": "Liên hệ trực tiếp"
+        "title": "Liên hệ trực tiếp",
+        "imageAlt": "Nhân viên hỗ trợ khách hàng của SolarTNP đang tư vấn cho khách"
       },
       "hours": "Thứ Hai – Thứ Bảy, 8:00 – 17:30 (GMT+7)",
       "next": {

@@ -1,9 +1,0 @@
-{
-  "/_not-found/page": "app/_not-found/page.js",
-  "/[locale]/contact/page": "app/[locale]/contact/page.js",
-  "/[locale]/privacy/page": "app/[locale]/privacy/page.js",
-  "/[locale]/404/page": "app/[locale]/404/page.js",
-  "/[locale]/page": "app/[locale]/page.js",
-  "/[locale]/pricing/page": "app/[locale]/pricing/page.js",
-  "/[locale]/regulations/page": "app/[locale]/regulations/page.js"
-}

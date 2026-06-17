@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import ContactForm from '@/components/ContactForm';
@@ -44,6 +45,15 @@ export default async function ContactPage({
           </div>
 
           <aside className="space-y-8">
+            <div className="relative h-44 w-full overflow-hidden rounded-2xl">
+              <Image
+                src="/assets/images/customer-support/customer-support-1.jpg"
+                alt={t('sidebar.direct.imageAlt')}
+                fill
+                className="object-cover"
+              />
+            </div>
+
             <div className="rounded-2xl border border-navy-800/10 bg-white p-6">
               <h2 className="font-display text-lg font-semibold text-navy-950">
                 {t('sidebar.direct.title')}

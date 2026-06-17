@@ -167,7 +167,8 @@
         "provider": "SolarTNP",
         "duration": "2 years",
         "coverage": "Any water ingress caused by the installation — penetrations, flashings, fixings"
-      }
+      },
+      "imageAlt": "A SolarTNP technician performing after-sales maintenance on an installed system"
     },
     "cta": {
       "title": "Ready for a free site assessment?",
@@ -326,7 +327,8 @@
     },
     "sidebar": {
       "direct": {
-        "title": "Direct Contact"
+        "title": "Direct Contact",
+        "imageAlt": "A SolarTNP customer support representative assisting a client"
       },
       "hours": "Monday–Saturday, 8:00 AM – 5:30 PM (GMT+7)",
       "next": {
@@ -416,4 +418,46 @@
     "s6": {
       "heading": "How SolarTNP Handles This",
       "items": [
-        "We size your system to you
+        "We size your system to your actual load — compliant by design",
+        "We prepare and submit your DOIT notification (under 100 kW)",
+        "We coordinate EVN grid connection approval and inspection",
+        "We document the 20% surplus cap in your system design specs",
+        "We do not install on non-compliant buildings"
+      ]
+    },
+    "sources": {
+      "label": "Sources",
+      "note": "Decree 135/2024/ND-CP (official) · SP Global Energy Transition coverage (Oct 2024) · WFW guidance article · Vietnam Business Law blog (Jan 2025, Mar 2025) · Vietnam Law Magazine · Baker McKenzie InsightPlus",
+      "lastVerified": "Last verified: 17 June 2026"
+    }
+  },
+  "notFound": {
+    "fourofour": "404",
+    "tagline": "This page went off-grid.",
+    "body": "The URL doesn't exist. Let's get you back somewhere sunny.",
+    "goHome": "Go Home",
+    "contact": "Contact Us"
+  },
+  "meta": {
+    "home": {
+      "title": "SolarTNP — Japanese-Quality Solar Installation in Vietnam",
+      "description": "SolarTNP designs, supplies, and installs Japanese-sourced grid-tied solar systems in Biên Hòa, Đồng Nai, and southern Vietnam. Real installations, honest pricing."
+    },
+    "pricing": {
+      "title": "Solar Pricing & Payback — SolarTNP",
+      "description": "Three system sizes, transparent inclusions, and an honest look at payback periods for solar in Vietnam. FAQ covers Decree 135/2024/ND-CP rules."
+    },
+    "contact": {
+      "title": "Request a Free Site Assessment — SolarTNP",
+      "description": "Contact SolarTNP for a free solar site assessment in Biên Hòa, Ho Chi Minh City, or southern Vietnam. No-pressure quote based on your roof and electricity bill."
+    },
+    "privacy": {
+      "title": "Privacy Policy — SolarTNP",
+      "description": "How SolarTNP collects, uses, and protects your information when you contact us for a solar site assessment."
+    },
+    "regulations": {
+      "title": "Vietnam Solar Regulations Explained — SolarTNP",
+      "description": "A plain-language guide to Decree 135/2024/ND-CP — self-consumption rules, the 20% EVN surplus cap, and permitting thresholds for rooftop solar in Vietnam."
+    }
+  }
+}

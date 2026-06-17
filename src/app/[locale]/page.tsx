@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { Link } from '@/i18n/navigation';
 import SunIcon from '@/components/SunIcon';
+import WarrantyTable from '@/components/WarrantyTable';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -104,8 +105,8 @@ export default async function HomePage({
           <h2 className="font-display text-3xl font-bold">{t('process.title')}</h2>
           <p className="mt-3 max-w-2xl text-cream-50/70">{t('process.lead')}</p>
 
-          <ol className="mt-12 grid gap-8 md:grid-cols-3">
-            {(['step1', 'step2', 'step3'] as const).map((step, i) => (
+          <ol className="mt-12 grid gap-8 sm:grid-cols-2 md:grid-cols-4">
+            {(['step1', 'step2', 'step3', 'step4'] as const).map((step, i) => (
               <li key={step} className="rounded-2xl border border-cream-50/10 p-6">
                 <span className="font-display text-3xl font-bold text-royal-600">
                   {String(i + 1).padStart(2, '0')}
@@ -161,6 +162,41 @@ export default async function HomePage({
           </div>
 
           <p className="mt-10 max-w-2xl text-sm text-charcoal/60">{t('projects.honestNote')}</p>
+        </div>
+      </section>
+
+      {/* Warranty & After-Sales */}
+      <section className="bg-white py-14 md:py-24">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid gap-10 md:grid-cols-3 md:items-end">
+            <div className="md:col-span-2">
+              <h2 className="font-display text-3xl font-bold text-navy-950">
+                {t('warranty.title')}
+              </h2>
+              <p className="mt-3 max-w-2xl text-charcoal/70">{t('warranty.lead')}</p>
+            </div>
+            <div className="relative h-40 w-full overflow-hidden rounded-2xl md:h-full">
+              <Image
+                src="/assets/images/process/aftersales.jpg"
+                alt={t('warranty.imageAlt')}
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+
+          <div className="mt-10">
+            <WarrantyTable />
+          </div>
+
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
+            <p className="rounded-2xl bg-cream-50 p-4 text-sm text-charcoal/80">
+              {t('warranty.support12mo')}
+            </p>
+            <p className="rounded-2xl bg-cream-50 p-4 text-sm text-charcoal/80">
+              {t('warranty.note')}
+            </p>
+          </div>
         </div>
       </section>
 

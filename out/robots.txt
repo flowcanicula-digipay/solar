@@ -1,7 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /en/privacy/
-Disallow: /vi/privacy/
-Disallow: /ja/privacy/
-
-Sitemap: https://www.solartnp.com/sitemap.xml
