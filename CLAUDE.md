@@ -1094,18 +1094,31 @@ Check `localePrefix: 'always'` in `src/i18n/routing.ts`. Also confirm
    update `connect-src` in the CSP meta tag in `src/app/[locale]/layout.tsx`
 3. Check Formspree dashboard spam settings — test submissions may be flagged
 
-### Bare "/" shows Next.js default page
-The root `src/app/layout.tsx` should do nothing but redirect to `/en/`:
+### Bare "/" shows Next.js default page, or `/en/` redirects to itself infinitely
+The redirect to `/en/` must live in a root **`page.tsx`**, not the root
+**`layout.tsx`**. The root layout wraps every route under `app/`, including
+`/[locale]/`, so a `redirect()` call placed there fires on every request —
+including requests to `/en/` itself, which then redirects to `/en/` again,
+producing `ERR_TOO_MANY_REDIRECTS`. The correct split:
 ```ts
-// src/app/layout.tsx
+// src/app/layout.tsx — pure pass-through, html/body comes from [locale]/layout.tsx
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return children;
+}
+```
+```ts
+// src/app/page.tsx — only this route redirects
 import { redirect } from 'next/navigation';
-export default function RootLayout() {
+export default function RootPage() {
   redirect('/en/');
 }
 ```
-If it still renders a page, check that `output: 'export'` hasn't broken the
-redirect — for static export, a `public/index.html` meta-refresh fallback may
-also be needed alongside the `.htaccess` redirect.
+This is the standard next-intl pattern: the root layout has no `<html>`/`<body>`
+of its own (that's supplied by `src/app/[locale]/layout.tsx`), and only the
+literal `/` route — handled by `src/app/page.tsx` — performs the redirect.
+For static export, `redirect()` in a Server Component bakes a client-side
+redirect into that route's static HTML; the `.htaccess` HTTP→HTTPS rule and
+bare-`/`→`/en/` rewrite still apply server-side on top of this for Hostinger.
 
 ### Hero SVG animation not working in Safari
 Safari sometimes struggles with SVG `animate` elements inside `<img>` tags.
