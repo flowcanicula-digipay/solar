@@ -1,0 +1,415 @@
+{
+  "common": {
+    "nav": {
+      "home": "Trang chủ",
+      "pricing": "Bảng giá",
+      "contact": "Liên hệ",
+      "regulations": "Quy định"
+    },
+    "cta": {
+      "freeAssessment": "Khảo sát miễn phí",
+      "getQuote": "Nhận báo giá",
+      "learnMore": "Tìm hiểu thêm"
+    },
+    "footer": {
+      "tagline": "Điện mặt trời chất lượng Nhật Bản. Lắp đặt đúng chuẩn, tại Việt Nam.",
+      "address": "Lô 35 đường số 9, KCN Tam Phước, Biên Hòa, Việt Nam",
+      "markets": "Phục vụ khách hàng tại Việt Nam và các đối tác liên kết Nhật Bản trên khắp Đồng Nai, TP. Hồ Chí Minh và miền Nam.",
+      "privacy": "Chính sách bảo mật",
+      "quickLinks": "Liên kết nhanh",
+      "company": "Công ty",
+      "contactColumn": "Liên hệ",
+      "rights": "Đã đăng ký bản quyền.",
+      "regulations": "Quy định điện mặt trời"
+    },
+    "business": {
+      "addressLabel": "Địa chỉ",
+      "phoneLabel": "Điện thoại",
+      "emailLabel": "Email",
+      "altEmailLabel": "Email phụ",
+      "address": "Lô 35 đường số 9, KCN Tam Phước, Biên Hòa, Đồng Nai, Việt Nam",
+      "phone": "+84 90 333 37 29",
+      "email": "thuy@tnpgr.vn",
+      "altEmail": "anhkiet3333@yahoo.com"
+    },
+    "languages": {
+      "en": "English",
+      "vi": "Tiếng Việt",
+      "ja": "日本語"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Điện mặt trời chất lượng Nhật Bản. Lắp đặt đúng chuẩn, tại Việt Nam.",
+      "subtitle": "SolarTNP thiết kế, cung cấp và lắp đặt hệ thống điện mặt trời hòa lưới bằng tấm pin năng lượng mặt trời nhập từ Nhật Bản — phù hợp với mái nhà, ánh nắng và hóa đơn tiền điện của người Việt.",
+      "cta": "Khảo sát miễn phí",
+      "secondaryCta": "Xem công trình của chúng tôi",
+      "imageAlt": "Tấm pin năng lượng mặt trời lắp trên mái ngói dưới bầu trời xanh"
+    },
+    "about": {
+      "title": "Công ty Nhật-Việt, xây dựng từ chất lượng",
+      "body": "SolarTNP mang tiêu chuẩn nhập hàng của Nhật Bản vào thị trường điện mặt trời Việt Nam. Chúng tôi kết hợp tấm pin hiệu suất cao, bảo hành dài hạn từ các nhà sản xuất Nhật Bản uy tín với đội ngũ lắp đặt người Việt am hiểu mái nhà, khí hậu và thực tế lưới điện địa phương. Chúng tôi là công ty còn trẻ — mỗi hệ thống chúng tôi lắp đều được tính toán đúng và thi công không cắt xén.",
+      "point1": "Tấm pin nhập từ Nhật Bản, bảo hành công suất tuyến tính 25 năm",
+      "point2": "Đội thi công riêng của chúng tôi — không thuê lại nhà thầu phụ",
+      "point3": "Lo toàn bộ thủ tục hòa lưới với EVN cho khách hàng",
+      "point4": "Hỗ trợ kỹ thuật miễn phí 12 tháng sau khi lắp đặt"
+    },
+    "process": {
+      "title": "Quy trình làm việc",
+      "lead": "Một quy trình rõ ràng gồm ba giai đoạn — từ lần khảo sát đầu tiên đến nhiều năm hỗ trợ sau lắp đặt.",
+      "step1": {
+        "title": "Thiết kế & Cung cấp",
+        "body": "Chúng tôi bắt đầu bằng khảo sát hiện trạng và đo lượng điện tiêu thụ — diện tích mái, mức tiêu thụ điện trung bình hàng tháng, tình trạng lưới điện. Từ đó, chúng tôi thiết kế hệ thống đúng công suất và cung cấp tấm pin, inverter nhập từ Nhật Bản kèm đầy đủ hồ sơ bảo hành."
+      },
+      "step2": {
+        "title": "Lắp đặt",
+        "body": "Đội thi công của chúng tôi — không qua nhà thầu phụ — đảm nhận toàn bộ việc lắp khung trên mái, đi dây, đấu nối inverter, hòa lưới điện và vận hành thử, sử dụng phụ kiện lắp đặt chuẩn Nhật Bản và đi dây đúng quy chuẩn."
+      },
+      "step3": {
+        "title": "Hỗ trợ sau lắp đặt & Bảo trì",
+        "body": "Hệ thống điện mặt trời hoạt động hơn 25 năm. Chúng tôi cài đặt ứng dụng giám sát ngay trong ngày lắp đặt, có gói kiểm tra và vệ sinh hàng năm, và hỗ trợ kỹ thuật miễn phí trong 12 tháng đầu."
+      }
+    },
+    "projects": {
+      "title": "Công trình đã thực hiện",
+      "lead": "Bốn công trình thực tế. Công suất thực, vị trí thực, kết quả thực — không có số liệu thổi phồng.",
+      "honestNote": "Chúng tôi là công ty còn trẻ. Đây là bốn công trình đầu tiên — mỗi công trình đều được làm đúng chuẩn, không cắt xén. Nhiều công trình khác đang được triển khai.",
+      "p1": {
+        "title": "Nhà riêng tại Biên Hòa",
+        "size": "5 kWp hòa lưới",
+        "panels": "16 tấm Panasonic 315W",
+        "location": "Nhà riêng, Biên Hòa, Đồng Nai",
+        "duration": "Lắp đặt trong 2 ngày",
+        "outcome": "Hóa đơn tiền điện giảm từ ~1.800.000 VNĐ xuống còn ~400.000 VNĐ mỗi tháng",
+        "note": "Công trình đầu tiên của SolarTNP. Mái ngói Việt Nam — chúng tôi thiết kế khung lắp riêng để giữ nguyên khả năng chống thấm.",
+        "imageAlt": "Tấm pin năng lượng mặt trời trên mái ngói đỏ dưới trời nắng, nhà riêng Biên Hòa"
+      },
+      "p2": {
+        "title": "Nhà phố tại Thủ Đức",
+        "size": "8 kWp hòa lưới",
+        "panels": "20 tấm Sharp 400W",
+        "location": "Nhà phố 3 tầng, Thủ Đức, TP. Hồ Chí Minh",
+        "duration": "Lắp đặt trong 3 ngày",
+        "outcome": "Sản lượng ~1.040 kWh/tháng; phần điện dư được bán lên lưới EVN",
+        "note": "Khách lo về tải trọng mái — chúng tôi tính toán kết cấu trước khi thi công.",
+        "imageAlt": "Nhà phố hiện đại với tấm pin năng lượng mặt trời trên mái và đường chân trời TP. Hồ Chí Minh"
+      },
+      "p3": {
+        "title": "Văn phòng tại KCN Tam Phước",
+        "size": "15 kWp hòa lưới",
+        "panels": "30 tấm Kyocera 500W",
+        "location": "Tòa văn phòng, KCN Tam Phước, Biên Hòa",
+        "duration": "Lắp đặt trong 4 ngày",
+        "outcome": "Bù khoảng 60% điện tiêu thụ ban ngày; thời gian hoàn vốn dự kiến ~5,5 năm",
+        "note": "Chúng tôi xử lý toàn bộ thủ tục hòa lưới với EVN — chỉ 3 tuần từ lúc nộp hồ sơ đến lúc đóng điện.",
+        "imageAlt": "Công nhân lắp đặt tấm pin năng lượng mặt trời trên mái nhà xưởng"
+      },
+      "p4": {
+        "title": "Nhà dân tại Long An",
+        "size": "6,4 kWp hòa lưới",
+        "panels": "16 tấm Sharp 400W",
+        "location": "Nhà riêng, Tân An, Long An",
+        "duration": "Lắp đặt trong 2 ngày",
+        "outcome": "Sản lượng ~830 kWh/tháng; gia đình đạt mức tự cân bằng điện vào mùa khô",
+        "note": "Công trình ở tỉnh xa — chúng tôi phối hợp với điện lực địa phương để xin hòa lưới.",
+        "imageAlt": "Tấm pin năng lượng mặt trời trên mái nhà nông thôn với lá cờ Việt Nam phía sau"
+      }
+    },
+    "japanese": {
+      "title": "Vì sao chất lượng Nhật Bản quan trọng",
+      "body": "Thị trường điện mặt trời Việt Nam phát triển rất nhanh trong những năm gần đây — và chất lượng không đồng đều từ các nhà cung cấp giá rẻ là vấn đề thực sự. Tấm pin Nhật Bản có bảo hành công suất tuyến tính 25 năm, suy giảm hiệu suất chỉ khoảng 0,45%/năm. Các tấm pin giá rẻ thường suy giảm 1,5–2%/năm, mất một nửa công suất chỉ sau 15 năm. Trong vòng đời 25 năm của hệ thống, khoảng cách này gần như luôn vượt qua chênh lệch giá ban đầu.",
+      "point1": "Suy giảm hiệu suất ≤0,45%/năm — vẫn đạt ≥89% công suất danh định ở năm thứ 25",
+      "point2": "Sai số sản xuất chặt chẽ hơn và kiểm soát chất lượng nghiêm ngặt",
+      "point3": "Thời hạn bảo hành dài và được tuân thủ nghiêm túc từ các nhà sản xuất uy tín",
+      "imageAlt": "Biểu đồ so sánh suy giảm công suất 25 năm giữa tấm pin thông thường và tấm pin Nhật Bản"
+    },
+    "cta": {
+      "title": "Sẵn sàng khảo sát miễn phí?",
+      "body": "Cho chúng tôi biết về mái nhà và hóa đơn tiền điện của bạn. Chúng tôi sẽ tính toán hệ thống phù hợp — không áp lực, không hứa hẹn thổi phồng.",
+      "button": "Khảo sát miễn phí"
+    }
+  },
+  "pricing": {
+    "hero": {
+      "title": "Bảng giá & Thời gian hoàn vốn",
+      "subtitle": "Ba mức công suất, hạng mục rõ ràng, và cái nhìn trung thực về thời gian hoàn vốn — tính theo mái nhà thực tế, không bán quá công suất cần thiết."
+    },
+    "tiers": {
+      "small": {
+        "name": "Nhỏ",
+        "tagline": "Căn hộ & nhà nhỏ",
+        "size": "3–5 kWp",
+        "description": "Phù hợp với mức tiêu thụ ban ngày của hộ gia đình nhỏ — thường từ 4–10 tấm pin tùy diện tích mái và công suất tấm.",
+        "price": "Từ X.XXX USD / XXX triệu VNĐ — CẦN BỔ SUNG: chủ doanh nghiệp điền khoảng giá"
+      },
+      "medium": {
+        "name": "Trung bình",
+        "tagline": "Nhà gia đình & văn phòng nhỏ",
+        "size": "6–10 kWp",
+        "description": "Mức công suất phổ biến nhất trong các công trình của chúng tôi hiện nay — đáp ứng phần lớn tiêu thụ ban ngày của một gia đình.",
+        "price": "Từ X.XXX USD / XXX triệu VNĐ — CẦN BỔ SUNG: chủ doanh nghiệp điền khoảng giá"
+      },
+      "large": {
+        "name": "Lớn",
+        "tagline": "Doanh nghiệp & nhà xưởng nhỏ",
+        "size": "11–20 kWp",
+        "description": "Dành cho văn phòng, xưởng sản xuất và nhà máy nhỏ có mức tiêu thụ ban ngày cao hơn và diện tích mái lớn hơn.",
+        "price": "Báo giá riêng — liên hệ với chúng tôi"
+      }
+    },
+    "included": {
+      "title": "Tất cả các mức đều bao gồm",
+      "items": [
+        "Tấm pin và inverter nhập từ Nhật Bản kèm đầy đủ hồ sơ bảo hành",
+        "Khảo sát hiện trạng, đo lượng điện tiêu thụ và kiểm tra kết cấu chịu lực",
+        "Thi công bởi đội ngũ riêng của chúng tôi — không qua nhà thầu phụ",
+        "Lo toàn bộ thủ tục hòa lưới EVN và thông báo DOIT",
+        "Cài đặt và hướng dẫn sử dụng ứng dụng giám sát ngay trong ngày lắp đặt",
+        "Hỗ trợ kỹ thuật miễn phí 12 tháng sau lắp đặt"
+      ]
+    },
+    "payback": {
+      "title": "Thời gian hoàn vốn dự kiến",
+      "note": "Số liệu dưới đây là ước tính dựa trên công suất hệ thống điển hình và giả định sản lượng hiện tại. Mức tiết kiệm thực tế phụ thuộc vào tải tiêu thụ của gia đình bạn, hướng mái và giá điện EVN tại thời điểm lắp đặt. Hãy hỏi chúng tôi để có con số tính riêng cho hóa đơn của bạn.",
+      "table": {
+        "system": "Công suất hệ thống",
+        "savings": "Tiết kiệm ước tính/tháng",
+        "cost": "Chi phí hệ thống",
+        "payback": "Thời gian hoàn vốn ước tính",
+        "todo": "CẦN BỔ SUNG — chủ doanh nghiệp xác nhận",
+        "perMonth": "/tháng"
+      }
+    },
+    "faq": {
+      "title": "Câu hỏi thường gặp",
+      "q1": {
+        "question": "Theo quy định hiện hành của Việt Nam, tôi được bán bao nhiêu điện dư cho EVN?",
+        "answer": "Theo Nghị định 135/2024/NĐ-CP (có hiệu lực từ 2024), lượng điện dư bán lên lưới EVN bị giới hạn tối đa 20% công suất lắp đặt của hệ thống. Mục đích chính của hệ thống phải là tự sử dụng. Phần điện dư được thanh toán theo giá thị trường điện bình quân của năm trước — không còn áp dụng giá FIT cao như trước đây. Với hầu hết khách hàng dân dụng, điều này có nghĩa là hiệu quả tài chính của điện mặt trời chủ yếu đến từ tiết kiệm tiền điện tự dùng, không phải từ doanh thu bán điện dư. SolarTNP tính toán công suất hệ thống theo đúng tải tiêu thụ thực tế của bạn để tối đa hóa phần tự dùng và giảm thiểu phần điện dư chạm mức giới hạn 20%."
+      },
+      "q2": {
+        "question": "Tôi có cần xin phép hay giấy tờ trước khi lắp đặt không?",
+        "answer": "Có. Với hệ thống dưới 100 kW (gồm hầu hết hộ dân và doanh nghiệp nhỏ), bạn cần nộp thông báo đơn giản tới Sở Công Thương (DOIT) cấp tỉnh — không cần phê duyệt đầu tư đầy đủ. Với hệ thống từ 100 kW–1.000 kW, áp dụng quy trình cấp phép thông thường với chính quyền địa phương. Với hệ thống trên 1.000 kW bán điện dư lên lưới, cần có giấy chứng nhận đăng ký đầu tư và Giấy phép hoạt động điện lực. SolarTNP thực hiện thông báo DOIT và toàn bộ thủ tục hòa lưới EVN cho hệ thống dưới 100 kW — thời gian thường từ 3–6 tuần kể từ khi nộp hồ sơ đến khi đóng điện."
+      },
+      "q3": {
+        "question": "Nhà tôi có cần đáp ứng yêu cầu gì khác không?",
+        "answer": "Có. Theo Nghị định 135/2024/NĐ-CP, hệ thống phải được lắp trên công trình tuân thủ đầy đủ pháp luật xây dựng, quyền sử dụng đất, an toàn phòng cháy chữa cháy và quy định về môi trường. SolarTNP kiểm tra sự tuân thủ này trong buổi khảo sát miễn phí. Chúng tôi sẽ không thi công trên công trình còn vướng vấn đề pháp lý chưa giải quyết — điều này bảo vệ bạn cũng như bảo vệ chúng tôi."
+      },
+      "q4": {
+        "question": "Tấm pin có chịu được bão không?",
+        "answer": "Hệ khung lắp của chúng tôi được tính toán chịu tải gió vượt mức tối thiểu của quy chuẩn xây dựng Việt Nam. Chúng tôi dùng nhôm ray chuẩn Nhật Bản và bu lông inox, bắt chắc vào kết cấu mái — không chỉ bám trên lớp vật liệu bề mặt. Mỗi công trình đều có tính toán tải trọng riêng. Chúng tôi thiết kế dành riêng cho khí hậu Việt Nam."
+      },
+      "q5": {
+        "question": "Loại mái nào lắp được?",
+        "answer": "Chúng tôi lắp được trên mái bê tông phẳng, mái ngói Việt Nam, mái tôn, và mái composite hoặc tấm sợi xi măng. Mỗi loại mái dùng phương pháp lắp khác nhau. Chúng tôi xác nhận khả năng lắp đặt ngay trong buổi khảo sát — không thi công nếu mái không phù hợp."
+      },
+      "q6": {
+        "question": "Vì sao chọn tấm pin Nhật Bản thay vì hàng giá rẻ?",
+        "answer": "Tấm pin Nhật Bản (Panasonic, Sharp, Kyocera) có bảo hành công suất tuyến tính 25 năm với mức suy giảm ≤0,45%/năm. Đến năm thứ 25, tấm pin vẫn đạt tối thiểu 89% công suất danh định. Tấm pin giá rẻ thường suy giảm 1,5–2%/năm — mất một nửa công suất chỉ sau 15 năm. Trong 25 năm, khoảng cách hiệu suất này gần như luôn vượt qua phần chênh lệch giá ban đầu. Chúng tôi cung cấp số liệu so sánh suy giảm công suất cho mọi khách hàng để bạn tự tính toán."
+      },
+      "q7": {
+        "question": "Hệ thống điện mặt trời cần bảo trì gì?",
+        "answer": "Rất ít. Vệ sinh tấm pin 2–4 lần/năm (bụi, phân chim). Kiểm tra chuyên nghiệp hàng năm: các điểm kết nối, độ siết của khung, tình trạng inverter. SolarTNP có gói bảo trì hàng năm. Trong 12 tháng đầu sau lắp đặt, mọi lần gọi hỗ trợ đều miễn phí."
+      },
+      "q8": {
+        "question": "Có lắp đặt ngoài khu vực Biên Hòa và TP. Hồ Chí Minh không?",
+        "answer": "Có, trong phạm vi miền Nam. Chúng tôi đã thi công tại Đồng Nai và Long An. Chúng tôi đánh giá từng địa điểm xa theo từng trường hợp cụ thể — chi phí đi lại và lưu trú sẽ được báo giá riêng cho các tỉnh xa."
+      }
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Đăng ký khảo sát miễn phí",
+      "subtitle": "Cho chúng tôi biết về mái nhà và hóa đơn tiền điện của bạn. Không áp lực — chỉ là một góc nhìn trung thực về những gì có thể làm được."
+    },
+    "form": {
+      "name": {
+        "label": "Họ và tên"
+      },
+      "email": {
+        "label": "Email"
+      },
+      "phone": {
+        "label": "Số điện thoại / Zalo / WhatsApp",
+        "hint": "Chúng tôi sẽ liên hệ qua Zalo hoặc WhatsApp"
+      },
+      "propertyType": {
+        "label": "Loại công trình",
+        "options": [
+          "Nhà / Biệt thự",
+          "Nhà phố / Nhà mặt tiền",
+          "Căn hộ",
+          "Văn phòng / Thương mại",
+          "Nhà máy / Nhà xưởng",
+          "Khác"
+        ]
+      },
+      "roofArea": {
+        "label": "Diện tích mái ước tính",
+        "hint": "Ví dụ: 60m² hoặc \"chưa rõ\""
+      },
+      "province": {
+        "label": "Tỉnh / Thành phố",
+        "hint": "Ví dụ: Biên Hòa, Thủ Đức, Long An"
+      },
+      "monthlyBill": {
+        "label": "Hóa đơn tiền điện hàng tháng",
+        "hint": "Giúp chúng tôi tính toán công suất phù hợp",
+        "options": [
+          "Dưới 500.000 VNĐ",
+          "500.000–1.000.000 VNĐ",
+          "1.000.000–2.000.000 VNĐ",
+          "Trên 2.000.000 VNĐ",
+          "Chưa rõ"
+        ]
+      },
+      "language": {
+        "label": "Ngôn ngữ liên hệ ưu tiên",
+        "options": [
+          "English",
+          "Tiếng Việt",
+          "日本語"
+        ]
+      },
+      "notes": {
+        "label": "Ghi chú / câu hỏi"
+      },
+      "submit": "Đăng ký khảo sát miễn phí",
+      "privacy": "Khi gửi, bạn đồng ý với Chính sách bảo mật của chúng tôi. Thông tin của bạn chỉ được dùng để phản hồi yêu cầu này.",
+      "success": "Cảm ơn bạn — chúng tôi đã nhận được yêu cầu và sẽ liên hệ sớm.",
+      "error": "Đã có lỗi khi gửi yêu cầu. Vui lòng thử lại hoặc gửi email trực tiếp cho chúng tôi."
+    },
+    "sidebar": {
+      "direct": {
+        "title": "Liên hệ trực tiếp"
+      },
+      "hours": "Thứ Hai – Thứ Bảy, 8:00 – 17:30 (GMT+7)",
+      "next": {
+        "title": "Các bước tiếp theo",
+        "step1": "Chúng tôi xem xét thông tin và gọi hoặc nhắn tin cho bạn trong 1–2 ngày làm việc",
+        "step2": "Chúng tôi sắp xếp khảo sát thực tế miễn phí để kiểm tra mái và tải tiêu thụ",
+        "step3": "Bạn nhận được báo giá chi tiết kèm công suất hệ thống, thiết bị và chi phí"
+      },
+      "trust": "Đây là một cuộc trao đổi không áp lực. Chúng tôi sẽ nói thật nếu điện mặt trời chưa phù hợp với tình hình của bạn."
+    }
+  },
+  "privacy": {
+    "title": "Chính sách bảo mật",
+    "lastUpdated": "Cập nhật lần cuối: Tháng 6, 2026",
+    "intro": "Trang này giải thích thông tin nào SolarTNP thu thập qua website, cách chúng tôi sử dụng thông tin đó, và quyền của bạn đối với thông tin này.",
+    "s01": {
+      "heading": "Thông tin chúng tôi thu thập",
+      "body": "Khi bạn gửi biểu mẫu liên hệ, chúng tôi thu thập họ tên, email, số điện thoại (không bắt buộc) và thông tin dự án (loại công trình, vị trí, diện tích mái, hóa đơn tiền điện hàng tháng, ghi chú dự án). Chúng tôi chỉ dùng thông tin này để phản hồi yêu cầu và chuẩn bị báo giá. Chúng tôi không tự động thu thập dữ liệu qua cookie, ngoại trừ một cookie chức năng duy nhất để ghi nhớ tùy chọn ngôn ngữ."
+    },
+    "s02": {
+      "heading": "Cách chúng tôi sử dụng thông tin của bạn",
+      "body": "Thông tin liên hệ của bạn được dùng để phản hồi yêu cầu khảo sát, chuẩn bị và gửi báo giá, và theo dõi nếu bạn chưa nhận được phản hồi. Chúng tôi không dùng thông tin của bạn cho mục đích quảng cáo không mong muốn. Chúng tôi không bán, cho thuê hoặc chia sẻ thông tin của bạn với bên thứ ba, trừ khi pháp luật yêu cầu."
+    },
+    "s03": {
+      "heading": "Lưu trữ dữ liệu",
+      "body": "Biểu mẫu liên hệ được xử lý qua Formspree (formspree.io), một dịch vụ biểu mẫu của bên thứ ba. Chính sách bảo mật của Formspree áp dụng cho dữ liệu xử lý trên nền tảng của họ. Chúng tôi lưu trữ thông tin yêu cầu của bạn trong thời gian cần thiết để xử lý yêu cầu hoặc theo quy định pháp luật Việt Nam."
+    },
+    "s04": {
+      "heading": "Cookie",
+      "body": "Website này chỉ dùng một cookie chức năng duy nhất để ghi nhớ tùy chọn ngôn ngữ hoặc thông báo bảo mật của bạn. Không sử dụng cookie theo dõi, pixel quảng cáo hoặc script phân tích. Chúng tôi không sử dụng Google Analytics hay bất kỳ dịch vụ theo dõi của bên thứ ba nào."
+    },
+    "s05": {
+      "heading": "Quyền của bạn",
+      "body": "Bạn có quyền truy cập, chỉnh sửa hoặc yêu cầu xóa dữ liệu cá nhân của mình. Để thực hiện các quyền này, vui lòng gửi email tới thuy@tnpgr.vn. Chúng tôi sẽ phản hồi trong vòng 30 ngày."
+    },
+    "s06": {
+      "heading": "Liên hệ với chúng tôi",
+      "body": "Với các câu hỏi về bảo mật: thuy@tnpgr.vn · +84 90 333 37 29. Lô 35 đường số 9, KCN Tam Phước, Biên Hòa, Việt Nam."
+    },
+    "backHome": "Về trang chủ"
+  },
+  "regulations": {
+    "title": "Quy định điện mặt trời tại Việt Nam — Những điều cần biết",
+    "subtitle": "Nghị định 135/2024/NĐ-CP quản lý điện mặt trời mái nhà tại Việt Nam. Chúng tôi đã tóm tắt những gì quy định này có nghĩa đối với công trình của bạn — và cách SolarTNP xử lý các thủ tục tuân thủ cho bạn.",
+    "disclaimer": "Trang này tóm tắt hiểu biết của chúng tôi về Nghị định 135/2024/NĐ-CP tính đến ngày bên dưới. Quy định về điện mặt trời tại Việt Nam có thể thay đổi. Đây không phải là tư vấn pháp lý — hãy tham khảo luật sư chuyên về năng lượng hoặc xây dựng để có hướng dẫn chính thức.",
+    "s1": {
+      "heading": "Quy tắc cốt lõi: Tự dùng là chính",
+      "body": "Theo Nghị định 135/2024/NĐ-CP, hệ thống điện mặt trời mái nhà tại Việt Nam phải được lắp đặt chủ yếu để tự sử dụng tại chỗ. Công suất hệ thống nói chung phải phù hợp với tải tiêu thụ điện hiện có tại thời điểm đăng ký. Đây là một ưu điểm, không phải hạn chế — nó đảm bảo hệ thống được tính toán đúng theo nhu cầu thực tế, không bán quá công suất cần thiết."
+    },
+    "s2": {
+      "heading": "Bán điện dư lên lưới EVN (giới hạn 20%)",
+      "body": "Bạn được phép bán điện dư cho Tập đoàn Điện lực Việt Nam (EVN), nhưng bị giới hạn nghiêm ngặt ở mức 20% công suất lắp đặt. Điện dư bán cho EVN được thanh toán theo giá thị trường điện bình quân của năm trước — không còn áp dụng giá FIT cao như trước. Ý nghĩa thực tế: hiệu quả tài chính của điện mặt trời hiện nay chủ yếu đến từ tiết kiệm tiền điện tự dùng, không phải từ doanh thu bán điện dư.",
+      "cap": "Điện dư bán tối đa cho EVN: 20% công suất lắp đặt"
+    },
+    "s3": {
+      "heading": "Trường hợp ngoại lệ: Hệ thống độc lập (off-grid)",
+      "body": "Nếu hệ thống của bạn hoàn toàn không kết nối với lưới điện quốc gia, sẽ không có giới hạn công suất. Điều này áp dụng cho các công trình ở vùng xa hoặc doanh nghiệp muốn tự chủ hoàn toàn về năng lượng với hệ thống lưu trữ pin."
+    },
+    "s4": {
+      "heading": "Ngưỡng công suất & Cấp phép",
+      "intro": "Trình bày dưới dạng bảng so sánh rõ ràng:",
+      "row1": {
+        "range": "Dưới 100 kW",
+        "who": "Hộ gia đình, doanh nghiệp nhỏ",
+        "process": "Thông báo đơn giản tới Sở Công Thương (DOIT) cấp tỉnh — không cần phê duyệt đầu tư"
+      },
+      "row2": {
+        "range": "100 kW – 1.000 kW",
+        "who": "Doanh nghiệp / công nghiệp quy mô vừa",
+        "process": "Cấp phép thông thường với chính quyền địa phương"
+      },
+      "row3": {
+        "range": "Trên 1.000 kW (1 MW+)",
+        "who": "Doanh nghiệp / công nghiệp lớn bán điện lên lưới",
+        "process": "Cần giấy chứng nhận đăng ký đầu tư và Giấy phép hoạt động điện lực"
+      },
+      "headers": {
+        "capacity": "Công suất",
+        "who": "Đối tượng",
+        "process": "Quy trình"
+      }
+    },
+    "s5": {
+      "heading": "Yêu cầu tuân thủ về công trình",
+      "body": "Hệ thống mái nhà phải được lắp trên công trình tuân thủ đầy đủ pháp luật xây dựng, quyền sử dụng đất, tiêu chuẩn phòng cháy chữa cháy và quy định môi trường. SolarTNP kiểm tra sự tuân thủ của công trình trong buổi khảo sát trước khi lắp đặt — chúng tôi sẽ không thi công trên công trình còn vướng vấn đề pháp lý chưa giải quyết."
+    },
+    "s6": {
+      "heading": "Cách SolarTNP xử lý điều này",
+      "items": [
+        "Chúng tôi tính toán công suất hệ thống theo đúng tải tiêu thụ thực tế — tuân thủ ngay từ thiết kế",
+        "Chúng tôi chuẩn bị và nộp thông báo DOIT (đối với hệ thống dưới 100 kW)",
+        "Chúng tôi phối hợp xin phê duyệt hòa lưới và nghiệm thu với EVN",
+        "Chúng tôi ghi rõ giới hạn 20% điện dư trong hồ sơ thiết kế hệ thống",
+        "Chúng tôi không thi công trên công trình chưa tuân thủ quy định"
+      ]
+    },
+    "sources": {
+      "label": "Nguồn tham khảo",
+      "note": "Nghị định 135/2024/NĐ-CP (văn bản chính thức) · SP Global Energy Transition (10/2024) · Bài viết hướng dẫn WFW · Vietnam Business Law blog (01/2025, 03/2025) · Vietnam Law Magazine · Baker McKenzie InsightPlus",
+      "lastVerified": "Xác minh lần cuối: 17 tháng 6, 2026"
+    }
+  },
+  "notFound": {
+    "fourofour": "404",
+    "tagline": "Trang này đã... mất điện.",
+    "body": "Đường dẫn này không tồn tại. Hãy để chúng tôi đưa bạn về nơi có nắng.",
+    "goHome": "Về trang chủ",
+    "contact": "Liên hệ"
+  },
+  "meta": {
+    "home": {
+      "title": "SolarTNP — Điện mặt trời chất lượng Nhật Bản tại Việt Nam",
+      "description": "SolarTNP thiết kế, cung cấp và lắp đặt hệ thống điện mặt trời hòa lưới nhập từ Nhật Bản tại Biên Hòa, Đồng Nai và miền Nam Việt Nam. Công trình thực tế, giá cả minh bạch."
+    },
+    "pricing": {
+      "title": "Bảng giá & Thời gian hoàn vốn điện mặt trời — SolarTNP",
+      "description": "Ba mức công suất, hạng mục rõ ràng và cái nhìn trung thực về thời gian hoàn vốn điện mặt trời tại Việt Nam. Phần hỏi đáp theo đúng Nghị định 135/2024/NĐ-CP."
+    },
+    "contact": {
+      "title": "Đăng ký khảo sát miễn phí — SolarTNP",
+      "description": "Liên hệ SolarTNP để khảo sát điện mặt trời miễn phí tại Biên Hòa, TP. Hồ Chí Minh hoặc miền Nam Việt Nam. Báo giá không áp lực dựa trên mái nhà và hóa đơn tiền điện của bạn."
+    },
+    "privacy": {
+      "title": "Chính sách bảo mật — SolarTNP",
+      "description": "Cách SolarTNP thu thập, sử dụng và bảo vệ thông tin của bạn khi liên hệ để khảo sát điện mặt trời."
+    },
+    "regulations": {
+      "title": "Giải thích quy định điện mặt trời Việt Nam — SolarTNP",
+      "description": "Hướng dẫn dễ hiểu về Nghị định 135/2024/NĐ-CP — quy tắc tự dùng, giới hạn 20% điện dư bán cho EVN và ngưỡng cấp phép cho điện mặt trời mái nhà tại Việt Nam."
+    }
+  }
+}

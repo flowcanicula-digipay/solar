@@ -1,0 +1,23 @@
+# Enforce HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirect bare / to /en/
+RewriteRule ^$ /en/ [L,R=301]
+
+# Disable directory listing
+Options -Indexes
+
+# 404 — serves the custom designed 404 page (default locale)
+ErrorDocument 404 /en/404/index.html
+
+# Cache assets for 1 year
+<FilesMatch "\.(svg|png|jpg|webp|ico|woff2)$">
+  Header set Cache-Control "max-age=31536000, immutable"
+</FilesMatch>
+
+# Cache HTML for 1 hour
+<FilesMatch "\.html$">
+  Header set Cache-Control "max-age=3600, must-revalidate"
+</FilesMatch>

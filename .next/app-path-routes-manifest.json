@@ -1,0 +1,9 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/[locale]/contact/page": "/[locale]/contact",
+  "/[locale]/privacy/page": "/[locale]/privacy",
+  "/[locale]/404/page": "/[locale]/404",
+  "/[locale]/page": "/[locale]",
+  "/[locale]/pricing/page": "/[locale]/pricing",
+  "/[locale]/regulations/page": "/[locale]/regulations"
+}

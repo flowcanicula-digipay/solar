@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "ui-design-aesthetics": {
+      "source": "nickcrew/claude-ctx-plugin",
+      "sourceType": "github",
+      "skillPath": "skills/ui-design-aesthetics/SKILL.md",
+      "computedHash": "261fd260a4544fa692a9c507e18189c6cc3fddd8b17a9b2b1ec73c326ef04cbe"
+    }
+  }
+}
