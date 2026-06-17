@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Menu, X } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
-import SunIcon from './SunIcon';
 import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Header() {
@@ -23,18 +22,15 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-navy-800/10 bg-cream-50/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center">
           <Image
-            src="/assets/logo/logo.jpg"
-            alt="TNP Co.,Ltd"
-            width={36}
-            height={36}
-            className="h-9 w-auto rounded-md"
+            src="/assets/logo/logo.png"
+            alt="TNP Solar"
+            width={160}
+            height={48}
+            className="h-10 w-auto"
+            priority
           />
-          <SunIcon size={20} />
-          <span className="font-display text-lg font-semibold text-navy-950">
-            SolarTNP
-          </span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

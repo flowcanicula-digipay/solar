@@ -20,9 +20,14 @@ const inter = Inter({
   display: 'swap',
 });
 
+// In dev, Next.js HMR/react-refresh needs 'unsafe-eval' and inline scripts —
+// the strict production CSP below blocks those, so dev mode relaxes script-src.
+// The static export (Hostinger/Pages) always uses the strict policy.
 const CSP = [
   "default-src 'none'",
-  "script-src 'self'",
+  process.env.NODE_ENV === 'development'
+    ? "script-src 'self' 'unsafe-eval' 'unsafe-inline'"
+    : "script-src 'self'",
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   "font-src 'self' https://fonts.gstatic.com",
   "connect-src 'self' https://formspree.io",
