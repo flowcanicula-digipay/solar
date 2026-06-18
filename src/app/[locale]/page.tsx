@@ -402,7 +402,7 @@ export default async function HomePage({
           </div>
 
           <Link
-            href="/contact"
+            href="/sourcing"
             className="mt-8 inline-flex items-center gap-2 rounded-full border-2 border-royal-600 bg-royal-600/10 px-6 py-3 text-sm font-semibold text-cream-50 transition-colors hover:bg-royal-600 hover:text-white"
           >
             <Ship className="h-4 w-4" aria-hidden="true" />

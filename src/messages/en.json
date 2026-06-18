@@ -3,8 +3,9 @@
     "nav": {
       "home": "Home",
       "pricing": "Pricing",
-      "contact": "Contact",
-      "regulations": "Regulations"
+      "regulations": "Regulations",
+      "sourcing": "Sourcing",
+      "contact": "Contact"
     },
     "cta": {
       "freeAssessment": "Get a Free Site Assessment",
@@ -390,6 +391,73 @@
       "trust": "This is a no-pressure conversation. We'll tell you honestly if solar isn't a good fit for your situation."
     }
   },
+  "sourcing": {
+    "hero": {
+      "title": "International Sourcing & Shipping",
+      "subtitle": "Sourcing solar equipment through our global supplier network, shipped to clients across the US and Southeast Asia — same standards, same quality checks, wherever it's headed."
+    },
+    "form": {
+      "companyName": {
+        "label": "Company name",
+        "placeholder": "e.g. Sunrise Energy LLC"
+      },
+      "contactName": {
+        "label": "Contact person",
+        "placeholder": "e.g. John Smith"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "you@company.com"
+      },
+      "phone": {
+        "label": "Phone / WhatsApp",
+        "hint": "We'll follow up by WhatsApp or email",
+        "placeholder": "+1 555 123 4567"
+      },
+      "market": {
+        "label": "Shipping destination",
+        "options": ["United States", "Southeast Asia", "Other"]
+      },
+      "equipment": {
+        "label": "Equipment needed",
+        "options": [
+          "Solar panels",
+          "Inverters",
+          "Mounting hardware",
+          "Cables & accessories",
+          "Full system package",
+          "Other"
+        ]
+      },
+      "quantity": {
+        "label": "Estimated quantity / order size",
+        "hint": "Rough figures are fine at this stage",
+        "placeholder": "e.g. 200 panels, or a container load"
+      },
+      "notes": {
+        "label": "Notes / requirements",
+        "placeholder": "Anything else we should know about your sourcing needs?"
+      },
+      "submit": "Send Sourcing Inquiry",
+      "privacy": "By submitting, you agree to our Privacy Policy. We'll only use your details to respond to this enquiry.",
+      "success": "Thank you — we've received your inquiry and will be in touch shortly.",
+      "error": "Something went wrong sending your inquiry. Please try again or email us directly."
+    },
+    "sidebar": {
+      "direct": {
+        "title": "Direct Contact",
+        "imageAlt": "Shipping containers stacked at a port"
+      },
+      "hours": "Monday–Saturday, 8:00 AM – 5:30 PM (GMT+7)",
+      "next": {
+        "title": "What Happens Next",
+        "step1": "We review your inquiry and respond within 1–2 business days",
+        "step2": "We share product options, pricing, and minimum order quantities",
+        "step3": "We coordinate shipping logistics and a delivery timeline"
+      },
+      "trust": "Same sourcing standards and quality checks as our own installs — no matter where it's headed."
+    }
+  },
   "privacy": {
     "title": "Privacy Policy",
     "lastUpdated": "Last updated: June 2026",
@@ -500,6 +568,10 @@
     "contact": {
       "title": "Request a Free Site Assessment — SolarTNP",
       "description": "Contact SolarTNP for a free solar site assessment in Biên Hòa, Ho Chi Minh City, or southern Vietnam. No-pressure quote based on your roof and electricity bill."
+    },
+    "sourcing": {
+      "title": "International Sourcing & Shipping — SolarTNP",
+      "description": "SolarTNP sources solar panels, inverters, and equipment through its global supplier network and ships to clients across the US and Southeast Asia."
     },
     "privacy": {
       "title": "Privacy Policy — SolarTNP",

@@ -3,8 +3,9 @@
     "nav": {
       "home": "Trang chủ",
       "pricing": "Bảng giá",
-      "contact": "Liên hệ",
-      "regulations": "Quy định"
+      "regulations": "Quy định",
+      "sourcing": "Nguồn hàng",
+      "contact": "Liên hệ"
     },
     "cta": {
       "freeAssessment": "Khảo sát miễn phí",
@@ -390,6 +391,73 @@
       "trust": "Đây là một cuộc trao đổi không áp lực. Chúng tôi sẽ nói thật nếu điện mặt trời chưa phù hợp với tình hình của bạn."
     }
   },
+  "sourcing": {
+    "hero": {
+      "title": "Tìm nguồn hàng & Vận chuyển quốc tế",
+      "subtitle": "Tìm nguồn thiết bị năng lượng mặt trời qua mạng lưới nhà cung cấp toàn cầu của chúng tôi, vận chuyển đến khách hàng tại Mỹ và Đông Nam Á — cùng tiêu chuẩn, cùng quy trình kiểm soát chất lượng, bất kể điểm đến."
+    },
+    "form": {
+      "companyName": {
+        "label": "Tên công ty",
+        "placeholder": "VD: Sunrise Energy LLC"
+      },
+      "contactName": {
+        "label": "Người liên hệ",
+        "placeholder": "VD: Nguyễn Văn A"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "ban@congty.com"
+      },
+      "phone": {
+        "label": "Số điện thoại / WhatsApp",
+        "hint": "Chúng tôi sẽ liên hệ qua WhatsApp hoặc email",
+        "placeholder": "+1 555 123 4567"
+      },
+      "market": {
+        "label": "Điểm đến vận chuyển",
+        "options": ["Hoa Kỳ", "Đông Nam Á", "Khác"]
+      },
+      "equipment": {
+        "label": "Thiết bị cần tìm nguồn",
+        "options": [
+          "Tấm pin năng lượng mặt trời",
+          "Inverter",
+          "Phụ kiện lắp đặt",
+          "Cáp & phụ kiện",
+          "Trọn bộ hệ thống",
+          "Khác"
+        ]
+      },
+      "quantity": {
+        "label": "Số lượng / quy mô đơn hàng ước tính",
+        "hint": "Số liệu ước tính là đủ ở giai đoạn này",
+        "placeholder": "VD: 200 tấm pin, hoặc một container hàng"
+      },
+      "notes": {
+        "label": "Ghi chú / yêu cầu",
+        "placeholder": "Còn điều gì khác về nhu cầu tìm nguồn hàng của bạn không?"
+      },
+      "submit": "Gửi yêu cầu tìm nguồn hàng",
+      "privacy": "Khi gửi, bạn đồng ý với Chính sách bảo mật của chúng tôi. Thông tin của bạn chỉ được dùng để phản hồi yêu cầu này.",
+      "success": "Cảm ơn bạn — chúng tôi đã nhận được yêu cầu và sẽ liên hệ sớm.",
+      "error": "Đã có lỗi khi gửi yêu cầu. Vui lòng thử lại hoặc gửi email trực tiếp cho chúng tôi."
+    },
+    "sidebar": {
+      "direct": {
+        "title": "Liên hệ trực tiếp",
+        "imageAlt": "Các container hàng xếp tại cảng"
+      },
+      "hours": "Thứ Hai–Thứ Bảy, 8:00 – 17:30 (GMT+7)",
+      "next": {
+        "title": "Các bước tiếp theo",
+        "step1": "Chúng tôi xem xét yêu cầu và phản hồi trong 1–2 ngày làm việc",
+        "step2": "Chúng tôi gửi các lựa chọn sản phẩm, giá cả và số lượng đặt hàng tối thiểu",
+        "step3": "Chúng tôi sắp xếp hậu cần vận chuyển và thời gian giao hàng"
+      },
+      "trust": "Cùng tiêu chuẩn tìm nguồn hàng và quy trình kiểm soát chất lượng như các công trình của chúng tôi — bất kể điểm đến."
+    }
+  },
   "privacy": {
     "title": "Chính sách bảo mật",
     "lastUpdated": "Cập nhật lần cuối: Tháng 6, 2026",
@@ -500,6 +568,10 @@
     "contact": {
       "title": "Đăng ký khảo sát miễn phí — SolarTNP",
       "description": "Liên hệ SolarTNP để khảo sát điện mặt trời miễn phí tại Biên Hòa, TP. Hồ Chí Minh hoặc miền Nam Việt Nam. Báo giá không áp lực dựa trên mái nhà và hóa đơn tiền điện của bạn."
+    },
+    "sourcing": {
+      "title": "Tìm nguồn hàng & Vận chuyển quốc tế — SolarTNP",
+      "description": "SolarTNP tìm nguồn tấm pin, inverter và thiết bị năng lượng mặt trời qua mạng lưới nhà cung cấp toàn cầu, vận chuyển đến khách hàng tại Mỹ và Đông Nam Á."
     },
     "privacy": {
       "title": "Chính sách bảo mật — SolarTNP",

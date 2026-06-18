@@ -83,6 +83,11 @@ export default function Footer() {
               </Link>
             </li>
             <li>
+              <Link href="/sourcing" className="text-cream-50/80 hover:text-royal-100">
+                {nav('sourcing')}
+              </Link>
+            </li>
+            <li>
               <Link href="/contact" className="text-cream-50/80 hover:text-royal-100">
                 {nav('contact')}
               </Link>

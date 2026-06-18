@@ -78,4 +78,23 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.solartnp.com/ja/regulations/" />
   </url>
 
+  <url>
+    <loc>https://www.solartnp.com/en/sourcing/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.solartnp.com/en/sourcing/" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.solartnp.com/vi/sourcing/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.solartnp.com/ja/sourcing/" />
+  </url>
+  <url>
+    <loc>https://www.solartnp.com/vi/sourcing/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.solartnp.com/en/sourcing/" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.solartnp.com/vi/sourcing/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.solartnp.com/ja/sourcing/" />
+  </url>
+  <url>
+    <loc>https://www.solartnp.com/ja/sourcing/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.solartnp.com/en/sourcing/" />
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.solartnp.com/vi/sourcing/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.solartnp.com/ja/sourcing/" />
+  </url>
+
 </urlset>

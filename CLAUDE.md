@@ -54,7 +54,7 @@ with 4 completed installations at launch.
 | Alt email | anhkiet3333@yahoo.com |
 | Phone | +84 90 333 37 29 |
 | Locales | `en` (default), `vi`, `ja` |
-| Pages | Home, Pricing, Contact, Privacy, Regulations + 404 |
+| Pages | Home, Pricing, Contact, Sourcing, Privacy, Regulations + 404 |
 | Export target | Hostinger shared hosting — `public_html/` |
 
 ---
@@ -105,12 +105,15 @@ const nextConfig = {
 │   │   │   ├── process/        → design.svg, installation.svg, aftersales.svg
 │   │   │   ├── projects/       → project-1.svg … project-4.svg
 │   │   │   ├── quality/        → japanese-quality.svg
+│   │   │   ├── sourcing/       → sourcing-bg.jpg (hero + sidebar, sourcing page)
+│   │   │   ├── contact/        → vietnam-flags.jpg (contact page sidebar)
 │   │   │   └── panels/         → (Phase 2: real panel photos)
 │   │   ├── logo/               → logo.svg, logo-light.svg
 │   │   ├── og/                 → og-en.svg, og-vi.svg, og-ja.svg
 │   │   └── favicon/            → favicon.svg, site.webmanifest
 │   ├── robots.txt
-│   ├── sitemap.xml             → 15 URLs (5 pages × 3 locales; /privacy excluded)
+│   ├── sitemap.xml             → 15 URLs (Home, Pricing, Contact, Sourcing,
+│   │                              Regulations × 3 locales; /privacy excluded, noindex)
 │   └── .htaccess
 ├── src/
 │   ├── app/
@@ -121,7 +124,9 @@ const nextConfig = {
 │   │       ├── pricing/
 │   │       │   └── page.tsx
 │   │       ├── contact/
-│   │       │   └── page.tsx
+│   │       │   └── page.tsx    → Free Site Assessment (residential leads)
+│   │       ├── sourcing/
+│   │       │   └── page.tsx    → International Sourcing & Shipping (B2B leads)
 │   │       ├── privacy/
 │   │       │   └── page.tsx    → noindex, numbered sections 01–06
 │   │       ├── regulations/
@@ -134,7 +139,8 @@ const nextConfig = {
 │   │   ├── HowItWorks.tsx
 │   │   ├── ProjectsGrid.tsx
 │   │   ├── WhyJapanese.tsx
-│   │   ├── ContactForm.tsx
+│   │   ├── ContactForm.tsx     → Free Site Assessment form (/contact)
+│   │   ├── SourcingForm.tsx    → International Sourcing & Shipping form (/sourcing)
 │   │   ├── PricingFAQ.tsx
 │   │   ├── PaybackTable.tsx
 │   │   ├── RegulationsTable.tsx → Capacity threshold comparison table
@@ -279,8 +285,9 @@ export const routing = defineRouting({
 ```
 common.nav.home
 common.nav.pricing
-common.nav.contact
 common.nav.regulations
+common.nav.sourcing
+common.nav.contact
 common.cta.freeAssessment
 common.cta.getQuote
 common.cta.learnMore
@@ -381,6 +388,30 @@ contact.sidebar.next.step2
 contact.sidebar.next.step3
 contact.sidebar.trust
 
+sourcing.hero.title
+sourcing.hero.subtitle
+sourcing.form.companyName.label
+sourcing.form.contactName.label
+sourcing.form.email.label
+sourcing.form.phone.label
+sourcing.form.phone.hint
+sourcing.form.market.label
+sourcing.form.market.options       ← array: United States / Southeast Asia / Other
+sourcing.form.equipment.label
+sourcing.form.equipment.options    ← array
+sourcing.form.quantity.label
+sourcing.form.quantity.hint
+sourcing.form.notes.label
+sourcing.form.submit
+sourcing.form.privacy
+sourcing.sidebar.direct.title
+sourcing.sidebar.hours
+sourcing.sidebar.next.title
+sourcing.sidebar.next.step1
+sourcing.sidebar.next.step2
+sourcing.sidebar.next.step3
+sourcing.sidebar.trust
+
 privacy.title
 privacy.lastUpdated
 privacy.intro
@@ -439,6 +470,8 @@ meta.pricing.title
 meta.pricing.description
 meta.contact.title
 meta.contact.description
+meta.sourcing.title
+meta.sourcing.description
 meta.privacy.title
 meta.privacy.description
 meta.regulations.title
@@ -778,6 +811,37 @@ On error: show inline red error, keep form visible.
 
 ---
 
+## Sourcing Form Fields
+
+This is a **separate form on a separate page** (`/sourcing`, component
+`SourcingForm.tsx`) for B2B equipment-sourcing leads — not a variant of the
+residential contact form above. It posts to its own Formspree endpoint
+(`YOUR_SOURCING_FORM_ID`).
+
+```
+Company name                → text, required, maxLength=100
+Contact person               → text, required, maxLength=100
+Email                        → email, required, maxLength=100
+Phone / WhatsApp             → tel, optional, maxLength=20
+                               hint: "We'll follow up by WhatsApp or email"
+Shipping destination         → radio chips, required
+  options: "United States", "Southeast Asia", "Other"
+Equipment needed             → radio chips, required
+  options: "Solar panels", "Inverters", "Mounting hardware",
+           "Cables & accessories", "Full system package", "Other"
+Estimated quantity / order size → text, optional, maxLength=100
+  hint: "Rough figures are fine at this stage"
+Notes / requirements         → textarea, optional, maxLength=1000
+```
+
+Submit to Formspree. On success: show inline green confirmation, hide form.
+On error: show inline red error, keep form visible. Same visual language as
+the residential form (rounded-xl inputs, chip-style radio groups via Tailwind
+`has-[:checked]`), but the field set is entirely different — this form
+qualifies a B2B buyer (who, what, how much, where to), not a homeowner's roof.
+
+---
+
 ## Schema JSON-LD
 
 ### All pages — LocalBusiness
@@ -887,15 +951,25 @@ ErrorDocument 404 /en/index.html
 ### 🔴 Must-do before launch
 
 #### 1. Set up Formspree
+The site has **two separate contact forms** that need **two separate Formspree
+form IDs** — residential leads and B2B sourcing leads should not land in the
+same inbox/thread.
+
 1. Create account at [formspree.io](https://formspree.io)
-2. Create form — name it "SolarTNP Contact"
-3. Copy form ID (e.g. `xrgnkzab`)
+2. Create form #1 — name it "SolarTNP Contact" (residential site assessment)
+3. Copy its form ID (e.g. `xrgnkzab`)
 4. In `src/components/ContactForm.tsx`, replace `YOUR_FORM_ID`:
    ```
    https://formspree.io/f/YOUR_FORM_ID  →  https://formspree.io/f/xrgnkzab
    ```
-5. Enable spam filtering in Formspree dashboard
-6. Submit a test entry and confirm email receipt
+5. Create form #2 — name it "SolarTNP Sourcing" (international sourcing & shipping)
+6. Copy its form ID and, in `src/components/SourcingForm.tsx`, replace
+   `YOUR_SOURCING_FORM_ID`:
+   ```
+   https://formspree.io/f/YOUR_SOURCING_FORM_ID  →  https://formspree.io/f/abcd1234
+   ```
+7. Enable spam filtering on both forms in the Formspree dashboard
+8. Submit a test entry to each form and confirm email receipt
 
 #### 2. Verify pricing numbers
 In `src/messages/en.json`, `vi.json`, `ja.json` — the `pricing.tiers.*.price`
@@ -1105,7 +1179,9 @@ Check `localePrefix: 'always'` in `src/i18n/routing.ts`. Also confirm
 `useRouter` and `usePathname` are imported from `next-intl` not `next/navigation`.
 
 ### Form not submitting
-1. Confirm `YOUR_FORM_ID` is replaced with a real Formspree ID
+1. Confirm `YOUR_FORM_ID` (`ContactForm.tsx`) and/or `YOUR_SOURCING_FORM_ID`
+   (`SourcingForm.tsx`) are replaced with real Formspree IDs — these are two
+   separate forms with two separate endpoints
 2. Check browser console for CSP violations — if Formspree endpoint is blocked,
    update `connect-src` in the CSP meta tag in `src/app/[locale]/layout.tsx`
 3. Check Formspree dashboard spam settings — test submissions may be flagged
