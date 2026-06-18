@@ -33,38 +33,41 @@ export default function Header() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav aria-label="Main navigation" className="hidden items-center gap-1 lg:flex">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-charcoal/80 hover:text-royal-700"
+              className="rounded-lg px-4 py-2 text-sm font-medium text-charcoal/80 transition-colors duration-200 hover:bg-royal-100/60 hover:text-royal-700"
             >
               {link.label}
             </Link>
           ))}
+        </nav>
+
+        <div className="hidden items-center gap-3 lg:flex">
           <LanguageSwitcher />
           <Link
             href="/contact"
-            className="rounded-md bg-royal-700 px-4 py-2 text-sm font-semibold text-white hover:bg-royal-600"
+            className="rounded-lg bg-royal-700 px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 hover:bg-royal-600"
           >
             {cta('freeAssessment')}
           </Link>
-        </nav>
+        </div>
 
         <button
           type="button"
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="md:hidden"
+          className="rounded-lg p-2 text-charcoal/80 hover:bg-cream-100 lg:hidden"
         >
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {open && (
-        <nav className="border-t border-navy-800/10 bg-cream-50 px-6 py-4 md:hidden">
+        <nav className="border-t border-navy-800/10 bg-cream-50 px-6 py-4 lg:hidden">
           <div className="flex flex-col gap-4">
             {links.map((link) => (
               <Link
@@ -83,7 +86,9 @@ export default function Header() {
             >
               {cta('freeAssessment')}
             </Link>
-            <LanguageSwitcher className="w-full" />
+            <div className="self-start">
+              <LanguageSwitcher />
+            </div>
           </div>
         </nav>
       )}
