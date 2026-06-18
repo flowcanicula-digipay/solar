@@ -10,53 +10,60 @@
 
 ## Who Is SolarTNP?
 
-SolarTNP is a newly established solar energy company operating in Vietnam, with
-**Chinese-Japanese-Vietnamese** ownership and heritage. It sells, designs,
-installs, and maintains residential and light-commercial solar panel systems.
-The company is based in Phú Nhuận, Ho Chi Minh City — and serves homeowners,
-small businesses, and light-industrial clients across southern Vietnam.
+SolarTNP is a newly established **Vietnamese** solar energy company, with
+global sourcing partnerships and a deep, defining tie to Japan. It sells,
+designs, installs, and maintains residential and light-commercial solar panel
+systems — and separately, sources solar equipment and ships it to clients
+abroad. The company is based in Phú Nhuận, Ho Chi Minh City — and serves
+homeowners, small businesses, and light-industrial clients across southern
+Vietnam, plus international buyers in the US and Southeast Asia.
 
-### The Three-Culture Identity — Why It Matters
+### The Identity — Why It Matters
 
-This is not a marketing angle. It is the actual story of the people who built
-the company, and it directly explains why SolarTNP operates the way it does.
+This is not a marketing angle. It is the operational reality of how the
+company works, and it directly explains why SolarTNP operates the way it does.
 
-**Chinese heritage — commercial precision and supply chain mastery.**
-China is the world's largest solar panel manufacturer and the backbone of the
-global photovoltaic supply chain. The Chinese side of SolarTNP brings deep
-supplier relationships, procurement knowledge, and an understanding of how
-panels are actually made — not just sold. This means SolarTNP can evaluate
-panel quality at the manufacturing level, not just the spec sheet, and can
-source components at competitive prices without sacrificing quality. Chinese
-business culture also brings a practical, results-oriented commercial
-discipline: systems are sized correctly, quotes are accurate, and timelines
-are kept.
+**Vietnamese identity — the crew, the ownership, the client relationship.**
+The installation crew, the project managers, the ownership, and the
+client-facing team are Vietnamese. They know Vietnamese roof construction,
+Vietnamese EVN bureaucracy, Vietnamese monsoon seasons, and Vietnamese client
+concerns — especially the one about roof waterproofing that foreign installers
+consistently underestimate. Vietnamese culture values long-term relationship
+over transactional speed. A SolarTNP client isn't a sale closed — they're a
+household or business the team will be checking on for years.
 
-**Japanese heritage — engineering standards and long-term thinking.**
+**Japanese standards — the company's core technical identity.**
 Japan has some of the most demanding electrical and construction standards in
 the world, and Japanese consumers are notoriously unforgiving of quality
-failures. The Japanese side of SolarTNP brings that exacting standard to every
-installation: mounting hardware torqued to spec, cable runs planned before
-they're laid, every connection tested before the inverter is switched on.
-Japanese business culture also brings a 25-year mindset — a solar system is a
-25-year commitment, and the installation decisions made on day one determine
+failures. This is not one heritage among equals — Japanese electrical
+standards and a 25-year mindset govern every install: mounting hardware
+torqued to spec, cable runs planned before they're laid, every connection
+tested before the inverter is switched on. A solar system is a 25-year
+commitment, and the installation decisions made on day one determine
 performance for decades. SolarTNP installs as if they'll be back to service it
 every year. (They will be.)
 
-**Vietnamese heritage — local knowledge, craft, and relationship.**
-The installation crew, the project managers, and the client-facing team are
-Vietnamese. They know Vietnamese roof construction, Vietnamese EVN bureaucracy,
-Vietnamese monsoon seasons, and Vietnamese client concerns — especially the one
-about roof waterproofing that foreign installers consistently underestimate.
-Vietnamese culture values long-term relationship over transactional speed. A
-SolarTNP client isn't a sale closed — they're a household or business the team
-will be checking on for years.
+**Global partners — sourcing leverage without picking one country.**
+Deep supplier relationships span the global solar manufacturing chain — not
+centered on any single country. This means SolarTNP can evaluate panel
+quality at the manufacturing level, not just the spec sheet, and source
+components (including Japanese- and Chinese-made panels and inverters) at
+competitive prices without compromising on quality.
 
-**What the combination produces**: a company that can source panels as well as
-any Chinese distributor, install to Japanese electrical standards, and navigate
-the Vietnamese permitting, grid-connection, and after-sales landscape as
-natives. No other solar installer in Biên Hòa or southern Vietnam brings all
-three together.
+**International sourcing & shipping — a distinct service line.**
+Beyond sourcing for its own Vietnamese installs, SolarTNP also sources solar
+equipment and ships it to clients abroad, across the **US and Southeast
+Asia**, drawing on the same supplier network. This is not folded silently
+into "global partners" — it's a separate offer with its own page (`/sourcing`)
+and its own inquiry form, because the buyer (a business abroad placing an
+equipment order) has nothing in common with a Vietnamese homeowner requesting
+a site assessment.
+
+**What the combination produces**: a company that sources as well as any
+international distributor, installs to Japanese electrical standards, and
+navigates the Vietnamese permitting, grid-connection, and after-sales
+landscape as natives. No other solar installer in Biên Hòa or southern Vietnam
+brings all of this together.
 
 **SolarTNP is brand new.** It has completed only a handful of installations —
 4 at launch. The site must feel credible and professional without overstating
@@ -77,16 +84,16 @@ say "we are just starting and we do fewer jobs and we do them properly."
 |---|---|
 | Company name | SolarTNP |
 | Industry | Solar energy — residential & light-commercial |
-| Services | Panel sales, system design, installation, after-sales & maintenance |
-| Heritage | Chinese-Japanese-Vietnamese |
+| Services | Panel sales, system design, installation, after-sales & maintenance, international sourcing & shipping |
+| Heritage | Vietnamese company, global sourcing partners, deeply tied to Japan |
 | HQ | Phú Nhuận, Hồ Chí Minh, Vietnam |
 | Address | 529/14 Huỳnh Văn Bánh, Phú Nhuận, Hồ Chí Minh, Vietnam |
 | Primary email | thuy@tnpgr.vn |
 | Alt email | anhkiet3333@yahoo.com |
 | Phone | +84 90 333 37 29 |
-| Markets | Vietnam (domestic primary), Japan, China, international |
+| Markets | Vietnam (domestic installs); international equipment sourcing & shipping to the US and Southeast Asia |
 | Site languages | English (primary), Vietnamese, Japanese |
-| Stage | Early — 4 completed projects at launch |
+| Stage | Early — 4 completed installations at launch |
 
 ---
 
@@ -119,7 +126,7 @@ A SolarTNP technician visits the property. They:
 This visit is completely free and non-binding. The client owes nothing.
 
 ### Phase 3 — System Design & Written Proposal
-Back at the office, the team (drawing on Chinese supply chain knowledge and
+Back at the office, the team (drawing on global sourcing knowledge and
 Japanese engineering standards) designs the system:
 - Panel count, layout, and brand/model selection
 - Inverter sizing and brand/model selection
@@ -144,7 +151,7 @@ in parallel, not after, so no time is wasted.
 ### Phase 5 — Procurement & Component Inspection
 SolarTNP orders the specific panels and inverter for this job. Components arrive
 at the Phú Nhuận facility, are inspected on receipt against the manufacturer
-spec sheet, and staged for the installation date. The Chinese supply chain
+spec sheet, and staged for the installation date. The global supplier
 relationships mean components arrive quickly and at verified quality.
 
 ### Phase 6 — Installation (2–4 days depending on system size)
@@ -259,25 +266,32 @@ and long-term thinking without overpromising.
 ## Content Architecture
 
 ### Home (`/`)
-- **Hero**: Bold headline landing the triple identity. Background: a completed
-  SolarTNP installation — panels on a Vietnamese tile roof, blue sky, clean
-  cable runs. Headline: "Trusted sourcing. Japanese standards. Vietnamese craft."
+- **Hero**: Real installation photography (`hero-bg.jpg`) with a slow Ken
+  Burns zoom and a staggered fade-up entrance on the headline, subtitle, and
+  CTAs. Headline: "Trusted sourcing. Japanese standards. Vietnamese craft."
   Subheadline: "Solar done properly. Built to last 25 years."
-- **About**: The three-culture story told plainly and specifically — what each
-  heritage contributes and why the combination matters. Not marketing copy.
-  Concrete claims: Chinese supply chain, Japanese electrical standards,
-  Vietnamese local expertise.
+- **About**: The identity story told plainly and specifically — Vietnamese
+  crew/ownership, Japanese standards, and global sourcing partners — and why
+  the combination matters. Not marketing copy. Concrete claims, not vague
+  heritage language.
 - **How It Works**: The 8-phase journey condensed to 4 visible steps for the
-  homepage (Consult → Design → Install → Support). A "See full process" link
-  goes to a dedicated process section or the pricing page detail.
+  homepage (Consult → Design → Install → Support).
 - **Projects**: 4 completed installations — honest, specific, no inflation.
-- **Why This Heritage**: Replaces "Why Japanese Quality" — now covers all three
-  angles. Chinese supply chain means quality components at competitive cost.
-  Japanese standards mean the installation is done right. Vietnamese craft means
-  local expertise, local knowledge, long-term relationship.
-- **Warranty & After-Sales Strip**: A visual summary of the warranty table —
-  25-yr panels, 10-yr mounting, 2-yr workmanship, 2-yr waterproofing, 12-month
-  free callouts. Scannable, trustworthy.
+  **Currently hidden** behind a `SHOW_PROJECTS` flag in `page.tsx` until there
+  are enough installations to show; flip it back on when ready.
+- **Why Japanese Standards Matter**: Real photo of a precisely mounted array
+  (`japanese-precision.jpg`) plus the degradation comparison (≤0.45%/yr vs.
+  1.5–2%/yr for cut-rate alternatives) — explicitly notes SolarTNP works with
+  both Chinese and Japanese manufacturers and global partners for these
+  warranty terms, not Japanese panels exclusively.
+- **International Sourcing & Shipping**: A distinct section (own background
+  photo, own copy) introducing the B2B sourcing/shipping service for the US
+  and Southeast Asia, with its own CTA linking to `/sourcing` — not the
+  residential contact form.
+- **Warranty & After-Sales Timeline**: A visual, scroll-animated summary of
+  the warranty table — each row badged "Backed by" SolarTNP (workmanship,
+  mounting hardware, roof waterproofing) or the manufacturer (panels,
+  inverter), so it's immediately clear who to call for what.
 - **Final CTA**: "Get your free site assessment — no obligation."
 
 ### Pricing (`/pricing`)
@@ -298,6 +312,29 @@ and long-term thinking without overpromising.
   monthly electricity bill, preferred contact language, notes
 - Sidebar: direct contact info, "What happens next" 3-step timeline,
   reassurance that this is a no-pressure conversation
+- This page is for **residential/light-commercial site assessment leads
+  only**. B2B equipment-sourcing inquiries are a separate audience with a
+  separate page — see `/sourcing` below. Don't merge the two forms; a roof
+  area field means nothing to a sourcing buyer abroad, and a shipping
+  destination field means nothing to a Vietnamese homeowner.
+
+### Sourcing (`/sourcing`)
+- Same visual language as `/contact` (hero, two-column form + sticky
+  sidebar) but a completely different audience and field set.
+- Form framed as a B2B sourcing inquiry, not a site visit request.
+- Fields: company name, contact person, email, phone/WhatsApp, shipping
+  destination (United States / Southeast Asia / Other), equipment needed
+  (panels, inverters, mounting hardware, cables, full system package,
+  other), estimated quantity/order size, notes.
+- Sidebar: direct contact info, "What Happens Next" 3-step timeline tailored
+  to a sourcing inquiry (review → share pricing/MOQ → coordinate shipping
+  logistics), trust line about consistent sourcing/quality standards
+  regardless of destination.
+- Posts to its **own Formspree endpoint**, separate from the residential
+  contact form — these should not land in the same inbox/thread.
+- Linked from: main nav (brief label "Sourcing"), footer quick links, and
+  the homepage's "International Sourcing & Shipping" section CTA (which
+  used to point at `/contact` — now points here).
 
 ### Privacy Policy (`/privacy`)
 - Numbered sections 01–06, `noindex, follow`, "Last updated" date
@@ -422,9 +459,10 @@ at a supply-chain and engineering level that most Vietnamese installers don't.
 The copy demonstrates this without alienating a homeowner who just wants to know
 "will this save me money?" Lead with the concrete benefit, follow with the spec.
 
-**Three cultures, one voice.** The Chinese-Japanese-Vietnamese identity is not
-three separate personalities — it is a single, integrated voice that is:
-- Precise (Chinese commercial discipline — no vague estimates, no inflated claims)
+**One identity, one voice.** The Vietnamese-craft-plus-Japanese-standards
+identity is not two separate personalities — it is a single, integrated
+voice that is:
+- Precise (global sourcing discipline — no vague estimates, no inflated claims)
 - Exacting (Japanese engineering standard — "we torque every bolt to spec" is
   a real sentence, not a metaphor)
 - Warm (Vietnamese relationship culture — clients are long-term partners, not
@@ -432,8 +470,8 @@ three separate personalities — it is a single, integrated voice that is:
   what Vietnamese homeowners actually worry about)
 
 **English**: Clear, internationally accessible, professional. Primary language
-for the site. Foreign investors, expats, Japanese and Chinese property owners
-in Vietnam will read this first.
+for the site. Foreign investors, expats, and international sourcing clients
+will read this first.
 
 **Vietnamese**: Natural, everyday phrasing. A Biên Hòa homeowner, a Thủ Đức
 business owner. Key terms used naturally: "điện mặt trời", "hòa lưới điện",
@@ -521,40 +559,52 @@ Slow amber radiance pulse on the hero — concentric rings at 4–6% opacity,
 4-second loop. Respects `prefers-reduced-motion`. Same pulse on the 404 page
 sun icon at 6-second loop.
 
-### Section to rename
-**"Why Japanese Quality"** → **"Why Our Supply Chain"** or **"Built Different"**
-This section now covers all three cultural contributions, not just the Japanese
-angle. The degradation comparison chart SVG stays — it's still the most powerful
-visual proof of panel quality — but the surrounding copy acknowledges the Chinese
-sourcing advantage and Vietnamese installation expertise.
+### Section naming (resolved)
+Shipped as **"Why Japanese Standards Matter"** — kept narrowly focused on the
+degradation/warranty argument (≤0.45%/yr vs. 1.5–2%/yr for cut-rate
+alternatives) rather than broadened into a general "why our supply chain"
+pitch. The body copy explicitly notes SolarTNP works with both Chinese and
+Japanese manufacturers and global partners for these warranty terms — sourcing
+breadth, not a tri-national ownership claim. The degradation comparison is
+now real photography (`japanese-precision.jpg`) rather than the original SVG
+chart concept.
 
 ---
 
 ## SEO & AI Search Keywords
 
 ### English
-"solar panels Vietnam", "solar installation Bien Hoa", "Japanese solar panels
-Vietnam", "Chinese Japanese Vietnamese solar company", "residential solar
-Ho Chi Minh City", "grid-tied solar system Vietnam", "solar energy Dong Nai",
-"EVN net metering solar Vietnam", "25-year solar warranty Vietnam",
-"rooftop solar Decree 135 Vietnam", "solar panel maintenance Vietnam"
+"solar panels Vietnam", "solar installation Bien Hoa", "Japanese-standard
+solar installation Vietnam", "Vietnamese solar company global sourcing",
+"residential solar Ho Chi Minh City", "grid-tied solar system Vietnam",
+"solar energy Dong Nai", "EVN net metering solar Vietnam", "25-year solar
+warranty Vietnam", "rooftop solar Decree 135 Vietnam", "solar panel
+maintenance Vietnam", "solar equipment sourcing shipping Southeast Asia"
 
 ### Vietnamese
 "lắp đặt điện mặt trời Biên Hòa", "điện mặt trời hòa lưới EVN",
 "công ty điện mặt trời Đồng Nai", "lắp điện mặt trời gia đình",
 "tiết kiệm tiền điện mặt trời", "bảo hành pin mặt trời 25 năm",
 "Nghị định 135 điện mặt trời", "dịch vụ bảo trì điện mặt trời",
-"điện mặt trời chất lượng Nhật Bản Trung Quốc"
+"điện mặt trời tiêu chuẩn Nhật Bản tay nghề Việt Nam"
 
 ### Japanese
 "ベトナム太陽光発電", "ビエンホア ソーラーパネル設置",
-"日本品質 太陽光パネル ベトナム", "中日越 ソーラーエネルギー会社",
+"日本基準 太陽光パネル ベトナム", "ベトナム企業 グローバル調達",
 "ベトナム 住宅用 太陽光発電システム", "SolarTNP",
 "ベトナム 太陽光 アフターサービス", "25年保証 太陽光パネル ベトナム"
 
 ---
 
 ## Generated SVG Asset Specifications
+
+> **Historical note**: these were the Phase 1 placeholder specs. Several have
+> since been replaced with real photography as the owner supplied it and as
+> images were sourced for new sections (hero background, footer banner,
+> "Why Japanese Standards Matter", the homepage Sourcing section, and both
+> contact-page sidebars are now real photos, not SVGs). The specs below are
+> kept as a record of the original placeholder intent — check `public/assets/`
+> for what's actually live before assuming an SVG is still in use.
 
 All Phase 1 images are SVGs generated by Claude Code and committed to
 `public/assets/`. They must look like real design choices — not coloured
@@ -688,7 +738,8 @@ rectangles. Each spec below is the brief for the generator.
 
 ### AC-1: Build exits clean
 - `npm run build` completes with zero errors on Node 20 LTS
-- `out/` directory contains all **15 routes** (5 pages × 3 locales)
+- `out/` directory contains all **21 routes** (7 pages × 3 locales: home,
+  pricing, contact, sourcing, privacy, regulations, 404)
 - No TypeScript errors in strict mode
 - Zero hardcoded user-visible strings in components
 
@@ -699,18 +750,28 @@ rectangles. Each spec below is the brief for the generator.
 - `<html lang="...">` set correctly per locale
 
 ### AC-3: All pages render correctly
-**Home**: Hero (new tri-cultural tagline), About (three-culture story: Chinese
-sourcing, Japanese standards, Vietnamese craft), How It Works (4 condensed
-steps), Projects (4 cards with honest note), Why Our Supply Chain (degradation
-chart + tri-cultural framing), Warranty & After-Sales Strip (warranty table,
+**Home**: Hero (real photo, Ken Burns zoom, staggered fade-up entrance),
+About (Vietnamese + Japan-tied + global-partners identity, not a tri-cultural
+ownership story), How It Works (4 condensed steps), Projects (4 cards with
+honest note — currently hidden via `SHOW_PROJECTS` flag), Why Japanese
+Standards Matter (degradation comparison, Chinese-or-Japanese sourcing
+acknowledged), International Sourcing & Shipping (own section, own CTA to
+`/sourcing`), Warranty & After-Sales Timeline ("Backed by" badges per row,
 12-month free support, annual plan mention), Final CTA
 
-**Pricing**: Page hero, 3 system tiers, what's included strip (explicitly
-lists after-sales and warranty coverage), payback table, after-sales packages
-brief section, FAQ (8 questions — Decree 135/2024/ND-CP accurate)
+**Pricing**: Page hero, 3 selectable system tiers (radio-card pattern),
+what's included strip (explicitly lists after-sales and warranty coverage),
+payback presented as stat cards with a progress bar against the 25-year
+system life, FAQ (8 questions — Decree 135/2024/ND-CP accurate)
 
 **Contact**: Page hero framed as "free, no-obligation site assessment", form
-with all fields, sidebar with contact info and 3-step next-steps timeline
+with all fields, sidebar with contact info and 3-step next-steps timeline.
+Residential leads only.
+
+**Sourcing** (`/sourcing`): Same visual language as Contact, entirely
+different field set (company, contact person, shipping destination,
+equipment, quantity), own Formspree endpoint, own sidebar copy. B2B leads
+only — see Content Architecture above for the full field list.
 
 **Privacy** (`/privacy`): Numbered sections 01–06, `noindex` meta, "Last
 updated" date, all content from translation files, footer link present
@@ -729,6 +790,11 @@ localised in all three languages, two CTA buttons, faint panel-grid background
 - No fake testimonials — project facts only
 - A small note: "We're just getting started. These are our first installations —
   each one done properly, no shortcuts."
+- **Current state**: the section is implemented but hidden behind a
+  `SHOW_PROJECTS = false` flag in `src/app/[locale]/page.tsx` — flip it back
+  to `true` once there are enough installations to show without it reading
+  thin. The "See How It Works" hero CTA was repointed to the process section
+  (`#process`) instead of `#projects` while it's hidden.
 
 ### AC-5: Generated SVG assets in place — all matching specs above
 - `logo.svg` and `logo-light.svg` — sun wordmark
@@ -746,7 +812,7 @@ localised in all three languages, two CTA buttons, faint panel-grid background
 - JSON-LD: `LocalBusiness` all pages; `Service` ×3 home; `FAQPage` pricing;
   `Product`/`Offer` pricing tiers; `WebPage` with `about` reference on /regulations
 - `robots.txt` and `sitemap.xml` listing all **15 URLs** (5 pages × 3 locales)
-  — home, pricing, contact, privacy, regulations
+  — home, pricing, contact, sourcing, regulations
 - `/privacy` has `robots: noindex, follow` meta tag — excluded from sitemap
 
 ### AC-7: Security implemented
@@ -786,12 +852,30 @@ localised in all three languages, two CTA buttons, faint panel-grid background
 - Legal disclaimer: "not binding legal advice — consult a licensed energy lawyer"
 - EVN FAQ answers on /pricing updated to reflect Decree 135 (not old Circular 18)
 
+### AC-11: International Sourcing page is properly separated from residential Contact
+- `/sourcing` exists as its own route, distinct from `/contact`, with its own
+  `generateMetadata` (`meta.sourcing.*`)
+- Form fields are B2B-appropriate (company, contact person, shipping
+  destination, equipment, quantity) — no roof/property/utility-bill fields
+  leaking in from the residential form
+- Posts to its own Formspree endpoint (`YOUR_SOURCING_FORM_ID`), separate from
+  the residential form's `YOUR_FORM_ID`
+- Nav (`common.nav.sourcing`) and footer quick links both link to it with a
+  brief label ("Sourcing" / "Nguồn hàng" / "調達") — short enough not to wrap
+  in the nav bar
+- Homepage's "International Sourcing & Shipping" section CTA points here, not
+  at `/contact`
+- Included in `sitemap.xml` with hreflang alternates for all three locales
+
 ---
 
 ## Out of Scope (Phase 2)
 
-- Real site photography (owner supplies; SVG placeholders until then)
-- Real Formspree form ID (owner action)
+- Real site photography (owner supplies; SVG placeholders until then —
+  several have since been replaced with real photos, see the historical note
+  under "Generated SVG Asset Specifications")
+- Real Formspree form ID (owner action — now needed for **two** forms,
+  residential and sourcing)
 - Real pricing numbers (owner action — documented in CLAUDE.md)
 - Blog / news section
 - Online quotation calculator (dynamic — not compatible with static export)

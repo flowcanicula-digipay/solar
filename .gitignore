@@ -16,3 +16,7 @@ npm-debug.log*
 
 # editor
 .vscode/
+
+# claude code
+.claude/
+CLAUDE.md

@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
+import { withBasePath } from '@/lib/assetPath';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -36,7 +37,7 @@ export default async function ContactPage({
       {/* Hero */}
       <section className="relative flex min-h-[400px] items-center overflow-hidden py-20 text-cream-50 md:min-h-[460px]">
         <Image
-          src="/assets/images/banner/contact-hero.jpg"
+          src={withBasePath('/assets/images/banner/contact-hero.jpg')}
           alt=""
           fill
           priority
@@ -76,7 +77,7 @@ export default async function ContactPage({
           <aside className="flex flex-col gap-6 lg:sticky lg:top-24 lg:self-start">
             <div className="relative h-48 w-full overflow-hidden rounded-2xl shadow-sm sm:h-56">
               <Image
-                src="/assets/images/contact/vietnam-flags.jpg"
+                src={withBasePath('/assets/images/contact/vietnam-flags.jpg')}
                 alt={t('sidebar.direct.imageAlt')}
                 fill
                 className="object-cover object-top"

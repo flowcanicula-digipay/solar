@@ -58,25 +58,38 @@ attributes and correct `type` values (`email`, `tel`, `text`, `textarea`).
 This provides basic client-side abuse resistance. Formspree applies server-side
 spam filtering independently.
 
-**Content Security Policy**: Defined as a `<meta http-equiv="Content-Security-Policy">` in `src/app/[locale]/layout.tsx`. This is necessary because Hostinger shared hosting cannot serve custom HTTP response headers.
+**Content Security Policy**: Split across two delivery mechanisms, because
+the CSP spec itself restricts what a `<meta>` tag is allowed to enforce —
+this isn't a Hostinger limitation. `frame-ancestors`, `report-uri`, and
+`sandbox` are ignored by browsers when delivered via `<meta>` (they silently
+no-op with a console warning); every other directive works fine in `<meta>`.
 
-Current CSP:
-```
-default-src 'none';
-script-src 'self';
-style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-font-src 'self' https://fonts.gstatic.com;
-connect-src 'self' https://formspree.io;
-img-src 'self' data:;
-frame-ancestors 'none';
-base-uri 'self';
-form-action https://formspree.io;
-```
+1. Most directives — `<meta http-equiv="Content-Security-Policy">` in
+   `src/app/[locale]/layout.tsx`:
+   ```
+   default-src 'none';
+   script-src 'self';
+   style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+   font-src 'self' https://fonts.gstatic.com;
+   connect-src 'self' https://formspree.io;
+   img-src 'self' data:;
+   base-uri 'self';
+   form-action https://formspree.io;
+   ```
+2. `frame-ancestors` plus `X-Frame-Options` — real HTTP response headers set
+   in `public/.htaccess` via `mod_headers` (`Header always set ...`), since
+   Hostinger's Apache shared hosting *does* support this — the existing
+   `Cache-Control` headers in `.htaccess` already prove it:
+   ```
+   Header always set X-Frame-Options "DENY"
+   Header always set Content-Security-Policy "frame-ancestors 'none'"
+   ```
+   Browsers enforce the intersection of all applicable CSPs, so the `<meta>`
+   policy and this header-based one combine rather than conflict.
 
-**Important**: `meta` CSP cannot set `X-Content-Type-Options: nosniff` or
-`X-Frame-Options: DENY` — those require real HTTP headers. If hosting ever
-moves to a platform that supports custom headers (Cloudflare, nginx, Vercel),
-migrate the CSP from the meta tag to a header and add those two headers as well.
+If hosting ever moves to a platform with more header control (Cloudflare,
+nginx, Vercel), the rest of the CSP could also move out of `<meta>` into
+headers for cleaner delivery, but it isn't required for correctness.
 
 **Note on `'unsafe-inline'` for styles**: Required because Tailwind CSS injects
 critical styles inline in the static export. If this is a concern, consider

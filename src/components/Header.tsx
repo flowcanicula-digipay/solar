@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl';
 import { Menu, X } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import LanguageSwitcher from './LanguageSwitcher';
+import { withBasePath } from '@/lib/assetPath';
 
 export default function Header() {
   const t = useTranslations('common.nav');
@@ -25,7 +26,7 @@ export default function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center">
           <Image
-            src="/assets/logo/logo-new.jpg"
+            src={withBasePath('/assets/logo/logo-new.jpg')}
             alt="TNP Solar"
             width={300}
             height={200}

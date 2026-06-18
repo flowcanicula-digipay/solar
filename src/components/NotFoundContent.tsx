@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import SunIcon from '@/components/SunIcon';
+import { withBasePath } from '@/lib/assetPath';
 
 export default async function NotFoundContent() {
   const t = await getTranslations('notFound');
@@ -9,7 +10,7 @@ export default async function NotFoundContent() {
   return (
     <section className="relative flex min-h-[80vh] items-center justify-center overflow-hidden bg-navy-950 px-6 py-20 text-center text-cream-50">
       <Image
-        src="/assets/images/hero/panel-grid.svg"
+        src={withBasePath('/assets/images/hero/panel-grid.svg')}
         alt=""
         fill
         className="object-cover opacity-[0.04]"

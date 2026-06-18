@@ -23,6 +23,10 @@ const inter = Inter({
 // In dev, Next.js HMR/react-refresh needs 'unsafe-eval' and inline scripts —
 // the strict production CSP below blocks those, so dev mode relaxes script-src.
 // The static export (Hostinger/Pages) always uses the strict policy.
+//
+// frame-ancestors is deliberately omitted here: the CSP spec ignores that
+// directive when delivered via <meta> (browsers log a console warning), so
+// it's enforced instead via a real HTTP header in public/.htaccess.
 const CSP = [
   "default-src 'none'",
   process.env.NODE_ENV === 'development'
@@ -32,7 +36,6 @@ const CSP = [
   "font-src 'self' https://fonts.gstatic.com",
   "connect-src 'self' https://formspree.io",
   "img-src 'self' data:",
-  "frame-ancestors 'none'",
   "base-uri 'self'",
   'form-action https://formspree.io',
 ].join('; ');

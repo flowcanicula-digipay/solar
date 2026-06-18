@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { withBasePath } from '@/lib/assetPath';
 
 export default function PageHero({
   image,
@@ -14,7 +15,7 @@ export default function PageHero({
 
   return (
     <section className="relative flex min-h-[320px] items-center overflow-hidden py-16 text-cream-50 md:min-h-[380px] md:py-20">
-      <Image src={image} alt="" fill priority className="object-cover" />
+      <Image src={withBasePath(image)} alt="" fill priority className="object-cover" />
       <div className="absolute inset-0 bg-navy-950/80" />
       <div className="relative mx-auto max-w-7xl px-6">
         <p

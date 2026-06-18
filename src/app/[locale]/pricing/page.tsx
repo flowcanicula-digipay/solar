@@ -8,6 +8,7 @@ import PaybackTable from '@/components/PaybackTable';
 import PricingFAQ from '@/components/PricingFAQ';
 import PricingTiers from '@/components/PricingTiers';
 import PageHero from '@/components/PageHero';
+import { withBasePath } from '@/lib/assetPath';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -61,7 +62,7 @@ export default async function PricingPage({
       <section className="relative overflow-hidden bg-navy-950 py-20">
         <div className="pointer-events-none absolute inset-0 select-none">
           <Image
-            src="/assets/images/hero/hero-bg.jpg"
+            src={withBasePath('/assets/images/hero/hero-bg.jpg')}
             alt=""
             aria-hidden="true"
             fill
@@ -85,7 +86,7 @@ export default async function PricingPage({
                 className="group relative h-40 w-[calc(50%-8px)] cursor-default overflow-hidden rounded-2xl sm:h-44 sm:w-[calc(33.333%-11px)] lg:w-[calc(25%-12px)]"
               >
                 <Image
-                  src={includedImages[i % includedImages.length]}
+                  src={withBasePath(includedImages[i % includedImages.length])}
                   alt=""
                   aria-hidden="true"
                   fill

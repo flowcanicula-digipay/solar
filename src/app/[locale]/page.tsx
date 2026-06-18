@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import SunIcon from '@/components/SunIcon';
 import WarrantyTimeline from '@/components/WarrantyTimeline';
+import { withBasePath } from '@/lib/assetPath';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -32,17 +33,33 @@ export async function generateMetadata({
 }
 
 const projectImages = [
-  { src: '/assets/images/projects/project-1.jpg', key: 'p1' as const },
-  { src: '/assets/images/projects/project-2.webp', key: 'p2' as const },
-  { src: '/assets/images/projects/project-3.jpg', key: 'p3' as const },
-  { src: '/assets/images/projects/project-4.jpg', key: 'p4' as const },
+  { src: withBasePath('/assets/images/projects/project-1.jpg'), key: 'p1' as const },
+  { src: withBasePath('/assets/images/projects/project-2.webp'), key: 'p2' as const },
+  { src: withBasePath('/assets/images/projects/project-3.jpg'), key: 'p3' as const },
+  { src: withBasePath('/assets/images/projects/project-4.jpg'), key: 'p4' as const },
 ];
 
 const processSteps = [
-  { key: 'step1' as const, src: '/assets/images/process/step1-consult.jpg', Icon: PhoneCall },
-  { key: 'step2' as const, src: '/assets/images/process/step2-design.jpg', Icon: Ruler },
-  { key: 'step3' as const, src: '/assets/images/process/step3-install.jpg', Icon: HardHat },
-  { key: 'step4' as const, src: '/assets/images/process/step4-support.jpg', Icon: ShieldCheck },
+  {
+    key: 'step1' as const,
+    src: withBasePath('/assets/images/process/step1-consult.jpg'),
+    Icon: PhoneCall,
+  },
+  {
+    key: 'step2' as const,
+    src: withBasePath('/assets/images/process/step2-design.jpg'),
+    Icon: Ruler,
+  },
+  {
+    key: 'step3' as const,
+    src: withBasePath('/assets/images/process/step3-install.jpg'),
+    Icon: HardHat,
+  },
+  {
+    key: 'step4' as const,
+    src: withBasePath('/assets/images/process/step4-support.jpg'),
+    Icon: ShieldCheck,
+  },
 ];
 
 const aboutFeatures = [
@@ -56,10 +73,10 @@ const aboutFeatures = [
 const SHOW_PROJECTS = false;
 
 const ctaGridImages = [
-  '/assets/images/cta/grid-1.jpg',
-  '/assets/images/cta/grid-2.jpg',
-  '/assets/images/cta/grid-3.jpg',
-  '/assets/images/cta/grid-4.jpg',
+  withBasePath('/assets/images/cta/grid-1.jpg'),
+  withBasePath('/assets/images/cta/grid-2.jpg'),
+  withBasePath('/assets/images/cta/grid-3.jpg'),
+  withBasePath('/assets/images/cta/grid-4.jpg'),
 ];
 
 export default async function HomePage({
@@ -78,7 +95,7 @@ export default async function HomePage({
       {/* Hero */}
       <section className="relative overflow-hidden bg-navy-950 text-cream-50">
         <Image
-          src="/assets/images/hero/hero-bg.jpg"
+          src={withBasePath('/assets/images/hero/hero-bg.jpg')}
           alt={t('hero.imageAlt')}
           fill
           priority
@@ -157,7 +174,7 @@ export default async function HomePage({
             <figure className="relative">
               <div className="relative h-[420px] overflow-hidden rounded-2xl shadow-2xl sm:h-[520px]">
                 <Image
-                  src="/assets/images/about/team.jpg"
+                  src={withBasePath('/assets/images/about/team.jpg')}
                   alt={t('about.imageAlt')}
                   fill
                   className="object-cover"
@@ -293,7 +310,7 @@ export default async function HomePage({
 
           <div className="relative mt-16 overflow-hidden rounded-3xl px-8 py-10 text-cream-50 md:px-12 md:py-14">
             <Image
-              src="/assets/images/cta/aftercare-bg.jpg"
+              src={withBasePath('/assets/images/cta/aftercare-bg.jpg')}
               alt=""
               fill
               className="object-cover"
@@ -360,7 +377,7 @@ export default async function HomePage({
           </div>
           <div className="relative h-72 w-full overflow-hidden rounded-2xl bg-white">
             <Image
-              src="/assets/images/quality/japanese-precision.jpg"
+              src={withBasePath('/assets/images/quality/japanese-precision.jpg')}
               alt={t('japanese.imageAlt')}
               fill
               className="object-cover"
@@ -372,7 +389,7 @@ export default async function HomePage({
       {/* International Sourcing & Shipping */}
       <section className="relative overflow-hidden bg-navy-950 text-cream-50">
         <Image
-          src="/assets/images/sourcing/sourcing-bg.jpg"
+          src={withBasePath('/assets/images/sourcing/sourcing-bg.jpg')}
           alt={t('sourcing.imageAlt')}
           fill
           className="object-cover opacity-40"

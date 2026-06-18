@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Mail, Phone, MapPin, Facebook } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
+import { withBasePath } from '@/lib/assetPath';
 
 export default function Footer() {
   const t = useTranslations('common.footer');
@@ -14,7 +15,7 @@ export default function Footer() {
     <footer className="border-t border-navy-800/10 bg-navy-950 text-cream-50">
       <div className="relative flex min-h-[340px] items-center overflow-hidden sm:min-h-[420px]">
         <Image
-          src="/assets/images/banner/footer-hero.jpg"
+          src={withBasePath('/assets/images/banner/footer-hero.jpg')}
           alt=""
           fill
           className="object-cover"
@@ -44,7 +45,7 @@ export default function Footer() {
         <div>
           <div className="inline-block rounded-md bg-cream-50 px-3 py-2">
             <Image
-              src="/assets/logo/logo-new.jpg"
+              src={withBasePath('/assets/logo/logo-new.jpg')}
               alt="TNP Co.,Ltd"
               width={300}
               height={200}

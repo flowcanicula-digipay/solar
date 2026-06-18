@@ -9,6 +9,11 @@ RewriteRule ^$ /en/ [L,R=301]
 # Disable directory listing
 Options -Indexes
 
+# Block framing by other sites (CSP frame-ancestors is ignored when set via
+# <meta>, so it's enforced here as a real HTTP header instead)
+Header always set X-Frame-Options "DENY"
+Header always set Content-Security-Policy "frame-ancestors 'none'"
+
 # 404 — serves the custom designed 404 page (default locale)
 ErrorDocument 404 /en/404/index.html
 

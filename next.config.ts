@@ -14,6 +14,12 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   basePath,
+  env: {
+    // Exposed to client/server code so hardcoded "/assets/..." paths (used with
+    // unoptimized next/image, which does not auto-prefix basePath) resolve
+    // correctly under a GitHub Pages project path like /<repo>/.
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
 };
 
 export default withNextIntl(nextConfig);
