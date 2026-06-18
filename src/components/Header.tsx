@@ -83,7 +83,7 @@ export default function Header() {
             >
               {cta('freeAssessment')}
             </Link>
-            <LanguageSwitcher />
+            <LanguageSwitcher className="w-full" />
           </div>
         </nav>
       )}

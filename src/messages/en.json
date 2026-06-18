@@ -33,6 +33,7 @@
       "altEmail": "anhkiet3333@yahoo.com"
     },
     "languages": {
+      "label": "Language",
       "en": "English",
       "vi": "Tiếng Việt",
       "ja": "日本語"
