@@ -6,6 +6,7 @@ import { routing } from '@/i18n/routing';
 import { Link } from '@/i18n/navigation';
 import PaybackTable from '@/components/PaybackTable';
 import PricingFAQ from '@/components/PricingFAQ';
+import PricingTiers from '@/components/PricingTiers';
 import PageHero from '@/components/PageHero';
 
 export function generateStaticParams() {
@@ -21,8 +22,6 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'meta.pricing' });
   return { title: t('title'), description: t('description') };
 }
-
-const tierKeys = ['small', 'medium', 'large'] as const;
 
 const includedImages = [
   '/assets/images/aftersales/warranty.png',
@@ -55,36 +54,7 @@ export default async function PricingPage({
 
       <section className="bg-cream-50 py-14 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="grid gap-8 md:grid-cols-3">
-            {tierKeys.map((key) => (
-              <div
-                key={key}
-                className="flex flex-col rounded-2xl border border-navy-800/10 bg-white p-8 shadow-sm"
-              >
-                <p className="text-sm font-semibold uppercase tracking-wide text-royal-700">
-                  {t(`tiers.${key}.tagline`)}
-                </p>
-                <h2 className="mt-2 font-display text-2xl font-bold text-navy-950">
-                  {t(`tiers.${key}.name`)}
-                </h2>
-                <p className="mt-1 font-mono text-sm text-charcoal/60">
-                  {t(`tiers.${key}.size`)}
-                </p>
-                <p className="mt-4 flex-1 text-sm text-charcoal/70">
-                  {t(`tiers.${key}.description`)}
-                </p>
-                <p className="mt-6 text-sm font-semibold text-navy-950">
-                  {t(`tiers.${key}.price`)}
-                </p>
-                <Link
-                  href="/contact"
-                  className="mt-4 inline-flex items-center justify-center gap-1 rounded-full bg-royal-600 px-6 py-3 text-sm font-semibold text-white hover:bg-royal-700"
-                >
-                  {cta('getQuote')}
-                </Link>
-              </div>
-            ))}
-          </div>
+          <PricingTiers />
         </div>
       </section>
 
@@ -158,9 +128,13 @@ export default async function PricingPage({
 
       <section className="bg-navy-950 py-16 text-center text-cream-50">
         <div className="mx-auto max-w-2xl px-6">
+          <h2 className="font-display text-2xl font-bold lg:text-3xl">
+            {t('finalCta.title')}
+          </h2>
+          <p className="mx-auto mt-3 max-w-md text-cream-50/70">{t('finalCta.body')}</p>
           <Link
             href="/contact"
-            className="inline-block rounded-full bg-royal-600 px-8 py-3 text-sm font-semibold text-white hover:bg-royal-700"
+            className="mt-7 inline-block rounded-full bg-royal-600 px-8 py-3 text-sm font-semibold text-white hover:bg-royal-700"
           >
             {cta('freeAssessment')}
           </Link>

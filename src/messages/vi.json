@@ -49,7 +49,7 @@
       "title": "Điện mặt trời chất lượng Nhật Bản. Lắp đặt đúng chuẩn, tại Việt Nam.",
       "subtitle": "SolarTNP thiết kế, cung cấp và lắp đặt hệ thống điện mặt trời hòa lưới bằng tấm pin năng lượng mặt trời nhập từ Nhật Bản — phù hợp với mái nhà, ánh nắng và hóa đơn tiền điện của người Việt.",
       "cta": "Khảo sát miễn phí",
-      "secondaryCta": "Xem công trình của chúng tôi",
+      "secondaryCta": "Xem quy trình thực hiện",
       "imageAlt": "Tấm pin năng lượng mặt trời lắp trên mái ngói dưới bầu trời xanh"
     },
     "about": {
@@ -60,31 +60,35 @@
       "point2": "Đội thi công riêng của chúng tôi — không thuê lại nhà thầu phụ",
       "point3": "Lo toàn bộ thủ tục hòa lưới với EVN cho khách hàng",
       "point4": "Hỗ trợ kỹ thuật miễn phí 12 tháng sau khi lắp đặt",
-      "point5": "Tìm nguồn hàng & vận chuyển quốc tế — chúng tôi cũng tìm nguồn thiết bị năng lượng mặt trời và vận chuyển cho khách hàng tại Mỹ và Đông Nam Á, qua cùng mạng lưới nhà cung cấp mà chúng tôi dùng cho các công trình của mình",
       "closingLine": "Công ty Việt Nam, đối tác toàn cầu.",
       "imageAlt": "Đội ngũ SolarTNP khảo sát mái nhà với đường chân trời Thành phố Hồ Chí Minh phía sau",
       "badge": "Tiêu chuẩn Nhật Bản, mọi công trình"
     },
     "process": {
+      "label": "Quy trình",
       "title": "Quy trình làm việc",
       "lead": "Một quy trình rõ ràng gồm bốn giai đoạn — từ lần trò chuyện đầu tiên đến nhiều năm hỗ trợ sau lắp đặt.",
       "step1": {
         "title": "Tư vấn",
+        "headline": "Chúng tôi bắt đầu bằng một cuộc trò chuyện thẳng thắn",
         "body": "Một buổi trò chuyện đầu tiên không áp lực — về hóa đơn tiền điện trung bình, loại hình nhà ở và quyền sở hữu mái nhà. Chúng tôi nói thẳng liệu điện mặt trời có phù hợp với tình huống của bạn ngay lúc này hay không.",
         "imageAlt": "Một thành viên của SolarTNP trao đổi dự án với khách hàng"
       },
       "step2": {
         "title": "Thiết kế",
+        "headline": "Chúng tôi thiết kế và báo giá hệ thống, miễn phí",
         "body": "Khảo sát hiện trạng miễn phí bao gồm diện tích mái, hướng nắng, kết cấu và tủ điện phân phối. Sau đó chúng tôi thiết kế hệ thống — chọn tấm pin và inverter, đường đi dây, phương án lắp khung — và gửi bạn báo giá bằng văn bản với một mức giá trọn gói duy nhất.",
         "imageAlt": "Kỹ sư SolarTNP khảo sát hiện trạng trên mái nhà với nền là đường chân trời thành phố"
       },
       "step3": {
         "title": "Lắp đặt",
+        "headline": "Đội thi công của chúng tôi lắp đặt theo tiêu chuẩn Nhật Bản",
         "body": "Đội thi công của chúng tôi — không qua nhà thầu phụ — đảm nhận việc lắp khung trên mái, đi dây, đấu nối inverter và vận hành thử trong 2–4 ngày, sử dụng phụ kiện lắp đặt chuẩn Nhật Bản và đi dây đúng quy chuẩn. Chúng tôi cũng nộp hồ sơ thông báo DOIT và làm thủ tục hòa lưới EVN cho bạn.",
         "imageAlt": "Đội thi công đưa tấm pin năng lượng mặt trời vào vị trí lắp đặt trên mái tôn"
       },
       "step4": {
         "title": "Hỗ trợ",
+        "headline": "Chúng tôi theo sát hệ thống của bạn trong nhiều năm",
         "body": "Khi nghiệm thu, bạn nhận đầy đủ hồ sơ bảo hành và thông tin đăng nhập ứng dụng giám sát. 12 tháng đầu, mọi lượt hỗ trợ kỹ thuật đều miễn phí, và chúng tôi theo dõi sản lượng hệ thống của bạn để phát hiện vấn đề trước khi bạn nhận ra.",
         "imageAlt": "Kỹ thuật viên SolarTNP kiểm tra hệ thống điện mặt trời trên mái nhà trong một lần bảo trì"
       }
@@ -140,7 +144,16 @@
       "point1": "Suy giảm hiệu suất ≤0,45%/năm — vẫn đạt ≥89% công suất danh định ở năm thứ 25",
       "point2": "Sai số sản xuất chặt chẽ hơn và kiểm soát chất lượng nghiêm ngặt",
       "point3": "Thời hạn bảo hành dài và được tuân thủ nghiêm túc từ các nhà sản xuất uy tín",
-      "imageAlt": "Hình minh họa hệ thống pin mặt trời lắp đặt chuẩn xác dưới ánh nắng, cùng dấu chứng nhận bảo hành 25 năm của SolarTNP"
+      "imageAlt": "Tấm pin năng lượng mặt trời lắp đặt chuẩn xác trên mái ngói, thẳng hàng và khít với mái nhà"
+    },
+    "sourcing": {
+      "label": "Nguồn hàng & Vận chuyển quốc tế",
+      "title": "Tìm nguồn hàng và vận chuyển, vượt ra ngoài các công trình của chúng tôi",
+      "body": "Bên cạnh các hệ thống chúng tôi lắp đặt tại Việt Nam, SolarTNP còn tìm nguồn thiết bị năng lượng mặt trời qua cùng mạng lưới nhà cung cấp toàn cầu đáng tin cậy — và vận chuyển đến khách hàng tại Mỹ và Đông Nam Á. Cùng tiêu chuẩn nguồn hàng, cùng quy trình kiểm soát chất lượng, bất kể điểm đến.",
+      "marketUS": "Hoa Kỳ",
+      "marketSEA": "Đông Nam Á",
+      "cta": "Liên hệ về nguồn hàng",
+      "imageAlt": "Các container hàng xếp tại cảng, đại diện cho dịch vụ tìm nguồn hàng và vận chuyển quốc tế của SolarTNP"
     },
     "cta": {
       "title": "Sẵn sàng khảo sát miễn phí?",
@@ -149,9 +162,16 @@
     },
     "warranty": {
       "title": "Bảo hành & Hậu mãi",
-      "lead": "Mỗi hệ thống lắp đặt đều có bảo hành nhiều tầng — bảo hành từ nhà sản xuất kết hợp với cam kết về chất lượng thi công của chúng tôi — cùng 12 tháng hỗ trợ miễn phí ngay từ ngày đầu.",
+      "lead": "Phần lớn đơn vị lắp đặt biến mất ngay khi bạn thanh toán xong. Một hệ thống SolarTNP có năm lớp bảo vệ chồng lên nhau từ lúc nghiệm thu cho đến năm thứ 25 — để không bao giờ có khoảng trống bảo hành.",
+      "closingLine": "Mỗi lớp bảo hành ở trên đều có ràng buộc hợp đồng, không phải lời hứa suông — và vì chúng tôi lắp đặt với tư duy 25 năm ngay từ đầu, chúng tôi có ý định đồng hành cùng bạn suốt thời gian đó.",
       "support12mo": "Trong 12 tháng đầu sau khi nghiệm thu, mọi lượt hỗ trợ kỹ thuật đều miễn phí. Đây là tiêu chuẩn của chúng tôi, không phải ưu đãi.",
       "note": "Từ năm thứ 2, bạn có thể đăng ký gói bảo trì hàng năm bao gồm hai lần vệ sinh tấm pin và một lần kiểm tra kỹ thuật toàn diện. Liên hệ chúng tôi để biết mức giá hiện tại.",
+      "afterCare": {
+        "label": "Hơn cả bảo hành",
+        "title": "Hỗ trợ miễn phí không kết thúc khi hóa đơn kết thúc",
+        "year1Label": "Năm 1",
+        "year2Label": "Từ năm 2"
+      },
       "headers": {
         "component": "Thành phần",
         "provider": "Đơn vị bảo hành",
@@ -160,33 +180,33 @@
       },
       "row1": {
         "component": "Tấm pin năng lượng mặt trời",
-        "provider": "Nhà sản xuất (Panasonic / Sharp / Kyocera)",
+        "provider": "Nhà sản xuất tấm pin",
         "duration": "25 năm",
-        "coverage": "Bảo hành sản lượng tuyến tính — suy giảm ≤0,45%/năm; đạt ≥89% công suất định mức ở năm thứ 25"
+        "coverage": "Bảo đảm vẫn đạt ≥89% công suất định mức ở năm thứ 25 — ghi rõ trong hợp đồng bảo hành từ nhà sản xuất, không phải lời hứa miệng"
       },
       "row2": {
         "component": "Inverter",
         "provider": "Nhà sản xuất (theo từng model)",
         "duration": "5–10 năm",
-        "coverage": "Linh kiện và công sửa chữa cho lỗi sản xuất"
+        "coverage": "Nếu inverter hỏng do lỗi sản xuất, linh kiện và công sửa đều được bảo hành — bạn không phải trả tiền cho lỗi không phải do mình"
       },
       "row3": {
         "component": "Khung lắp đặt",
         "provider": "SolarTNP",
         "duration": "10 năm",
-        "coverage": "Độ bền kết cấu — không hỏng do ăn mòn hoặc lỗi vật liệu"
+        "coverage": "Không gỉ, không hỏng kết cấu trong suốt 10 năm — phần ít ai để ý cho tới khi nó là phần quan trọng nhất"
       },
       "row4": {
         "component": "Chất lượng thi công",
         "provider": "SolarTNP",
         "duration": "2 năm",
-        "coverage": "Mọi lỗi phát sinh từ việc lắp đặt — đi dây, đấu nối, lắp ráp"
+        "coverage": "Mọi lỗi đi dây, đấu nối hay lắp ráp do chúng tôi thi công — chúng tôi sửa ngay, không đổ lỗi qua lại"
       },
       "row5": {
         "component": "Chống thấm mái nhà",
         "provider": "SolarTNP",
         "duration": "2 năm",
-        "coverage": "Mọi sự cố thấm nước do quá trình lắp đặt gây ra — vị trí xuyên mái, viền chống thấm, điểm cố định"
+        "coverage": "Nỗi lo thấm dột mà gia chủ Việt Nam nào cũng sợ — nếu lỗi từ điểm xuyên mái hay viền chống thấm do chúng tôi thi công, chúng tôi sửa trần nhà cho bạn, không phải bạn"
       },
       "imageAlt": "Kỹ thuật viên SolarTNP đang bảo trì hệ thống điện mặt trời đã lắp đặt"
     }
@@ -197,6 +217,8 @@
       "subtitle": "Ba mức công suất, hạng mục rõ ràng, và cái nhìn trung thực về thời gian hoàn vốn — tính theo mái nhà thực tế, không bán quá công suất cần thiết."
     },
     "tiers": {
+      "selectLabel": "Chọn công suất hệ thống",
+      "selectedBadge": "Đã chọn",
       "small": {
         "name": "Nhỏ",
         "tagline": "Căn hộ & nhà nhỏ",
@@ -223,7 +245,7 @@
       "label": "SolarTNP",
       "title": "Tất cả các mức đều bao gồm",
       "items": [
-        "Tấm pin và inverter nhập từ Nhật Bản kèm đầy đủ hồ sơ bảo hành",
+        "Tấm pin và inverter nhập từ Nhật Bản hoặc Trung Quốc, kèm đầy đủ hồ sơ bảo hành",
         "Khảo sát hiện trạng, đo lượng điện tiêu thụ và kiểm tra kết cấu chịu lực",
         "Thi công bởi đội ngũ riêng của chúng tôi — không qua nhà thầu phụ",
         "Lo toàn bộ thủ tục hòa lưới EVN và thông báo DOIT",
@@ -240,8 +262,14 @@
         "cost": "Chi phí hệ thống",
         "payback": "Thời gian hoàn vốn ước tính",
         "todo": "CẦN BỔ SUNG — chủ doanh nghiệp xác nhận",
-        "perMonth": "/tháng"
+        "perMonth": "/tháng",
+        "yearsUnit": "năm",
+        "ofSystemLife": "trong vòng đời 25 năm của hệ thống"
       }
+    },
+    "finalCta": {
+      "title": "Sẵn sàng xem con số của bạn?",
+      "body": "Cho chúng tôi biết về mái nhà và hóa đơn tiền điện của bạn — chúng tôi sẽ phản hồi trong 48 giờ với báo giá miễn phí, trung thực, tính theo đúng tải tiêu thụ thực tế."
     },
     "faq": {
       "title": "Câu hỏi thường gặp",
@@ -286,14 +314,17 @@
     },
     "form": {
       "name": {
-        "label": "Họ và tên"
+        "label": "Họ và tên",
+        "placeholder": "VD: Nguyễn Văn A"
       },
       "email": {
-        "label": "Email"
+        "label": "Email",
+        "placeholder": "ban@email.com"
       },
       "phone": {
         "label": "Số điện thoại / Zalo / WhatsApp",
-        "hint": "Chúng tôi sẽ liên hệ qua Zalo hoặc WhatsApp"
+        "hint": "Chúng tôi sẽ liên hệ qua Zalo hoặc WhatsApp",
+        "placeholder": "+84 90 123 4567"
       },
       "propertyType": {
         "label": "Loại công trình",
@@ -308,11 +339,13 @@
       },
       "roofArea": {
         "label": "Diện tích mái ước tính",
-        "hint": "Ví dụ: 60m² hoặc \"chưa rõ\""
+        "hint": "Ví dụ: 60m² hoặc \"chưa rõ\"",
+        "placeholder": "60m²"
       },
       "province": {
         "label": "Tỉnh / Thành phố",
-        "hint": "Ví dụ: Biên Hòa, Thủ Đức, Long An"
+        "hint": "Ví dụ: Biên Hòa, Thủ Đức, Long An",
+        "placeholder": "Biên Hòa, Thủ Đức, Long An"
       },
       "monthlyBill": {
         "label": "Hóa đơn tiền điện hàng tháng",
@@ -334,7 +367,8 @@
         ]
       },
       "notes": {
-        "label": "Ghi chú / câu hỏi"
+        "label": "Ghi chú / câu hỏi",
+        "placeholder": "Còn điều gì khác về mái nhà hoặc mong muốn của bạn không?"
       },
       "submit": "Đăng ký khảo sát miễn phí",
       "privacy": "Khi gửi, bạn đồng ý với Chính sách bảo mật của chúng tôi. Thông tin của bạn chỉ được dùng để phản hồi yêu cầu này.",
@@ -344,7 +378,7 @@
     "sidebar": {
       "direct": {
         "title": "Liên hệ trực tiếp",
-        "imageAlt": "Nhân viên hỗ trợ khách hàng của SolarTNP đang tư vấn cho khách"
+        "imageAlt": "Những dải cờ Việt Nam tung bay trên nền trời xanh"
       },
       "hours": "Thứ Hai – Thứ Bảy, 8:00 – 17:30 (GMT+7)",
       "next": {

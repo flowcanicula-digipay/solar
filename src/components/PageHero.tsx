@@ -17,11 +17,26 @@ export default function PageHero({
       <Image src={image} alt="" fill priority className="object-cover" />
       <div className="absolute inset-0 bg-navy-950/80" />
       <div className="relative mx-auto max-w-7xl px-6">
-        <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-cream-50/60">
+        <p
+          className="animate-fade-up mb-3 text-xs font-semibold uppercase tracking-widest text-cream-50/60"
+          style={{ animationDelay: '0ms' }}
+        >
           {t('heroLabel')}
         </p>
-        <h1 className="max-w-2xl font-display text-4xl font-bold">{title}</h1>
-        {subtitle && <p className="mt-4 max-w-xl text-cream-50/80">{subtitle}</p>}
+        <h1
+          className="animate-fade-up max-w-2xl font-display text-4xl font-bold"
+          style={{ animationDelay: '150ms' }}
+        >
+          {title}
+        </h1>
+        {subtitle && (
+          <p
+            className="animate-fade-up mt-4 max-w-xl text-cream-50/80"
+            style={{ animationDelay: '300ms' }}
+          >
+            {subtitle}
+          </p>
+        )}
       </div>
     </section>
   );

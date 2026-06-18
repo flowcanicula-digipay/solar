@@ -12,21 +12,31 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-navy-800/10 bg-navy-950 text-cream-50">
-      <div className="relative flex min-h-[280px] items-center overflow-hidden sm:min-h-[340px]">
+      <div className="relative flex min-h-[340px] items-center overflow-hidden sm:min-h-[420px]">
         <Image
           src="/assets/images/banner/footer-hero.jpg"
           alt=""
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-navy-950/75" />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy-950/90 via-navy-950/60 to-navy-950/95" />
         <div className="relative mx-auto max-w-7xl px-6 py-16 text-cream-50">
           <p className="text-xs font-semibold uppercase tracking-widest text-amber-400">
             {home('brandBanner.location')}
           </p>
-          <h2 className="mt-4 max-w-2xl font-display text-3xl font-bold sm:text-4xl">
+          <h2 className="mt-4 max-w-2xl font-display text-3xl font-bold leading-snug sm:text-4xl">
             {t('tagline')}
           </h2>
+          <div className="mt-7 flex items-center gap-3">
+            <span className="h-px w-24 bg-cream-50/25" />
+            <span className="h-1 w-1 rounded-full bg-amber-400" />
+          </div>
+          <p className="mt-6 text-xs tracking-[0.2em] text-cream-50/45">
+            太陽光発電 ・ 日本基準 ・ ベトナムの職人技
+          </p>
+          <p className="mt-2 font-display text-sm italic text-cream-50/55">
+            Solar done properly. Built to last 25 years.
+          </p>
         </div>
       </div>
 

@@ -25,4 +25,13 @@ body {
     opacity: 0.06;
     transform: scale(1);
   }
+
+  .animate-fade-up,
+  .animate-pop-in,
+  .animate-hero-zoom {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
 }

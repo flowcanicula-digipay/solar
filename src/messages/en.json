@@ -49,7 +49,7 @@
       "title": "Trusted sourcing. Japanese standards. Vietnamese craft.",
       "subtitle": "Solar done properly. Built to last 25 years. SolarTNP designs, supplies, and installs grid-tied solar systems — built for Vietnamese roofs, Vietnamese sun, and Vietnamese electricity bills.",
       "cta": "Get a Free Site Assessment",
-      "secondaryCta": "See Our Work",
+      "secondaryCta": "See How It Works",
       "imageAlt": "Solar panels installed on a tile roof under a clear blue sky"
     },
     "about": {
@@ -60,31 +60,35 @@
       "point2": "Japanese standards — every mounting bolt torqued to spec, every connection tested, a 25-year mindset on day one",
       "point3": "Vietnamese craft — our own installation crew who know Vietnamese roofs, EVN bureaucracy, and monsoon seasons",
       "point4": "The combination: global sourcing leverage, Japanese engineering rigour, and local execution in one project",
-      "point5": "International sourcing & shipping — we also source solar equipment and ship to clients across the US and Southeast Asia, through the same supplier network we use for our own installs",
       "closingLine": "Vietnamese company, global partners.",
       "imageAlt": "SolarTNP crew assessing a rooftop site against the Ho Chi Minh City skyline",
       "badge": "Japanese-standard install, every time"
     },
     "process": {
+      "label": "Process",
       "title": "How It Works",
       "lead": "A clear, four-stage process — from first conversation to years of after-sales support.",
       "step1": {
         "title": "Consult",
+        "headline": "We start with an honest conversation",
         "body": "A no-pressure first conversation — your average electricity bill, property type, and roof ownership. We tell you honestly whether solar makes sense for your situation right now.",
         "imageAlt": "A SolarTNP team member discussing a project with a client"
       },
       "step2": {
         "title": "Design",
+        "headline": "We design and quote your system, free",
         "body": "A free site assessment covers roof area, shading, structure, and your electrical distribution board. We then design your system — panel and inverter selection, cable routing, mounting method — and hand you a written proposal with one all-in price.",
         "imageAlt": "SolarTNP engineers assessing a rooftop site against the city skyline"
       },
       "step3": {
         "title": "Install",
+        "headline": "Our own crew installs it, to Japanese standards",
         "body": "Our own crew — never a subcontractor — handles roof mounting, cable management, inverter wiring, and commissioning over 2–4 days, using Japanese-grade mounting hardware and code-compliant wiring throughout. We also file your DOIT notification and manage EVN grid connection.",
         "imageAlt": "Installers carrying a solar panel into place on a metal roof"
       },
       "step4": {
         "title": "Support",
+        "headline": "We watch over your system for years",
         "body": "At handover you receive your full warranty package and monitoring app credentials. The first 12 months of callouts are free, and we monitor your system's generation so we can flag problems before you notice them.",
         "imageAlt": "A SolarTNP technician inspecting a rooftop solar installation during a maintenance visit"
       }
@@ -140,48 +144,64 @@
       "point1": "≤0.45% annual degradation — still ≥89% of rated output at year 25",
       "point2": "Tighter manufacturing tolerances and rigorous quality control",
       "point3": "Long warranty terms, backed by established manufacturers",
-      "imageAlt": "Illustration of a precision-mounted solar array under the sun, with SolarTNP's 25-year guarantee seal"
+      "imageAlt": "Solar panels precisely mounted on a tile roof, aligned and flush with the roofline"
+    },
+    "sourcing": {
+      "label": "International Sourcing & Shipping",
+      "title": "Sourcing and shipping, beyond our own installs",
+      "body": "Beyond the systems we install in Vietnam, SolarTNP sources solar equipment through the same trusted global supplier network — and ships it to clients across the US and Southeast Asia. Same sourcing standards, same quality checks, wherever it's headed.",
+      "marketUS": "United States",
+      "marketSEA": "Southeast Asia",
+      "cta": "Talk to Us About Sourcing",
+      "imageAlt": "Shipping containers stacked at a port, representing SolarTNP's international sourcing and shipping service"
     },
     "warranty": {
       "title": "Warranty & After-Sales",
-      "lead": "A layered warranty on every installation — manufacturer guarantees backed by our own workmanship promise — plus 12 months of free support from day one.",
+      "lead": "Most installers disappear the moment your payment clears. A SolarTNP system carries five protections that stack from handover all the way to year 25 — so there's never a gap in coverage.",
+      "closingLine": "Every layer above is contractual, not promotional — and because we install with a 25-year mindset from day one, we intend to be here for all of it.",
       "support12mo": "For the first 12 months after handover, all callouts are free. This is our baseline, not a promotion.",
       "note": "From year 2, an optional annual maintenance plan covers two panel cleaning visits and a full technical inspection. Ask us for current pricing.",
+      "afterCare": {
+        "label": "Beyond the Warranty",
+        "title": "Free support that doesn't end when the invoice does",
+        "year1Label": "Year 1",
+        "year2Label": "Year 2 onward"
+      },
       "headers": {
         "component": "Component",
-        "provider": "Provider",
+        "provider": "Backed by",
         "duration": "Duration",
         "coverage": "Coverage"
       },
       "row1": {
         "component": "Solar panels",
-        "provider": "Manufacturer (Panasonic / Sharp / Kyocera)",
+        "provider": "Panel manufacturer",
         "duration": "25 years",
-        "coverage": "Linear output guarantee — ≤0.45%/yr degradation; ≥89% of rated output at year 25"
+        "coverage": "Guaranteed to still produce ≥89% of rated power at year 25 — in writing, from the manufacturer, not a sales promise"
       },
       "row2": {
         "component": "Inverter",
         "provider": "Manufacturer (model-dependent)",
         "duration": "5–10 years",
-        "coverage": "Parts and labour for manufacturing defects"
+        "coverage": "If a manufacturing fault takes it down, parts and labour are covered — you don't pay twice for someone else's defect"
       },
       "row3": {
         "component": "Mounting hardware",
         "provider": "SolarTNP",
         "duration": "10 years",
-        "coverage": "Structural integrity — no failure due to corrosion or material defect"
+        "coverage": "No corrosion, no structural failure, for a decade — the part nobody thinks about until it's the part that matters"
       },
       "row4": {
         "component": "Workmanship",
         "provider": "SolarTNP",
         "duration": "2 years",
-        "coverage": "Any defect caused by installation — wiring, connections, assembly"
+        "coverage": "Any wiring, connection, or assembly issue traced back to our install — we fix it, full stop, no argument about whose fault it was"
       },
       "row5": {
         "component": "Roof waterproofing",
         "provider": "SolarTNP",
         "duration": "2 years",
-        "coverage": "Any water ingress caused by the installation — penetrations, flashings, fixings"
+        "coverage": "The roof leak every Vietnamese homeowner fears — if our penetrations or flashings cause it, we fix your ceiling, not you"
       },
       "imageAlt": "A SolarTNP technician performing after-sales maintenance on an installed system"
     },
@@ -197,6 +217,8 @@
       "subtitle": "Three system sizes, transparent inclusions, and an honest look at payback — sized to your roof, not oversold."
     },
     "tiers": {
+      "selectLabel": "Select a system size",
+      "selectedBadge": "Selected",
       "small": {
         "name": "Small",
         "tagline": "Apartments & small homes",
@@ -223,7 +245,7 @@
       "label": "SolarTNP",
       "title": "Always included",
       "items": [
-        "Japanese-sourced panels and inverter with full warranty documentation",
+        "Japanese or Chinese-sourced panels and inverter with full warranty documentation",
         "Site assessment, energy audit, and structural load check",
         "Installation by our own crew — never a subcontractor",
         "EVN grid-connection paperwork and DOIT notification handled for you",
@@ -240,8 +262,14 @@
         "cost": "System cost",
         "payback": "Est. payback",
         "todo": "TODO — owner to confirm",
-        "perMonth": "/month"
+        "perMonth": "/month",
+        "yearsUnit": "years",
+        "ofSystemLife": "of the 25-year system life"
       }
+    },
+    "finalCta": {
+      "title": "Ready to see your number?",
+      "body": "Tell us about your roof and your electricity bill — we'll get back within 48 hours with a free, honest quote sized to your actual load."
     },
     "faq": {
       "title": "Frequently Asked Questions",
@@ -286,14 +314,17 @@
     },
     "form": {
       "name": {
-        "label": "Full name"
+        "label": "Full name",
+        "placeholder": "e.g. Nguyễn Văn A"
       },
       "email": {
-        "label": "Email"
+        "label": "Email",
+        "placeholder": "you@email.com"
       },
       "phone": {
         "label": "Phone / Zalo / WhatsApp",
-        "hint": "We'll contact you on Zalo or WhatsApp"
+        "hint": "We'll contact you on Zalo or WhatsApp",
+        "placeholder": "+84 90 123 4567"
       },
       "propertyType": {
         "label": "Property type",
@@ -308,11 +339,13 @@
       },
       "roofArea": {
         "label": "Approximate roof area",
-        "hint": "e.g. 60m² or \"not sure yet\""
+        "hint": "e.g. 60m² or \"not sure yet\"",
+        "placeholder": "60m²"
       },
       "province": {
         "label": "Province / City",
-        "hint": "e.g. Biên Hòa, Thủ Đức, Long An"
+        "hint": "e.g. Biên Hòa, Thủ Đức, Long An",
+        "placeholder": "Biên Hòa, Thủ Đức, Long An"
       },
       "monthlyBill": {
         "label": "Monthly electricity bill",
@@ -334,7 +367,8 @@
         ]
       },
       "notes": {
-        "label": "Notes / questions"
+        "label": "Notes / questions",
+        "placeholder": "Anything else we should know about your roof or goals?"
       },
       "submit": "Request Free Assessment",
       "privacy": "By submitting, you agree to our Privacy Policy. We'll only use your details to respond to this enquiry.",
@@ -344,7 +378,7 @@
     "sidebar": {
       "direct": {
         "title": "Direct Contact",
-        "imageAlt": "A SolarTNP customer support representative assisting a client"
+        "imageAlt": "Strings of Vietnamese flags against a blue sky"
       },
       "hours": "Monday–Saturday, 8:00 AM – 5:30 PM (GMT+7)",
       "next": {

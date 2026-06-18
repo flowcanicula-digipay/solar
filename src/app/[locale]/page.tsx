@@ -3,9 +3,19 @@ import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { Link } from '@/i18n/navigation';
-import { PhoneCall, Ruler, HardHat, ShieldCheck, Factory, Handshake, Ship } from 'lucide-react';
+import {
+  PhoneCall,
+  Ruler,
+  HardHat,
+  ShieldCheck,
+  Factory,
+  Handshake,
+  Ship,
+  ClipboardCheck,
+  Globe2,
+} from 'lucide-react';
 import SunIcon from '@/components/SunIcon';
-import WarrantyTable from '@/components/WarrantyTable';
+import WarrantyTimeline from '@/components/WarrantyTimeline';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -42,6 +52,9 @@ const aboutFeatures = [
   { key: 'point4' as const, Icon: Handshake },
 ];
 
+// TODO: re-enable once we have more than the 4 seed installations to show
+const SHOW_PROJECTS = false;
+
 const ctaGridImages = [
   '/assets/images/cta/grid-1.jpg',
   '/assets/images/cta/grid-2.jpg',
@@ -69,7 +82,7 @@ export default async function HomePage({
           alt={t('hero.imageAlt')}
           fill
           priority
-          className="object-cover opacity-30"
+          className="animate-hero-zoom object-cover opacity-30 motion-reduce:animate-none"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/90 to-navy-950/40" />
 
@@ -78,22 +91,30 @@ export default async function HomePage({
             className="radiance-ring animate-radiance pointer-events-none absolute -left-20 top-10 h-72 w-72 rounded-full bg-amber-400 blur-3xl"
             aria-hidden="true"
           />
-          <h1 className="relative max-w-2xl font-display text-4xl font-bold leading-tight md:text-5xl">
+          <h1
+            className="animate-fade-up relative max-w-2xl font-display text-4xl font-bold leading-tight md:text-5xl"
+            style={{ animationDelay: '150ms' }}
+          >
             {t('hero.title')}
           </h1>
-          <p className="relative mt-6 max-w-xl text-lg text-cream-50/80">
+          <p
+            className="animate-fade-up relative mt-6 max-w-xl text-lg text-cream-50/80"
+            style={{ animationDelay: '420ms' }}
+          >
             {t('hero.subtitle')}
           </p>
           <div className="relative mt-8 flex flex-wrap gap-4">
             <Link
               href="/contact"
-              className="rounded-full bg-royal-600 px-6 py-3 text-sm font-semibold text-white hover:bg-royal-700"
+              className="animate-pop-in rounded-full bg-royal-600 px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:scale-105 hover:bg-royal-700"
+              style={{ animationDelay: '700ms' }}
             >
               {t('hero.cta')}
             </Link>
             <a
-              href="#projects"
-              className="rounded-full border-2 border-royal-600 px-6 py-3 text-sm font-semibold text-cream-50 hover:bg-royal-100 hover:text-royal-700"
+              href="#process"
+              className="animate-pop-in rounded-full border-2 border-royal-600 px-6 py-3 text-sm font-semibold text-cream-50 transition-all duration-200 hover:scale-105 hover:bg-royal-100 hover:text-royal-700"
+              style={{ animationDelay: '850ms' }}
             >
               {t('hero.secondaryCta')}
             </a>
@@ -132,10 +153,6 @@ export default async function HomePage({
                   </div>
                 ))}
               </dl>
-              <div className="mt-4 flex gap-3 rounded-xl border border-royal-600/20 bg-royal-100/60 p-4">
-                <Ship className="mt-0.5 h-5 w-5 flex-shrink-0 text-royal-600" aria-hidden="true" />
-                <p className="text-sm text-charcoal/80">{t('about.point5')}</p>
-              </div>
             </div>
             <figure className="relative">
               <div className="relative h-[420px] overflow-hidden rounded-2xl shadow-2xl sm:h-[520px]">
@@ -156,41 +173,48 @@ export default async function HomePage({
       </section>
 
       {/* How It Works */}
-      <section className="bg-white py-14 md:py-24">
+      <section id="process" className="bg-white py-14 md:py-24">
         <div className="mx-auto max-w-7xl px-6">
-          <h2 className="font-display text-3xl font-bold text-navy-950">{t('process.title')}</h2>
-          <p className="mt-3 max-w-2xl text-charcoal/70">{t('process.lead')}</p>
+          <header className="mx-auto mb-16 max-w-2xl text-center">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-royal-700">
+              {t('process.label')}
+            </p>
+            <h2 className="font-display text-3xl font-bold text-navy-950 lg:text-4xl">
+              {t('process.title')}
+            </h2>
+            <p className="mx-auto mt-6 max-w-xl text-base text-charcoal/70">{t('process.lead')}</p>
+          </header>
 
-          <ol className="mt-16 flex flex-col gap-16 md:gap-24">
+          <ol className="flex flex-col gap-24">
             {processSteps.map(({ key, src, Icon }, i) => (
               <li
                 key={key}
-                className="grid gap-8 md:grid-cols-2 md:items-center md:gap-16"
+                className="grid items-center gap-12 lg:grid-cols-2"
               >
-                <div className={i % 2 === 1 ? 'md:order-2' : ''}>
-                  <div className="flex items-center gap-3">
-                    <span className="font-display text-3xl font-bold text-charcoal/20">
+                <div className={i % 2 === 1 ? 'lg:order-2' : ''}>
+                  <div className="mb-4 flex items-center gap-3">
+                    <span className="font-display text-6xl font-bold leading-none text-royal-100">
                       {String(i + 1).padStart(2, '0')}
                     </span>
-                    <span className="h-4 w-px bg-charcoal/20" />
-                    <span className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-royal-600">
-                      <Icon className="h-3.5 w-3.5" aria-hidden="true" />
+                    <span className="h-10 w-px bg-royal-100" />
+                    <span className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-royal-600">
+                      <Icon className="h-5 w-5" aria-hidden="true" />
                       {t(`process.${key}.title`)}
                     </span>
                   </div>
-                  <h3 className="mt-4 font-display text-2xl font-bold text-navy-950">
-                    {t(`process.${key}.title`)}
+                  <h3 className="mb-4 font-display text-2xl font-bold text-navy-950 lg:text-3xl">
+                    {t(`process.${key}.headline`)}
                   </h3>
-                  <p className="mt-3 text-charcoal/70">{t(`process.${key}.body`)}</p>
+                  <p className="leading-relaxed text-charcoal/70">{t(`process.${key}.body`)}</p>
                 </div>
-                <div className="relative h-64 w-full overflow-hidden rounded-2xl md:h-80">
+                <figure className="relative h-80 overflow-hidden rounded-2xl shadow-lg lg:h-[420px]">
                   <Image
                     src={src}
                     alt={t(`process.${key}.imageAlt`)}
                     fill
                     className="object-cover"
                   />
-                </div>
+                </figure>
               </li>
             ))}
           </ol>
@@ -198,82 +222,121 @@ export default async function HomePage({
       </section>
 
       {/* Projects */}
-      <section id="projects" className="bg-cream-50 py-14 md:py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <h2 className="font-display text-3xl font-bold text-navy-950">
-            {t('projects.title')}
-          </h2>
-          <p className="mt-3 max-w-2xl text-charcoal/70">{t('projects.lead')}</p>
+      {SHOW_PROJECTS && (
+        <section id="projects" className="bg-cream-50 py-14 md:py-24">
+          <div className="mx-auto max-w-7xl px-6">
+            <h2 className="font-display text-3xl font-bold text-navy-950">
+              {t('projects.title')}
+            </h2>
+            <p className="mt-3 max-w-2xl text-charcoal/70">{t('projects.lead')}</p>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-2">
-            {projectImages.map(({ src, key }) => (
-              <article key={key} className="overflow-hidden rounded-2xl bg-white shadow-sm">
-                <div className="relative h-56 w-full">
-                  <Image
-                    src={src}
-                    alt={t(`projects.${key}.imageAlt`)}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-display text-xl font-semibold text-navy-950">
-                    {t(`projects.${key}.title`)}
-                  </h3>
-                  <p className="mt-1 text-sm font-semibold text-amber-400">
-                    {t(`projects.${key}.size`)}
-                  </p>
-                  <dl className="mt-4 space-y-1 text-sm text-charcoal/70">
-                    <div>{t(`projects.${key}.panels`)}</div>
-                    <div>{t(`projects.${key}.location`)}</div>
-                    <div>{t(`projects.${key}.duration`)}</div>
-                  </dl>
-                  <p className="mt-3 text-sm font-medium text-charcoal">
-                    {t(`projects.${key}.outcome`)}
-                  </p>
-                  <p className="mt-3 text-sm italic text-charcoal/60">
-                    {t(`projects.${key}.note`)}
-                  </p>
-                </div>
-              </article>
-            ))}
+            <div className="mt-12 grid gap-8 md:grid-cols-2">
+              {projectImages.map(({ src, key }) => (
+                <article key={key} className="overflow-hidden rounded-2xl bg-white shadow-sm">
+                  <div className="relative h-56 w-full">
+                    <Image
+                      src={src}
+                      alt={t(`projects.${key}.imageAlt`)}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-display text-xl font-semibold text-navy-950">
+                      {t(`projects.${key}.title`)}
+                    </h3>
+                    <p className="mt-1 text-sm font-semibold text-amber-400">
+                      {t(`projects.${key}.size`)}
+                    </p>
+                    <dl className="mt-4 space-y-1 text-sm text-charcoal/70">
+                      <div>{t(`projects.${key}.panels`)}</div>
+                      <div>{t(`projects.${key}.location`)}</div>
+                      <div>{t(`projects.${key}.duration`)}</div>
+                    </dl>
+                    <p className="mt-3 text-sm font-medium text-charcoal">
+                      {t(`projects.${key}.outcome`)}
+                    </p>
+                    <p className="mt-3 text-sm italic text-charcoal/60">
+                      {t(`projects.${key}.note`)}
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            <p className="mt-10 max-w-2xl text-sm text-charcoal/60">{t('projects.honestNote')}</p>
           </div>
-
-          <p className="mt-10 max-w-2xl text-sm text-charcoal/60">{t('projects.honestNote')}</p>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Warranty & After-Sales */}
       <section className="bg-white py-14 md:py-24">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="grid gap-10 md:grid-cols-3 md:items-end">
-            <div className="md:col-span-2">
-              <h2 className="font-display text-3xl font-bold text-navy-950">
-                {t('warranty.title')}
-              </h2>
-              <p className="mt-3 max-w-2xl text-charcoal/70">{t('warranty.lead')}</p>
-            </div>
-            <div className="relative h-40 w-full overflow-hidden rounded-2xl md:h-full">
-              <Image
-                src="/assets/images/process/aftersales.jpg"
-                alt={t('warranty.imageAlt')}
-                fill
-                className="object-cover"
-              />
-            </div>
+          <header className="mx-auto mb-12 max-w-2xl text-center">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-royal-700">
+              {t('about.label')}
+            </p>
+            <h2 className="font-display text-3xl font-bold text-navy-950 lg:text-4xl">
+              {t('warranty.title')}
+            </h2>
+            <p className="mx-auto mt-6 max-w-xl text-base text-charcoal/70">
+              {t('warranty.lead')}
+            </p>
+          </header>
+
+          <div className="mx-auto max-w-3xl">
+            <WarrantyTimeline />
+            <p className="mt-6 text-center text-sm italic text-charcoal/60">
+              {t('warranty.closingLine')}
+            </p>
           </div>
 
-          <div className="mt-10">
-            <WarrantyTable />
-          </div>
+          <div className="relative mt-16 overflow-hidden rounded-3xl px-8 py-10 text-cream-50 md:px-12 md:py-14">
+            <Image
+              src="/assets/images/cta/aftercare-bg.jpg"
+              alt=""
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-navy-950/85" />
 
-          <div className="mt-8 grid gap-4 md:grid-cols-2">
-            <p className="rounded-2xl bg-cream-50 p-4 text-sm text-charcoal/80">
-              {t('warranty.support12mo')}
-            </p>
-            <p className="rounded-2xl bg-cream-50 p-4 text-sm text-charcoal/80">
-              {t('warranty.note')}
-            </p>
+            <div className="relative">
+              <div className="mx-auto max-w-3xl text-center">
+                <p className="text-xs font-semibold uppercase tracking-widest text-royal-100">
+                  {t('warranty.afterCare.label')}
+                </p>
+                <h3 className="mt-4 font-display text-2xl font-bold lg:text-3xl">
+                  {t('warranty.afterCare.title')}
+                </h3>
+              </div>
+
+              <div className="mx-auto mt-10 grid max-w-3xl gap-px overflow-hidden rounded-2xl bg-cream-50/15 sm:grid-cols-2">
+                <div className="flex flex-col gap-3 bg-navy-950/70 p-6 backdrop-blur-sm">
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-royal-600">
+                      <PhoneCall className="h-5 w-5 text-white" aria-hidden="true" />
+                    </div>
+                    <p className="text-xs font-semibold uppercase tracking-wide text-royal-100">
+                      {t('warranty.afterCare.year1Label')}
+                    </p>
+                  </div>
+                  <p className="text-sm leading-relaxed text-cream-50/85">
+                    {t('warranty.support12mo')}
+                  </p>
+                </div>
+                <div className="flex flex-col gap-3 bg-navy-950/70 p-6 backdrop-blur-sm">
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-royal-600">
+                      <ClipboardCheck className="h-5 w-5 text-white" aria-hidden="true" />
+                    </div>
+                    <p className="text-xs font-semibold uppercase tracking-wide text-royal-100">
+                      {t('warranty.afterCare.year2Label')}
+                    </p>
+                  </div>
+                  <p className="text-sm leading-relaxed text-cream-50/85">{t('warranty.note')}</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -297,12 +360,54 @@ export default async function HomePage({
           </div>
           <div className="relative h-72 w-full overflow-hidden rounded-2xl bg-white">
             <Image
-              src="/assets/images/quality/japanese-precision.svg"
+              src="/assets/images/quality/japanese-precision.jpg"
               alt={t('japanese.imageAlt')}
               fill
               className="object-cover"
             />
           </div>
+        </div>
+      </section>
+
+      {/* International Sourcing & Shipping */}
+      <section className="relative overflow-hidden bg-navy-950 text-cream-50">
+        <Image
+          src="/assets/images/sourcing/sourcing-bg.jpg"
+          alt={t('sourcing.imageAlt')}
+          fill
+          className="object-cover opacity-40"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-950/85 to-navy-950/55" />
+
+        <div className="relative mx-auto max-w-7xl px-6 py-20 md:py-28">
+          <p className="text-xs font-semibold uppercase tracking-widest text-amber-400">
+            {t('sourcing.label')}
+          </p>
+          <h2 className="mt-4 max-w-2xl font-display text-3xl font-bold leading-tight lg:text-4xl">
+            {t('sourcing.title')}
+          </h2>
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-cream-50/80 lg:text-lg">
+            {t('sourcing.body')}
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-3">
+            <span className="inline-flex items-center gap-2 rounded-full border border-cream-50/20 bg-cream-50/5 px-4 py-2 text-sm font-medium text-cream-50/90">
+              <Globe2 className="h-4 w-4 text-amber-400" aria-hidden="true" />
+              {t('sourcing.marketUS')}
+            </span>
+            <span className="inline-flex items-center gap-2 rounded-full border border-cream-50/20 bg-cream-50/5 px-4 py-2 text-sm font-medium text-cream-50/90">
+              <Globe2 className="h-4 w-4 text-amber-400" aria-hidden="true" />
+              {t('sourcing.marketSEA')}
+            </span>
+          </div>
+
+          <Link
+            href="/contact"
+            className="mt-8 inline-flex items-center gap-2 rounded-full border-2 border-royal-600 bg-royal-600/10 px-6 py-3 text-sm font-semibold text-cream-50 transition-colors hover:bg-royal-600 hover:text-white"
+          >
+            <Ship className="h-4 w-4" aria-hidden="true" />
+            {t('sourcing.cta')}
+          </Link>
         </div>
       </section>
 
