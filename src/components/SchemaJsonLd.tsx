@@ -10,9 +10,9 @@ const localBusinessSchema = {
   email: 'thuy@tnpgr.vn',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Lô 35 đường số 9, KCN Tam Phước',
-    addressLocality: 'Biên Hòa',
-    addressRegion: 'Đồng Nai',
+    streetAddress: '529/14 Huỳnh Văn Bánh',
+    addressLocality: 'Phú Nhuận',
+    addressRegion: 'Hồ Chí Minh',
     addressCountry: 'VN',
   },
   areaServed: ['Đồng Nai', 'Ho Chi Minh City', 'Vietnam'],
@@ -42,7 +42,20 @@ const serviceSchema = {
   },
   areaServed: ['Đồng Nai', 'Ho Chi Minh City', 'Vietnam'],
   description:
-    'Design, supply, and installation of grid-tied solar systems — Chinese sourcing, Japanese standards, Vietnamese craft.',
+    'Design, supply, and installation of grid-tied solar systems — trusted sourcing, Japanese standards, Vietnamese craft.',
+};
+
+const sourcingServiceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'International solar equipment sourcing and shipping',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: 'SolarTNP',
+  },
+  areaServed: ['United States', 'Southeast Asia'],
+  description:
+    'Sourcing and shipping of solar equipment to clients across the US and Southeast Asia, through SolarTNP’s global supplier network.',
 };
 
 export default function SchemaJsonLd() {
@@ -55,6 +68,10 @@ export default function SchemaJsonLd() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(sourcingServiceSchema) }}
       />
     </>
   );

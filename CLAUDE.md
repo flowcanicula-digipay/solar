@@ -10,37 +10,46 @@ before going live.
 ## What Is SolarTNP?
 
 **SolarTNP** sells, designs, installs, and maintains solar panel systems for
-residential and light-commercial clients in Vietnam. The company has
-**Chinese-Japanese-Vietnamese** ownership and heritage — and this is not a
-marketing angle, it is the operational reality of how the company works.
+residential and light-commercial clients in Vietnam. SolarTNP is a
+**Vietnamese company with global sourcing partnerships, and a deep,
+defining tie to Japan** — and this is not a marketing angle, it is the
+operational reality of how the company works.
 
-- **Chinese heritage**: Deep supplier relationships in the global solar
-  manufacturing chain. SolarTNP can evaluate panel quality at the manufacturing
-  level, not just the spec sheet, and sources components at competitive prices
-  without compromising on quality.
-- **Japanese heritage**: Japanese electrical standards and a 25-year mindset.
-  Every connection is made correctly. Every mounting bolt is torqued to spec.
-  The installation is done as if someone will be servicing it every year for
-  25 years. (SolarTNP will be.)
-- **Vietnamese heritage**: The crew, the project managers, and the client team
-  are Vietnamese. They know Vietnamese EVN bureaucracy, Vietnamese roof
-  construction, Vietnamese monsoon seasons, and Vietnamese client anxieties —
-  especially the one about roof waterproofing.
+- **Vietnamese identity**: The crew, the project managers, the ownership, and
+  the client team are Vietnamese. They know Vietnamese EVN bureaucracy,
+  Vietnamese roof construction, Vietnamese monsoon seasons, and Vietnamese
+  client anxieties — especially the one about roof waterproofing.
+- **Japanese standards**: This is the company's core technical identity, not
+  one heritage among equals. Japanese electrical standards and a 25-year
+  mindset govern every install. Every connection is made correctly. Every
+  mounting bolt is torqued to spec. The installation is done as if someone
+  will be servicing it every year for 25 years. (SolarTNP will be.)
+- **Global partners**: Deep supplier relationships across the global solar
+  manufacturing chain (not centered on any single country). SolarTNP can
+  evaluate panel quality at the manufacturing level, not just the spec sheet,
+  and sources components at competitive prices without compromising on
+  quality.
+- **International sourcing & shipping**: Not only an inbound capability used
+  for SolarTNP's own installs — SolarTNP also sources solar equipment and
+  ships it to clients abroad, across the **US and Southeast Asia**, drawing
+  on the same supplier network. This is a distinct service line and should be
+  represented alongside sales/design/install/maintenance, not folded silently
+  into "global partners."
 
-The company is headquartered in Biên Hòa, newly established with 4 completed
-installations at launch.
+The company is headquartered in Phú Nhuận, Hồ Chí Minh City, newly established
+with 4 completed installations at launch.
 
-**Primary tagline**: *"Chinese sourcing. Japanese standards. Vietnamese craft."*
+**Primary tagline**: *"Trusted sourcing. Japanese standards. Vietnamese craft."*
 **Secondary tagline**: *"Solar done properly. Built to last 25 years."*
 
 | Field | Value |
 |---|---|
 | Company | SolarTNP |
 | Industry | Solar energy — residential & light-commercial |
-| Heritage | Chinese-Japanese-Vietnamese |
-| Services | Panel sales · System design · Installation · After-sales & maintenance |
-| HQ | Biên Hòa, Đồng Nai, Vietnam |
-| Address | Lô 35 đường số 9, KCN Tam Phước, Biên Hòa, Vietnam |
+| Heritage | Vietnamese company, global partners, deeply tied to Japan |
+| Services | Panel sales · System design · Installation · After-sales & maintenance · International sourcing & shipping (US, Southeast Asia) |
+| HQ | Phú Nhuận, Hồ Chí Minh, Vietnam |
+| Address | 529/14 Huỳnh Văn Bánh, Phú Nhuận, Hồ Chí Minh, Vietnam |
 | Primary email | thuy@tnpgr.vn |
 | Alt email | anhkiet3333@yahoo.com |
 | Phone | +84 90 333 37 29 |
@@ -160,15 +169,18 @@ const nextConfig = {
 | `royal-600` | `#003baf` | **Primary CTA buttons, active links, highlights** |
 | `royal-700` | `#002d8a` | Hover/pressed state on royal-600 elements |
 | `royal-100` | `#dce8ff` | Badge backgrounds, feature chips, light tints |
-| `amber-400` | `#F59E0B` | Sun icon, generation stat highlights — sparingly |
+| `amber-400` | `#F59E0B` | Sun icon, generation stat highlights, footer accents — sparingly |
 | `cream-50` | `#F8F5EE` | Off-white section backgrounds |
 | `charcoal` | `#2D2D2D` | Body text on light backgrounds |
 | `white` | `#FFFFFF` | Cards, forms, clean surfaces |
 
-**Amber rule**: `#F59E0B` amber is used in exactly three places —
-(1) the sun icon in the logo, (2) solar generation stat numbers/highlights,
-(3) the subtle hero radiance pulse. Nowhere else. This restraint makes the
-amber feel meaningful (it always means "sun/energy") rather than decorative.
+**Amber rule**: `#F59E0B` amber is reserved for a small, deliberate set of
+accents — (1) the sun icon in the logo, (2) solar generation stat
+numbers/highlights, (3) the subtle hero radiance pulse, and (4) the global
+`Footer` component (column headings, contact icons, social icon hover).
+Nowhere else. This restraint makes the amber feel meaningful (it always
+means "sun/energy" or, in the footer, a warm closing accent) rather than
+decorative.
 
 ### Typography
 
@@ -436,9 +448,9 @@ meta.regulations.description
 ### Translation quality rules
 
 **The identity across languages:**
-- EN: "Chinese sourcing. Japanese standards. Vietnamese craft."
-- VI: "Nguồn hàng Trung Quốc. Tiêu chuẩn Nhật Bản. Tay nghề Việt Nam."
-- JA: "中国調達。日本基準。ベトナムの職人技。"
+- EN: "Trusted sourcing. Japanese standards. Vietnamese craft."
+- VI: "Nguồn hàng đáng tin cậy. Tiêu chuẩn Nhật Bản. Tay nghề Việt Nam."
+- JA: "信頼できる調達。日本基準。ベトナムの職人技。"
 
 These three lines must appear verbatim in the hero and about sections of
 each locale file. They are the core identity claim.
@@ -464,12 +476,12 @@ each locale file. They are the core identity claim.
 - Net metering / surplus → "bán điện dư lên lưới"
 - Site assessment → "khảo sát hiện trạng" or "đánh giá địa điểm"
 - Free site assessment → "khảo sát miễn phí"
-- Chinese sourcing → "nguồn hàng Trung Quốc"
+- Global partners / sourcing → "đối tác toàn cầu"
 - Japanese standards → "tiêu chuẩn Nhật Bản"
 - Vietnamese craft → "tay nghề Việt Nam"
 
 **Japanese key terms:**
-- Primary tagline → "中国調達。日本基準。ベトナムの職人技。"
+- Primary tagline → "信頼できる調達。日本基準。ベトナムの職人技。"
 - Solar panels → ソーラーパネル (first), 太陽光パネル (alternates)
 - Solar power system → 太陽光発電システム
 - Grid-tied → 系統連系
@@ -487,41 +499,40 @@ each locale file. They are the core identity claim.
 - Panel brands → パナソニック、シャープ、京セラ (use katakana/kanji as natural)
 - Net metering → 余剰電力売電
 - Decree 135 → デクリー135/2024/ND-CP (or: ベトナム屋根置き太陽光規制)
-- Chinese sourcing → 中国調達
+- Global partners / sourcing → グローバルパートナー
 - Japanese standards → 日本基準
 - Vietnamese craft → ベトナムの職人技
 
 ---
 
-## Pricing Content (Owner Must Fill In)
+## Pricing Content
 
-The pricing page structure is built. The owner must fill in the actual price
-ranges. Find these TODO comments in `src/messages/en.json`:
+The pricing page is populated with realistic placeholder price ranges based on
+~14.5–15.5 million VND per installed kWp (typical Vietnam residential turnkey
+pricing) and a ~25,000 VND/USD exchange rate. **The owner should still verify
+these against current supplier and labour costs before launch** — they are
+sized to be plausible, not pulled from an actual quote.
 
 ```jsonc
-// TODO: set price range for small system (3–5 kWp)
-"pricing.tiers.small.price": "From $X,XXX USD / XXX triệu VND",
-
-// TODO: set price range for medium system (6–10 kWp)
-"pricing.tiers.medium.price": "From $X,XXX USD / XXX triệu VND",
-
-// TODO: set price range for large system (11–20 kWp)
+"pricing.tiers.small.price": "From $1,900 USD / 47 triệu VND (3 kWp) up to $3,100 USD / 78 triệu VND (5 kWp)",
+"pricing.tiers.medium.price": "From $3,600 USD / 90 triệu VND (6 kWp) up to $5,000 USD / 125 triệu VND (10 kWp)",
 "pricing.tiers.large.price": "Custom quote — contact us",
 ```
 
-Then update `vi.json` and `ja.json` with equivalent values in the appropriate
-currency/format for each audience.
+`vi.json` and `ja.json` carry the same USD/VND figures, translated to each
+locale's number formatting (e.g. `1억2,500만VND` in `ja.json` for 125 million VND).
 
 ### Payback Table
 
-A static table showing estimated payback periods. The owner should verify these
-numbers with current EVN tariffs before going live. Current draft values:
+A static table showing estimated payback periods (`src/components/PaybackTable.tsx`).
+The owner should verify these numbers with current EVN tariffs and actual
+system costs before going live. Current values:
 
 | System | Est. monthly savings | System cost | Est. payback |
 |---|---|---|---|
-| 5 kWp | ~1,400,000 VND/month | TODO | TODO years |
-| 8 kWp | ~2,200,000 VND/month | TODO | TODO years |
-| 15 kWp | ~4,800,000 VND/month | TODO | TODO years |
+| 5 kWp | ~1,400,000 VND/month | ~78,000,000 VND | ~4.6 years |
+| 8 kWp | ~2,200,000 VND/month | ~125,000,000 VND | ~4.7 years |
+| 15 kWp | ~4,800,000 VND/month | ~230,000,000 VND | ~4.0 years |
 
 ---
 
@@ -569,14 +580,16 @@ process described in STORY.md.
    We confirm compatibility during the site assessment. If the roof isn't
    suitable, we tell you before any commitment.
 
-6. **Why Chinese-sourced panels via a Japanese-standard installer?**
-   China manufactures the majority of the world's solar panels — including the
-   cells inside Japanese-branded products. SolarTNP's Chinese supply chain
-   relationships mean we can evaluate panel quality at the manufacturing level,
-   not just the spec sheet, and source at competitive prices. Our Japanese
-   installation standards mean those panels are mounted, wired, and commissioned
-   correctly — to tolerances that exceed Vietnam's minimums. You get supply chain
-   advantage and engineering rigour in the same project.
+6. **Why a Vietnamese company installing to Japanese standards?**
+   We're Vietnamese, and we install to Japanese engineering standards — not as
+   two separate claims, but as how the company actually operates. Our global
+   sourcing partnerships mean we can evaluate panel quality at the
+   manufacturing level, not just the spec sheet, and source at competitive
+   prices without compromising on quality. Our Japanese installation standards
+   mean those panels are mounted, wired, and commissioned correctly — to
+   tolerances that exceed Vietnam's minimums. You get global sourcing
+   advantage, Japanese engineering rigour, and a Vietnamese crew who knows the
+   ground truth, in the same project.
 
 7. **What does your warranty actually cover?**
    Every installation carries five distinct warranties: 25-year linear output
@@ -633,7 +646,7 @@ element (large navy "01" as a display character beside each heading).
 
 06  Contact us
     For privacy questions: thuy@tnpgr.vn · +84 90 333 37 29
-    Lô 35 đường số 9, KCN Tam Phước, Biên Hòa, Vietnam
+    529/14 Huỳnh Văn Bánh, Phú Nhuận, Hồ Chí Minh, Vietnam
 ```
 
 **Implementation notes:**
@@ -773,15 +786,15 @@ On error: show inline red error, keep form visible.
 {
   "@type": "LocalBusiness",
   "name": "SolarTNP",
-  "description": "Chinese-sourced, Japanese-standard solar panel installation and maintenance in Vietnam.",
+  "description": "Trusted-sourcing, Japanese-standard solar panel installation and maintenance in Vietnam.",
   "url": "https://solartnp.vn",
   "telephone": "+84903333729",
   "email": "thuy@tnpgr.vn",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Lô 35 đường số 9, KCN Tam Phước",
-    "addressLocality": "Biên Hòa",
-    "addressRegion": "Đồng Nai",
+    "streetAddress": "529/14 Huỳnh Văn Bánh",
+    "addressLocality": "Phú Nhuận",
+    "addressRegion": "Hồ Chí Minh",
     "addressCountry": "VN"
   },
   "areaServed": ["VN", "JP"],
@@ -884,13 +897,16 @@ ErrorDocument 404 /en/index.html
 5. Enable spam filtering in Formspree dashboard
 6. Submit a test entry and confirm email receipt
 
-#### 2. Fill in pricing numbers
-In `src/messages/en.json`, `vi.json`, `ja.json` — find the TODO pricing keys
-and fill in your real price ranges. See "Pricing Content" section above.
+#### 2. Verify pricing numbers
+In `src/messages/en.json`, `vi.json`, `ja.json` — the `pricing.tiers.*.price`
+keys are filled with realistic placeholder ranges (see "Pricing Content"
+section above). Confirm they match your actual supplier/labour costs before
+launch and adjust if not.
 
-#### 3. Fill in payback table numbers
-In `src/components/PaybackTable.tsx` — update estimated monthly savings and
-payback years based on current EVN tariffs. Verify accuracy before going live.
+#### 3. Verify payback table numbers
+`src/components/PaybackTable.tsx` has estimated monthly savings, system cost,
+and payback years filled in. Verify accuracy against current EVN tariffs and
+real installed costs before going live.
 
 #### 4. Set business hours
 Find `// TODO: insert business hours` in `src/messages/en.json`:
@@ -953,9 +969,9 @@ href="https://youtube.com/@solartnp"   // timelapse install videos work very wel
 3. Check for crawl errors after 48 hours
 
 #### 13. Register on Google Business Profile
-Register SolarTNP at the Biên Hòa address so local clients can find you on
-Maps when searching "lắp điện mặt trời Biên Hòa" or "solar panel installation
-Dong Nai".
+Register SolarTNP at the Phú Nhuận, Hồ Chí Minh address so local clients can
+find you on Maps when searching "lắp điện mặt trời Hồ Chí Minh" or "solar
+panel installation Ho Chi Minh City".
 
 ### 🟢 Nice-to-have later
 

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import ContactForm from '@/components/ContactForm';
+import PageHero from '@/components/PageHero';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -31,12 +32,11 @@ export default async function ContactPage({
 
   return (
     <>
-      <section className="bg-navy-950 py-16 text-cream-50 md:py-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <h1 className="max-w-2xl font-display text-4xl font-bold">{t('hero.title')}</h1>
-          <p className="mt-4 max-w-xl text-cream-50/80">{t('hero.subtitle')}</p>
-        </div>
-      </section>
+      <PageHero
+        image="/assets/images/banner/contact-hero.jpg"
+        title={t('hero.title')}
+        subtitle={t('hero.subtitle')}
+      />
 
       <section className="bg-cream-50 py-14 md:py-20">
         <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-3">

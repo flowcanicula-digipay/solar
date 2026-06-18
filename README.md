@@ -1,8 +1,8 @@
 # SolarTNP Website
 
 Marketing site for **SolarTNP** — a Chinese-Japanese-Vietnamese solar panel
-sales, design, installation, and maintenance company based in Biên Hòa,
-Vietnam.
+sales, design, installation, and maintenance company based in Phú Nhuận,
+Hồ Chí Minh, Vietnam.
 
 Static export built with Next.js 15 (App Router), TypeScript, Tailwind CSS,
 and `next-intl` for English / Vietnamese / Japanese localisation.

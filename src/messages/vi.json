@@ -11,14 +11,16 @@
       "getQuote": "Nhận báo giá",
       "learnMore": "Tìm hiểu thêm"
     },
+    "heroLabel": "SolarTNP — Phú Nhuận, Hồ Chí Minh",
     "footer": {
       "tagline": "Điện mặt trời chất lượng Nhật Bản. Lắp đặt đúng chuẩn, tại Việt Nam.",
-      "address": "Lô 35 đường số 9, KCN Tam Phước, Biên Hòa, Việt Nam",
-      "markets": "Phục vụ khách hàng tại Việt Nam và các đối tác liên kết Nhật Bản trên khắp Đồng Nai, TP. Hồ Chí Minh và miền Nam.",
+      "address": "529/14 Huỳnh Văn Bánh, Phú Nhuận, Hồ Chí Minh, Việt Nam",
+      "markets": "Phục vụ khách hàng tại Việt Nam và các đối tác liên kết Nhật Bản trên khắp Đồng Nai, TP. Hồ Chí Minh và miền Nam — cùng dịch vụ tìm nguồn hàng và vận chuyển quốc tế tới Mỹ và Đông Nam Á.",
       "privacy": "Chính sách bảo mật",
       "quickLinks": "Liên kết nhanh",
       "company": "Công ty",
       "contactColumn": "Liên hệ",
+      "marketsLabel": "Thị trường",
       "rights": "Đã đăng ký bản quyền.",
       "regulations": "Quy định điện mặt trời"
     },
@@ -27,7 +29,7 @@
       "phoneLabel": "Điện thoại",
       "emailLabel": "Email",
       "altEmailLabel": "Email phụ",
-      "address": "Lô 35 đường số 9, KCN Tam Phước, Biên Hòa, Đồng Nai, Việt Nam",
+      "address": "529/14 Huỳnh Văn Bánh, Phú Nhuận, Hồ Chí Minh, Việt Nam",
       "phone": "+84 90 333 37 29",
       "email": "thuy@tnpgr.vn",
       "altEmail": "anhkiet3333@yahoo.com"
@@ -40,6 +42,9 @@
     }
   },
   "home": {
+    "brandBanner": {
+      "location": "Phú Nhuận · Hồ Chí Minh · Việt Nam"
+    },
     "hero": {
       "title": "Điện mặt trời chất lượng Nhật Bản. Lắp đặt đúng chuẩn, tại Việt Nam.",
       "subtitle": "SolarTNP thiết kế, cung cấp và lắp đặt hệ thống điện mặt trời hòa lưới bằng tấm pin năng lượng mặt trời nhập từ Nhật Bản — phù hợp với mái nhà, ánh nắng và hóa đơn tiền điện của người Việt.",
@@ -48,37 +53,46 @@
       "imageAlt": "Tấm pin năng lượng mặt trời lắp trên mái ngói dưới bầu trời xanh"
     },
     "about": {
+      "label": "SolarTNP",
       "title": "Công ty Nhật-Việt, xây dựng từ chất lượng",
       "body": "SolarTNP mang tiêu chuẩn nhập hàng của Nhật Bản vào thị trường điện mặt trời Việt Nam. Chúng tôi kết hợp tấm pin hiệu suất cao, bảo hành dài hạn từ các nhà sản xuất Nhật Bản uy tín với đội ngũ lắp đặt người Việt am hiểu mái nhà, khí hậu và thực tế lưới điện địa phương. Chúng tôi là công ty còn trẻ — mỗi hệ thống chúng tôi lắp đều được tính toán đúng và thi công không cắt xén.",
-      "point1": "Tấm pin nhập từ Nhật Bản, bảo hành công suất tuyến tính 25 năm",
+      "point1": "Tấm pin nhập từ Nhật Bản và các đối tác toàn cầu, bảo hành công suất tuyến tính 25 năm",
       "point2": "Đội thi công riêng của chúng tôi — không thuê lại nhà thầu phụ",
       "point3": "Lo toàn bộ thủ tục hòa lưới với EVN cho khách hàng",
-      "point4": "Hỗ trợ kỹ thuật miễn phí 12 tháng sau khi lắp đặt"
+      "point4": "Hỗ trợ kỹ thuật miễn phí 12 tháng sau khi lắp đặt",
+      "point5": "Tìm nguồn hàng & vận chuyển quốc tế — chúng tôi cũng tìm nguồn thiết bị năng lượng mặt trời và vận chuyển cho khách hàng tại Mỹ và Đông Nam Á, qua cùng mạng lưới nhà cung cấp mà chúng tôi dùng cho các công trình của mình",
+      "closingLine": "Công ty Việt Nam, đối tác toàn cầu.",
+      "imageAlt": "Đội ngũ SolarTNP khảo sát mái nhà với đường chân trời Thành phố Hồ Chí Minh phía sau",
+      "badge": "Tiêu chuẩn Nhật Bản, mọi công trình"
     },
     "process": {
       "title": "Quy trình làm việc",
       "lead": "Một quy trình rõ ràng gồm bốn giai đoạn — từ lần trò chuyện đầu tiên đến nhiều năm hỗ trợ sau lắp đặt.",
       "step1": {
         "title": "Tư vấn",
-        "body": "Một buổi trò chuyện đầu tiên không áp lực — về hóa đơn tiền điện trung bình, loại hình nhà ở và quyền sở hữu mái nhà. Chúng tôi nói thẳng liệu điện mặt trời có phù hợp với tình huống của bạn ngay lúc này hay không."
+        "body": "Một buổi trò chuyện đầu tiên không áp lực — về hóa đơn tiền điện trung bình, loại hình nhà ở và quyền sở hữu mái nhà. Chúng tôi nói thẳng liệu điện mặt trời có phù hợp với tình huống của bạn ngay lúc này hay không.",
+        "imageAlt": "Một thành viên của SolarTNP trao đổi dự án với khách hàng"
       },
       "step2": {
         "title": "Thiết kế",
-        "body": "Khảo sát hiện trạng miễn phí bao gồm diện tích mái, hướng nắng, kết cấu và tủ điện phân phối. Sau đó chúng tôi thiết kế hệ thống — chọn tấm pin và inverter, đường đi dây, phương án lắp khung — và gửi bạn báo giá bằng văn bản với một mức giá trọn gói duy nhất."
+        "body": "Khảo sát hiện trạng miễn phí bao gồm diện tích mái, hướng nắng, kết cấu và tủ điện phân phối. Sau đó chúng tôi thiết kế hệ thống — chọn tấm pin và inverter, đường đi dây, phương án lắp khung — và gửi bạn báo giá bằng văn bản với một mức giá trọn gói duy nhất.",
+        "imageAlt": "Kỹ sư SolarTNP khảo sát hiện trạng trên mái nhà với nền là đường chân trời thành phố"
       },
       "step3": {
         "title": "Lắp đặt",
-        "body": "Đội thi công của chúng tôi — không qua nhà thầu phụ — đảm nhận việc lắp khung trên mái, đi dây, đấu nối inverter và vận hành thử trong 2–4 ngày, sử dụng phụ kiện lắp đặt chuẩn Nhật Bản và đi dây đúng quy chuẩn. Chúng tôi cũng nộp hồ sơ thông báo DOIT và làm thủ tục hòa lưới EVN cho bạn."
+        "body": "Đội thi công của chúng tôi — không qua nhà thầu phụ — đảm nhận việc lắp khung trên mái, đi dây, đấu nối inverter và vận hành thử trong 2–4 ngày, sử dụng phụ kiện lắp đặt chuẩn Nhật Bản và đi dây đúng quy chuẩn. Chúng tôi cũng nộp hồ sơ thông báo DOIT và làm thủ tục hòa lưới EVN cho bạn.",
+        "imageAlt": "Đội thi công đưa tấm pin năng lượng mặt trời vào vị trí lắp đặt trên mái tôn"
       },
       "step4": {
         "title": "Hỗ trợ",
-        "body": "Khi nghiệm thu, bạn nhận đầy đủ hồ sơ bảo hành và thông tin đăng nhập ứng dụng giám sát. 12 tháng đầu, mọi lượt hỗ trợ kỹ thuật đều miễn phí, và chúng tôi theo dõi sản lượng hệ thống của bạn để phát hiện vấn đề trước khi bạn nhận ra."
+        "body": "Khi nghiệm thu, bạn nhận đầy đủ hồ sơ bảo hành và thông tin đăng nhập ứng dụng giám sát. 12 tháng đầu, mọi lượt hỗ trợ kỹ thuật đều miễn phí, và chúng tôi theo dõi sản lượng hệ thống của bạn để phát hiện vấn đề trước khi bạn nhận ra.",
+        "imageAlt": "Kỹ thuật viên SolarTNP kiểm tra hệ thống điện mặt trời trên mái nhà trong một lần bảo trì"
       }
     },
     "projects": {
       "title": "Công trình đã thực hiện",
       "lead": "Bốn công trình thực tế. Công suất thực, vị trí thực, kết quả thực — không có số liệu thổi phồng.",
-      "honestNote": "Chúng tôi là công ty còn trẻ. Đây là bốn công trình đầu tiên — mỗi công trình đều được làm đúng chuẩn, không cắt xén. Nhiều công trình khác đang được triển khai.",
+      "honestNote": "Công trình thứ 4 hay thứ 400, chúng tôi vẫn áp dụng cùng một tiêu chuẩn Nhật Bản — tính toán kết cấu đầy đủ, không cắt xén, bảo hành 25 năm. Đó là tiêu chuẩn mà SolarTNP xây dựng từ những công trình đầu tiên.",
       "p1": {
         "title": "Nhà riêng tại Biên Hòa",
         "size": "5 kWp hòa lưới",
@@ -122,11 +136,11 @@
     },
     "japanese": {
       "title": "Vì sao chất lượng Nhật Bản quan trọng",
-      "body": "Thị trường điện mặt trời Việt Nam phát triển rất nhanh trong những năm gần đây — và chất lượng không đồng đều từ các nhà cung cấp giá rẻ là vấn đề thực sự. Tấm pin Nhật Bản có bảo hành công suất tuyến tính 25 năm, suy giảm hiệu suất chỉ khoảng 0,45%/năm. Các tấm pin giá rẻ thường suy giảm 1,5–2%/năm, mất một nửa công suất chỉ sau 15 năm. Trong vòng đời 25 năm của hệ thống, khoảng cách này gần như luôn vượt qua chênh lệch giá ban đầu.",
+      "body": "Thị trường điện mặt trời Việt Nam phát triển rất nhanh trong những năm gần đây — và chất lượng không đồng đều từ các nhà cung cấp giá rẻ là vấn đề thực sự. Chúng tôi hợp tác với các nhà sản xuất Trung Quốc, Nhật Bản và các đối tác toàn cầu nhờ chế độ bảo hành công suất tuyến tính 25 năm, suy giảm hiệu suất chỉ khoảng 0,45%/năm. Các tấm pin giá rẻ, lắp đặt kém thường suy giảm 1,5–2%/năm, mất một nửa công suất chỉ sau 15 năm. Trong vòng đời 25 năm của hệ thống, khoảng cách này gần như luôn vượt qua chênh lệch giá ban đầu.",
       "point1": "Suy giảm hiệu suất ≤0,45%/năm — vẫn đạt ≥89% công suất danh định ở năm thứ 25",
       "point2": "Sai số sản xuất chặt chẽ hơn và kiểm soát chất lượng nghiêm ngặt",
       "point3": "Thời hạn bảo hành dài và được tuân thủ nghiêm túc từ các nhà sản xuất uy tín",
-      "imageAlt": "Biểu đồ so sánh suy giảm công suất 25 năm giữa tấm pin thông thường và tấm pin Nhật Bản"
+      "imageAlt": "Hình minh họa hệ thống pin mặt trời lắp đặt chuẩn xác dưới ánh nắng, cùng dấu chứng nhận bảo hành 25 năm của SolarTNP"
     },
     "cta": {
       "title": "Sẵn sàng khảo sát miễn phí?",
@@ -188,14 +202,14 @@
         "tagline": "Căn hộ & nhà nhỏ",
         "size": "3–5 kWp",
         "description": "Phù hợp với mức tiêu thụ ban ngày của hộ gia đình nhỏ — thường từ 4–10 tấm pin tùy diện tích mái và công suất tấm.",
-        "price": "Từ X.XXX USD / XXX triệu VNĐ — CẦN BỔ SUNG: chủ doanh nghiệp điền khoảng giá"
+        "price": "Từ 1.900 USD / 47 triệu VNĐ (3 kWp) đến 3.100 USD / 78 triệu VNĐ (5 kWp)"
       },
       "medium": {
         "name": "Trung bình",
         "tagline": "Nhà gia đình & văn phòng nhỏ",
         "size": "6–10 kWp",
         "description": "Mức công suất phổ biến nhất trong các công trình của chúng tôi hiện nay — đáp ứng phần lớn tiêu thụ ban ngày của một gia đình.",
-        "price": "Từ X.XXX USD / XXX triệu VNĐ — CẦN BỔ SUNG: chủ doanh nghiệp điền khoảng giá"
+        "price": "Từ 3.600 USD / 90 triệu VNĐ (6 kWp) đến 5.000 USD / 125 triệu VNĐ (10 kWp)"
       },
       "large": {
         "name": "Lớn",
@@ -206,6 +220,7 @@
       }
     },
     "included": {
+      "label": "SolarTNP",
       "title": "Tất cả các mức đều bao gồm",
       "items": [
         "Tấm pin và inverter nhập từ Nhật Bản kèm đầy đủ hồ sơ bảo hành",
@@ -367,7 +382,7 @@
     },
     "s06": {
       "heading": "Liên hệ với chúng tôi",
-      "body": "Với các câu hỏi về bảo mật: thuy@tnpgr.vn · +84 90 333 37 29. Lô 35 đường số 9, KCN Tam Phước, Biên Hòa, Việt Nam."
+      "body": "Với các câu hỏi về bảo mật: thuy@tnpgr.vn · +84 90 333 37 29. 529/14 Huỳnh Văn Bánh, Phú Nhuận, Hồ Chí Minh, Việt Nam."
     },
     "backHome": "Về trang chủ"
   },

@@ -1,14 +1,13 @@
 import { useTranslations } from 'next-intl';
 
 const rows = [
-  { size: '5 kWp', savings: '~1,400,000 VND' },
-  { size: '8 kWp', savings: '~2,200,000 VND' },
-  { size: '15 kWp', savings: '~4,800,000 VND' },
+  { size: '5 kWp', savings: '~1,400,000 VND', cost: '~78,000,000 VND', payback: '~4.6 years' },
+  { size: '8 kWp', savings: '~2,200,000 VND', cost: '~125,000,000 VND', payback: '~4.7 years' },
+  { size: '15 kWp', savings: '~4,800,000 VND', cost: '~230,000,000 VND', payback: '~4.0 years' },
 ];
 
 export default function PaybackTable() {
   const t = useTranslations('pricing.payback.table');
-  const todo = t('todo');
 
   return (
     <div className="overflow-x-auto rounded-2xl border border-navy-800/10">
@@ -29,8 +28,8 @@ export default function PaybackTable() {
                 {row.savings}
                 {t('perMonth')}
               </td>
-              <td className="px-4 py-3 text-charcoal/50">{todo}</td>
-              <td className="px-4 py-3 text-charcoal/50">{todo}</td>
+              <td className="px-4 py-3">{row.cost}</td>
+              <td className="px-4 py-3">{row.payback}</td>
             </tr>
           ))}
         </tbody>

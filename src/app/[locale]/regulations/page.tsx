@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import RegulationsTable from '@/components/RegulationsTable';
+import PageHero from '@/components/PageHero';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -36,12 +37,11 @@ export default async function RegulationsPage({
 
   return (
     <>
-      <section className="bg-navy-950 py-16 text-cream-50 md:py-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <h1 className="max-w-2xl font-display text-4xl font-bold">{t('title')}</h1>
-          <p className="mt-4 max-w-2xl text-cream-50/80">{t('subtitle')}</p>
-        </div>
-      </section>
+      <PageHero
+        image="/assets/images/banner/regulations-hero.jpg"
+        title={t('title')}
+        subtitle={t('subtitle')}
+      />
 
       <section className="bg-cream-50 py-14 md:py-20">
         <div className="mx-auto max-w-3xl space-y-12 px-6">

@@ -13,9 +13,8 @@
 SolarTNP is a newly established solar energy company operating in Vietnam, with
 **Chinese-Japanese-Vietnamese** ownership and heritage. It sells, designs,
 installs, and maintains residential and light-commercial solar panel systems.
-The company is based in Biên Hòa (Đồng Nai province) — one hour from Ho Chi
-Minh City — and serves homeowners, small businesses, and light-industrial
-clients across southern Vietnam.
+The company is based in Phú Nhuận, Ho Chi Minh City — and serves homeowners,
+small businesses, and light-industrial clients across southern Vietnam.
 
 ### The Three-Culture Identity — Why It Matters
 
@@ -65,7 +64,7 @@ experience. The trust is built through specificity: real system sizes, real
 panel brands, real project locations, real warranty terms, and the honesty to
 say "we are just starting and we do fewer jobs and we do them properly."
 
-**Tagline**: *"Chinese sourcing. Japanese standards. Vietnamese craft."*
+**Tagline**: *"Trusted sourcing. Japanese standards. Vietnamese craft."*
 
 **Secondary tagline** (for hero subheadline, shorter contexts):
 *"Solar done properly. Built to last 25 years."*
@@ -80,8 +79,8 @@ say "we are just starting and we do fewer jobs and we do them properly."
 | Industry | Solar energy — residential & light-commercial |
 | Services | Panel sales, system design, installation, after-sales & maintenance |
 | Heritage | Chinese-Japanese-Vietnamese |
-| HQ | Biên Hòa, Đồng Nai province, Vietnam |
-| Address | Lô 35 đường số 9, Khu Công Nghiệp Tam Phước, Biên Hòa, Vietnam |
+| HQ | Phú Nhuận, Hồ Chí Minh, Vietnam |
+| Address | 529/14 Huỳnh Văn Bánh, Phú Nhuận, Hồ Chí Minh, Vietnam |
 | Primary email | thuy@tnpgr.vn |
 | Alt email | anhkiet3333@yahoo.com |
 | Phone | +84 90 333 37 29 |
@@ -144,7 +143,7 @@ in parallel, not after, so no time is wasted.
 
 ### Phase 5 — Procurement & Component Inspection
 SolarTNP orders the specific panels and inverter for this job. Components arrive
-at the Biên Hòa facility, are inspected on receipt against the manufacturer
+at the Phú Nhuận facility, are inspected on receipt against the manufacturer
 spec sheet, and staged for the installation date. The Chinese supply chain
 relationships mean components arrive quickly and at verified quality.
 
@@ -262,7 +261,7 @@ and long-term thinking without overpromising.
 ### Home (`/`)
 - **Hero**: Bold headline landing the triple identity. Background: a completed
   SolarTNP installation — panels on a Vietnamese tile roof, blue sky, clean
-  cable runs. Headline: "Chinese sourcing. Japanese standards. Vietnamese craft."
+  cable runs. Headline: "Trusted sourcing. Japanese standards. Vietnamese craft."
   Subheadline: "Solar done properly. Built to last 25 years."
 - **About**: The three-culture story told plainly and specifically — what each
   heritage contributes and why the combination matters. Not marketing copy.
@@ -513,7 +512,7 @@ social proof strip. They are deliberately modest — this is a new company.
   warranty durations
 
 ### Updated Taglines (for SVG assets and OG images)
-- **Primary**: "Chinese sourcing. Japanese standards. Vietnamese craft."
+- **Primary**: "Trusted sourcing. Japanese standards. Vietnamese craft."
 - **Secondary**: "Solar done properly. Built to last 25 years."
 - Use primary on hero and OG images. Use secondary on CTAs and the pricing page.
 
@@ -674,9 +673,9 @@ rectangles. Each spec below is the brief for the generator.
 - Background: navy `#0C1F3F`
 - Top-left: `logo-light.svg` embedded (~180px wide)
 - Centre: large display text (locale-specific):
-  EN: "Chinese sourcing. Japanese standards." / "Vietnamese craft. Solar done right."
-  VI: "Nguồn hàng Trung Quốc. Tiêu chuẩn Nhật." / "Tay nghề Việt. Điện mặt trời đúng chuẩn."
-  JA: "中国調達。日本基準。" / "ベトナムの職人技。正しく設置された太陽光発電。"
+  EN: "Trusted sourcing. Japanese standards." / "Vietnamese craft. Solar done right."
+  VI: "Nguồn hàng đáng tin cậy. Tiêu chuẩn Nhật." / "Tay nghề Việt. Điện mặt trời đúng chuẩn."
+  JA: "信頼できる調達。日本基準。" / "ベトナムの職人技。正しく設置された太陽光発電。"
 - Right third: the hero sun illustration (amber circle + rays) at full opacity
 - Bottom: thin royal blue rule, then website URL in Inter Mono cream text
 - All text in cream `#F8F5EE`

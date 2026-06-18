@@ -11,14 +11,16 @@
       "getQuote": "Get a Quote",
       "learnMore": "Learn More"
     },
+    "heroLabel": "SolarTNP — Phú Nhuận, Hồ Chí Minh",
     "footer": {
-      "tagline": "Chinese sourcing. Japanese standards. Vietnamese craft.",
-      "address": "Lô 35 đường số 9, KCN Tam Phước, Biên Hòa, Vietnam",
-      "markets": "Serving Vietnam and Japan-linked clients across Đồng Nai, Ho Chi Minh City, and southern Vietnam.",
+      "tagline": "Trusted sourcing. Japanese standards. Vietnamese craft.",
+      "address": "529/14 Huỳnh Văn Bánh, Phú Nhuận, Hồ Chí Minh, Vietnam",
+      "markets": "Serving Vietnam and Japan-linked clients across Đồng Nai, Ho Chi Minh City, and southern Vietnam — plus international sourcing and shipping to the US and Southeast Asia.",
       "privacy": "Privacy Policy",
       "quickLinks": "Quick Links",
       "company": "Company",
       "contactColumn": "Contact",
+      "marketsLabel": "Markets",
       "rights": "All rights reserved.",
       "regulations": "Solar Regulations"
     },
@@ -27,7 +29,7 @@
       "phoneLabel": "Phone",
       "emailLabel": "Email",
       "altEmailLabel": "Alternate email",
-      "address": "Lô 35 đường số 9, KCN Tam Phước, Biên Hòa, Đồng Nai, Vietnam",
+      "address": "529/14 Huỳnh Văn Bánh, Phú Nhuận, Hồ Chí Minh, Vietnam",
       "phone": "+84 90 333 37 29",
       "email": "thuy@tnpgr.vn",
       "altEmail": "anhkiet3333@yahoo.com"
@@ -40,45 +42,57 @@
     }
   },
   "home": {
+    "brandBanner": {
+      "location": "Phú Nhuận · Hồ Chí Minh · Vietnam"
+    },
     "hero": {
-      "title": "Chinese sourcing. Japanese standards. Vietnamese craft.",
+      "title": "Trusted sourcing. Japanese standards. Vietnamese craft.",
       "subtitle": "Solar done properly. Built to last 25 years. SolarTNP designs, supplies, and installs grid-tied solar systems — built for Vietnamese roofs, Vietnamese sun, and Vietnamese electricity bills.",
       "cta": "Get a Free Site Assessment",
       "secondaryCta": "See Our Work",
       "imageAlt": "Solar panels installed on a tile roof under a clear blue sky"
     },
     "about": {
-      "title": "Three cultures, one standard",
-      "body": "SolarTNP is a Chinese-Japanese-Vietnamese company, and that heritage shapes how we work — not just where our components come from. We source through Chinese supply chain relationships, install to Japanese engineering standards, and rely on a Vietnamese crew who know local roofs, local weather, and local grid realities. We are a young company — every system we've installed has been sized properly and installed without shortcuts.",
-      "point1": "Chinese supply chain — panel quality evaluated at the manufacturing level, sourced at competitive prices",
+      "label": "SolarTNP",
+      "title": "Vietnamese craft, Japanese standards",
+      "body": "SolarTNP is a Vietnamese company, built around a deep partnership with Japan. We install to Japanese engineering standards, source components through trusted global partners, and rely on our own Vietnamese crew who know local roofs, local weather, and local grid realities. We are a young company — every system we've installed has been sized properly and installed without shortcuts.",
+      "point1": "Global partners — panel quality evaluated at the manufacturing level, sourced at competitive prices without compromising standards",
       "point2": "Japanese standards — every mounting bolt torqued to spec, every connection tested, a 25-year mindset on day one",
       "point3": "Vietnamese craft — our own installation crew who know Vietnamese roofs, EVN bureaucracy, and monsoon seasons",
-      "point4": "The combination: supply chain leverage, engineering rigour, and local execution in one project"
+      "point4": "The combination: global sourcing leverage, Japanese engineering rigour, and local execution in one project",
+      "point5": "International sourcing & shipping — we also source solar equipment and ship to clients across the US and Southeast Asia, through the same supplier network we use for our own installs",
+      "closingLine": "Vietnamese company, global partners.",
+      "imageAlt": "SolarTNP crew assessing a rooftop site against the Ho Chi Minh City skyline",
+      "badge": "Japanese-standard install, every time"
     },
     "process": {
       "title": "How It Works",
       "lead": "A clear, four-stage process — from first conversation to years of after-sales support.",
       "step1": {
         "title": "Consult",
-        "body": "A no-pressure first conversation — your average electricity bill, property type, and roof ownership. We tell you honestly whether solar makes sense for your situation right now."
+        "body": "A no-pressure first conversation — your average electricity bill, property type, and roof ownership. We tell you honestly whether solar makes sense for your situation right now.",
+        "imageAlt": "A SolarTNP team member discussing a project with a client"
       },
       "step2": {
         "title": "Design",
-        "body": "A free site assessment covers roof area, shading, structure, and your electrical distribution board. We then design your system — panel and inverter selection, cable routing, mounting method — and hand you a written proposal with one all-in price."
+        "body": "A free site assessment covers roof area, shading, structure, and your electrical distribution board. We then design your system — panel and inverter selection, cable routing, mounting method — and hand you a written proposal with one all-in price.",
+        "imageAlt": "SolarTNP engineers assessing a rooftop site against the city skyline"
       },
       "step3": {
         "title": "Install",
-        "body": "Our own crew — never a subcontractor — handles roof mounting, cable management, inverter wiring, and commissioning over 2–4 days, using Japanese-grade mounting hardware and code-compliant wiring throughout. We also file your DOIT notification and manage EVN grid connection."
+        "body": "Our own crew — never a subcontractor — handles roof mounting, cable management, inverter wiring, and commissioning over 2–4 days, using Japanese-grade mounting hardware and code-compliant wiring throughout. We also file your DOIT notification and manage EVN grid connection.",
+        "imageAlt": "Installers carrying a solar panel into place on a metal roof"
       },
       "step4": {
         "title": "Support",
-        "body": "At handover you receive your full warranty package and monitoring app credentials. The first 12 months of callouts are free, and we monitor your system's generation so we can flag problems before you notice them."
+        "body": "At handover you receive your full warranty package and monitoring app credentials. The first 12 months of callouts are free, and we monitor your system's generation so we can flag problems before you notice them.",
+        "imageAlt": "A SolarTNP technician inspecting a rooftop solar installation during a maintenance visit"
       }
     },
     "projects": {
       "title": "Our Installations",
       "lead": "Four real installations. Real sizes, real locations, real outcomes — no inflated numbers.",
-      "honestNote": "We're a young company. These four projects are where we've started — each one done properly, without shortcuts. More are in progress.",
+      "honestNote": "Every install gets the same Japanese-standard treatment — full structural calculations, no shortcuts, 25-year warranties — whether it's our 4th project or our 400th. That's the standard we're building SolarTNP on.",
       "p1": {
         "title": "Biên Hòa Residence",
         "size": "5 kWp grid-tied",
@@ -121,12 +135,12 @@
       }
     },
     "japanese": {
-      "title": "Why Our Supply Chain",
-      "body": "China manufactures the majority of the world's solar panels — including the cells inside many premium brands. Our Chinese supply chain relationships mean we evaluate panel quality at the manufacturing level, not just the spec sheet, and source at competitive prices without compromising quality. Our Japanese installation standards then carry that hardware through 25-year linear output guarantees and degradation as low as 0.45% per year. Cheaper, poorly-installed alternatives often degrade at 1.5–2% per year, losing half their output within 15 years. Our Vietnamese crew makes sure it's all installed and serviced right, for as long as the system runs.",
-      "point1": "Chinese sourcing — panel quality assessed at the manufacturing level, competitive pricing without compromise",
-      "point2": "Japanese standards — ≤0.45% annual degradation, still ≥89% of rated output at year 25",
-      "point3": "Vietnamese craft — local installation expertise and a long-term service relationship",
-      "imageAlt": "Chart comparing 25-year output degradation between standard panels and SolarTNP-installed panels"
+      "title": "Why Japanese Standards Matter",
+      "body": "Vietnam's solar market has grown quickly in recent years — and inconsistent quality from cut-rate suppliers is a real problem. We work with Chinese and Japanese manufacturers and global partners for their 25-year linear output guarantees and degradation as low as 0.45% per year. Cheaper, poorly-installed alternatives often degrade at 1.5–2% per year, losing half their output within 15 years. Over a 25-year system life, that gap almost always outweighs the upfront price difference.",
+      "point1": "≤0.45% annual degradation — still ≥89% of rated output at year 25",
+      "point2": "Tighter manufacturing tolerances and rigorous quality control",
+      "point3": "Long warranty terms, backed by established manufacturers",
+      "imageAlt": "Illustration of a precision-mounted solar array under the sun, with SolarTNP's 25-year guarantee seal"
     },
     "warranty": {
       "title": "Warranty & After-Sales",
@@ -188,14 +202,14 @@
         "tagline": "Apartments & small homes",
         "size": "3–5 kWp",
         "description": "Right-sized for a smaller household's daytime load — typically 4–10 panels depending on roof space and wattage.",
-        "price": "From $X,XXX USD / XXX triệu VND — TODO: owner to set price range"
+        "price": "From $1,900 USD / 47 triệu VND (3 kWp) up to $3,100 USD / 78 triệu VND (5 kWp)"
       },
       "medium": {
         "name": "Medium",
         "tagline": "Family homes & small offices",
         "size": "6–10 kWp",
         "description": "The most common residential size in our installs so far — covers most of a family home's daytime consumption.",
-        "price": "From $X,XXX USD / XXX triệu VND — TODO: owner to set price range"
+        "price": "From $3,600 USD / 90 triệu VND (6 kWp) up to $5,000 USD / 125 triệu VND (10 kWp)"
       },
       "large": {
         "name": "Large",
@@ -206,7 +220,8 @@
       }
     },
     "included": {
-      "title": "What's Included at Every Tier",
+      "label": "SolarTNP",
+      "title": "Always included",
       "items": [
         "Japanese-sourced panels and inverter with full warranty documentation",
         "Site assessment, energy audit, and structural load check",
@@ -367,7 +382,7 @@
     },
     "s06": {
       "heading": "Contact us",
-      "body": "For privacy questions: thuy@tnpgr.vn · +84 90 333 37 29. Lô 35 đường số 9, KCN Tam Phước, Biên Hòa, Vietnam."
+      "body": "For privacy questions: thuy@tnpgr.vn · +84 90 333 37 29. 529/14 Huỳnh Văn Bánh, Phú Nhuận, Hồ Chí Minh, Vietnam."
     },
     "backHome": "Back to Home"
   },

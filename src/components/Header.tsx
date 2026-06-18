@@ -24,11 +24,11 @@ export default function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center">
           <Image
-            src="/assets/logo/logo.png"
+            src="/assets/logo/logo-new.jpg"
             alt="TNP Solar"
-            width={160}
-            height={48}
-            className="h-10 w-auto"
+            width={300}
+            height={200}
+            className="h-12 w-auto"
             priority
           />
         </Link>
