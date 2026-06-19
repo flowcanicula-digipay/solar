@@ -54,9 +54,11 @@ export function generateStaticParams() {
 export const metadata: Metadata = {
   title: 'SolarTNP',
   icons: {
+    // No SVG entry here on purpose — browsers (Chrome especially) prefer an
+    // SVG favicon over .ico whenever both are declared, which would silently
+    // override the intended default (public/favicon.ico).
     icon: [
       { url: withBasePath('/favicon.ico'), sizes: 'any' },
-      { url: withBasePath('/assets/favicon/favicon.svg'), type: 'image/svg+xml' },
       { url: withBasePath('/assets/favicon/favicon-128.png'), sizes: '128x128', type: 'image/png' },
       { url: withBasePath('/assets/favicon/favicon-64.png'), sizes: '64x64', type: 'image/png' },
     ],
