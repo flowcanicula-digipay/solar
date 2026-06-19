@@ -29,20 +29,42 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-export const metadata: Metadata = {
-  title: 'SolarTNP',
-  icons: {
-    // No SVG entry here on purpose — browsers (Chrome especially) prefer an
-    // SVG favicon over .ico whenever both are declared, which would silently
-    // override the intended default (public/favicon.ico).
-    icon: [
-      { url: withBasePath('/favicon.ico'), sizes: 'any' },
-      { url: withBasePath('/assets/favicon/favicon-128.png'), sizes: '128x128', type: 'image/png' },
-      { url: withBasePath('/assets/favicon/favicon-64.png'), sizes: '64x64', type: 'image/png' },
-    ],
-    shortcut: withBasePath('/favicon.ico'),
-  },
-};
+// Individual pages only set `title`/`description` in their own
+// generateMetadata — Next merges those with whatever's returned here rather
+// than replacing it, so every page inherits this default `openGraph`/
+// `twitter` image unless it explicitly sets its own.
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const ogLocale = routing.locales.includes(locale as Locale) ? locale : routing.defaultLocale;
+  const ogImage = withBasePath(`/assets/og/og-${ogLocale}.svg`);
+
+  return {
+    title: 'SolarTNP',
+    metadataBase: new URL('https://www.solartnp.com'),
+    icons: {
+      // No SVG entry here on purpose — browsers (Chrome especially) prefer an
+      // SVG favicon over .ico whenever both are declared, which would silently
+      // override the intended default (public/favicon.ico).
+      icon: [
+        { url: withBasePath('/favicon.ico'), sizes: 'any' },
+        { url: withBasePath('/assets/favicon/favicon-128.png'), sizes: '128x128', type: 'image/png' },
+        { url: withBasePath('/assets/favicon/favicon-64.png'), sizes: '64x64', type: 'image/png' },
+      ],
+      shortcut: withBasePath('/favicon.ico'),
+    },
+    openGraph: {
+      images: [{ url: ogImage }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      images: [ogImage],
+    },
+  };
+}
 
 export default async function LocaleLayout({
   children,
