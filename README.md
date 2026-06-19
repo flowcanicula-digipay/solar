@@ -1,14 +1,14 @@
 # SolarTNP Website
 
-Marketing site for **SolarTNP** — a Chinese-Japanese-Vietnamese solar panel
-sales, design, installation, and maintenance company based in Phú Nhuận,
-Hồ Chí Minh, Vietnam.
+Marketing site for **SolarTNP** — solar panel sales, system design,
+installation, after-sales maintenance, and international equipment sourcing
+& shipping (US / Southeast Asia), based in Phú Nhuận, Hồ Chí Minh City,
+Vietnam.
 
 Static export built with Next.js 15 (App Router), TypeScript, Tailwind CSS,
 and `next-intl` for English / Vietnamese / Japanese localisation.
 
-See [CLAUDE.md](./CLAUDE.md) for the full technical spec and conventions,
-[STORY.md](./STORY.md) for the product/content brief, and
+See [STORY.md](./STORY.md) for the product/content brief and
 [SECURITY.md](./SECURITY.md) for the security posture.
 
 ## Stack
@@ -17,7 +17,8 @@ See [CLAUDE.md](./CLAUDE.md) for the full technical spec and conventions,
 - TypeScript (strict mode)
 - Tailwind CSS
 - `next-intl` — locales: `en` (default), `vi`, `ja`
-- Formspree — static-compatible contact form backend
+- Formspree — static-compatible form backend (separate forms for residential
+  leads and B2B sourcing leads)
 
 ## Getting started
 
@@ -30,9 +31,15 @@ npm run dev      # http://localhost:3000 — redirects to /en/
 ## Build
 
 ```bash
-npm run build    # outputs static site to out/
+npm run build    # builds and exports static site to out/
 npx serve out    # preview the static export locally
 ```
+
+`npm run build` also runs `scripts/inject-csp-hashes.mjs` after `next build`,
+which hashes every inline `<script>` in each generated HTML file and writes
+the matching `sha256-...` values into that page's Content-Security-Policy
+meta tag — the site ships a strict `script-src 'self'` policy with no
+`unsafe-inline`.
 
 ## Pages
 
@@ -41,16 +48,18 @@ npx serve out    # preview the static export locally
 | `/` | Redirects to `/en/` |
 | `/[locale]/` | Home |
 | `/[locale]/pricing/` | System tiers, payback table, FAQ |
-| `/[locale]/contact/` | Free site assessment request form |
+| `/[locale]/contact/` | Free site assessment request form (residential) |
+| `/[locale]/sourcing/` | International equipment sourcing & shipping leads (B2B) |
 | `/[locale]/privacy/` | Privacy policy (`noindex, follow`) |
 | `/[locale]/regulations/` | Decree 135/2024/ND-CP explainer |
-| `/[locale]/404/` | Custom 404 |
+| Custom 404 | `src/app/[locale]/not-found.tsx` |
 
 ## Deployment
 
 **Production**: built `out/` is uploaded to Hostinger shared hosting
-(`public_html/`) — see CLAUDE.md's "Deployment" section for the full
-hPanel/FTP steps and the required `.htaccess`.
+(`public_html/`). The `.htaccess` in `public/.htaccess` (copied into `out/`
+on build) handles the HTTPS redirect, the bare `/` → `/en/` rewrite, and
+cache headers.
 
 **GitHub Pages**: `.github/workflows/deploy-pages.yml` builds and publishes
 `out/` to GitHub Pages on every push to `master`, using a `basePath` of
@@ -58,8 +67,13 @@ hPanel/FTP steps and the required `.htaccess`.
 that workflow — the Hostinger build stays root-relative). Enable Pages once
 per repo: **Settings → Pages → Source: GitHub Actions**.
 
+Because `images.unoptimized: true` is required for static export, `next/image`
+does not auto-prefix the base path onto plain string `src` values — use the
+`withBasePath()` helper from `src/lib/assetPath.ts` for any hardcoded
+`/assets/...` path so it resolves under both deployment targets.
+
 ## Owner action items before launch
 
 Several values are intentionally left as `TODO` placeholders (pricing,
-Formspree form ID, business hours, payback table figures). See CLAUDE.md's
-"Owner Action Items" section for the full pre-launch checklist.
+Formspree form IDs, business hours, payback table figures). Search the repo
+for `TODO` to find them all before going live.
