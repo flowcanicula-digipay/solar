@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
 import { Playfair_Display, Inter } from 'next/font/google';
+import { redirect } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
-import { routing } from '@/i18n/routing';
+import { routing, type Locale } from '@/i18n/routing';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SchemaJsonLd from '@/components/SchemaJsonLd';
 import { withBasePath } from '@/lib/assetPath';
+import { buildCsp } from '@/lib/csp';
 import '../globals.css';
 
 const playfair = Playfair_Display({
@@ -21,31 +23,7 @@ const inter = Inter({
   display: 'swap',
 });
 
-// In dev, Next.js HMR/react-refresh needs 'unsafe-eval' and inline scripts —
-// the strict production CSP below blocks those, so dev mode relaxes script-src.
-// The static export (Hostinger/Pages) always uses the strict policy.
-//
-// frame-ancestors is deliberately omitted here: the CSP spec ignores that
-// directive when delivered via <meta> (browsers log a console warning), so
-// it's enforced instead via a real HTTP header in public/.htaccess.
-//
-// The production script-src below is intentionally just 'self' as a placeholder —
-// scripts/inject-csp-hashes.mjs (run as part of `npm run build`) rewrites it per
-// HTML file after export, adding the exact sha256 hashes of every inline <script>
-// actually present on that page (JSON-LD plus Next's RSC hydration payloads, which
-// differ per route and can't be hashed statically here).
-const CSP = [
-  "default-src 'none'",
-  process.env.NODE_ENV === 'development'
-    ? "script-src 'self' 'unsafe-eval' 'unsafe-inline'"
-    : "script-src 'self'",
-  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-  "font-src 'self' https://fonts.gstatic.com",
-  "connect-src 'self' https://formspree.io",
-  "img-src 'self' data:",
-  "base-uri 'self'",
-  'form-action https://formspree.io',
-].join('; ');
+const CSP = buildCsp();
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -74,6 +52,18 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+
+  // generateStaticParams only ever produces en/vi/ja for the static export,
+  // so an unsupported locale (or this segment missing entirely) never gets a
+  // prerendered file in production — Apache's 404 handler covers that case.
+  // In `next dev`, though, this route renders on demand for any value, so
+  // without this guard an unsupported locale silently renders with the
+  // wrong `lang` attribute and fallback English copy instead of routing
+  // the visitor somewhere sane.
+  if (!routing.locales.includes(locale as Locale)) {
+    redirect(`/${routing.defaultLocale}/`);
+  }
+
   setRequestLocale(locale);
   const messages = await getMessages();
 
