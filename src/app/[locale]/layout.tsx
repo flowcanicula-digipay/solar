@@ -6,6 +6,7 @@ import { routing } from '@/i18n/routing';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SchemaJsonLd from '@/components/SchemaJsonLd';
+import { withBasePath } from '@/lib/assetPath';
 import '../globals.css';
 
 const playfair = Playfair_Display({
@@ -52,6 +53,15 @@ export function generateStaticParams() {
 
 export const metadata: Metadata = {
   title: 'SolarTNP',
+  icons: {
+    icon: [
+      { url: withBasePath('/favicon.ico'), sizes: 'any' },
+      { url: withBasePath('/assets/favicon/favicon.svg'), type: 'image/svg+xml' },
+      { url: withBasePath('/assets/favicon/favicon-128.png'), sizes: '128x128', type: 'image/png' },
+      { url: withBasePath('/assets/favicon/favicon-64.png'), sizes: '64x64', type: 'image/png' },
+    ],
+    shortcut: withBasePath('/favicon.ico'),
+  },
 };
 
 export default async function LocaleLayout({
