@@ -41,6 +41,26 @@ the matching `sha256-...` values into that page's Content-Security-Policy
 meta tag — the site ships a strict `script-src 'self'` policy with no
 `unsafe-inline`.
 
+## Testing
+
+```bash
+npm test              # run the unit test suite once (Vitest)
+npm run test:watch    # watch mode, reruns on file changes
+npm run test:coverage # run once and print the coverage table
+```
+
+Unit tests live under `test/`, covering `src/lib`, `src/i18n`, every
+component, and every page/layout/not-found file under `src/app`, using
+Vitest + React Testing Library + jsdom. `next/image`, `next/font/google`,
+`next/navigation`, `@/i18n/navigation`, and `next-intl/server` are mocked in
+`test/setup.ts` so Server Components and Client Components can both be
+rendered and asserted on directly, without a running Next server.
+
+Coverage thresholds (statements/branches/functions/lines, all 80%) are
+enforced in `vitest.config.ts` — `vitest run --coverage` exits non-zero if
+any metric falls below that bar. `npm run build` runs this gate before
+`next build`, so a coverage regression fails the build (and CI) outright.
+
 ## Pages
 
 | Route | Description |

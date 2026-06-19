@@ -5,6 +5,8 @@ import { useTranslations } from 'next-intl';
 
 const SYSTEM_LIFE_YEARS = 25;
 
+// TODO: owner to verify these figures against current EVN tariffs and actual
+// installed system costs before going live (see CLAUDE.md "Pricing Content").
 const rows = [
   { size: '5 kWp', savings: '~1,400,000 VND', cost: '~78,000,000 VND', paybackYears: 4.6 },
   { size: '8 kWp', savings: '~2,200,000 VND', cost: '~125,000,000 VND', paybackYears: 4.7 },

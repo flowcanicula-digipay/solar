@@ -262,7 +262,6 @@
         "savings": "月間節約額(推定)",
         "cost": "システム費用",
         "payback": "回収期間(推定)",
-        "todo": "要対応 — 事業者側で確認してください",
         "perMonth": "/月",
         "yearsUnit": "年",
         "ofSystemLife": "25年のシステム寿命のうち"
