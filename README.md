@@ -67,6 +67,14 @@ cache headers.
 that workflow — the Hostinger build stays root-relative). Enable Pages once
 per repo: **Settings → Pages → Source: GitHub Actions**.
 
+**Vercel**: the repo also deploys to Vercel as a static export, serving from
+the project's domain root (no base path) — same as Hostinger. `vercel.json`
+pins the build command (`npm run build`) and output directory (`out`).
+Vercel auto-deploys on every push once the GitHub repo is connected to the
+project; no `GITHUB_PAGES_BASE_PATH` should be set in the Vercel project's
+environment variables, since that variable is only meant for the GitHub
+Pages sub-path build.
+
 Because `images.unoptimized: true` is required for static export, `next/image`
 does not auto-prefix the base path onto plain string `src` values — use the
 `withBasePath()` helper from `src/lib/assetPath.ts` for any hardcoded
