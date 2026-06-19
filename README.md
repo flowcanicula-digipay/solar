@@ -88,3 +88,8 @@ does not auto-prefix the base path onto plain string `src` values — use the
 Several values are intentionally left as `TODO` placeholders (pricing,
 Formspree form IDs, business hours, payback table figures). Search the repo
 for `TODO` to find them all before going live.
+
+## Author
+
+Jaime Canicula ([jaime.canicula@gmail.com](mailto:jaime.canicula@gmail.com)) —
+based in the Philippines, building for clients in Vietnam.

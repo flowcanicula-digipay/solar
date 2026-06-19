@@ -3,6 +3,8 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [master]
+  pull_request:
+    branches: [master]
   workflow_dispatch:
 
 permissions:
@@ -27,17 +29,22 @@ jobs:
 
       - run: npm install
 
+      - name: Run tests (80% coverage required)
+        run: npm run test:coverage
+
       - name: Build static export
         run: npm run build
         env:
           GITHUB_PAGES_BASE_PATH: /${{ github.event.repository.name }}
 
       - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request'
         with:
           path: out
 
   deploy:
     needs: build
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

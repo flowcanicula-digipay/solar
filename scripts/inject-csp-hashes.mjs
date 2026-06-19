@@ -8,10 +8,9 @@
 import { createHash } from 'node:crypto';
 import { readdirSync, readFileSync, writeFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const outDir = join(process.cwd(), 'out');
-
-function listHtmlFiles(dir) {
+export function listHtmlFiles(dir) {
   const files = [];
   for (const entry of readdirSync(dir)) {
     const full = join(dir, entry);
@@ -24,7 +23,7 @@ function listHtmlFiles(dir) {
   return files;
 }
 
-function hashInlineScripts(html) {
+export function hashInlineScripts(html) {
   const scriptRe = /<script([^>]*)>([\s\S]*?)<\/script\s*>/gi;
   const hashes = new Set();
   let match;
@@ -37,18 +36,15 @@ function hashInlineScripts(html) {
   return [...hashes];
 }
 
-let filesPatched = 0;
-
-for (const file of listHtmlFiles(outDir)) {
-  const html = readFileSync(file, 'utf8');
-  if (!html.includes('Content-Security-Policy')) continue;
+export function patchCsp(html) {
+  if (!html.includes('Content-Security-Policy')) return html;
 
   const hashes = hashInlineScripts(html);
   const scriptSrcValue = `script-src &#x27;self&#x27; ${hashes
     .map((h) => `&#x27;sha256-${h}&#x27;`)
     .join(' ')}`.trim();
 
-  const patched = html.replace(
+  return html.replace(
     /(<meta http-equiv="Content-Security-Policy" content=")([^"]*)(")/,
     (_full, pre, content, post) =>
       // The content here is HTML-entity-encoded (' -> &#x27;), and &#x27; itself
@@ -58,11 +54,27 @@ for (const file of listHtmlFiles(outDir)) {
       // buildCsp() always places style-src immediately after script-src.
       `${pre}${content.replace(/script-src[\s\S]*?(?=; style-src)/, scriptSrcValue)}${post}`
   );
-
-  if (patched !== html) {
-    writeFileSync(file, patched, 'utf8');
-    filesPatched++;
-  }
 }
 
-console.log(`[inject-csp-hashes] patched ${filesPatched} HTML file(s) in out/`);
+export function run(outDir) {
+  let filesPatched = 0;
+
+  for (const file of listHtmlFiles(outDir)) {
+    const html = readFileSync(file, 'utf8');
+    const patched = patchCsp(html);
+
+    if (patched !== html) {
+      writeFileSync(file, patched, 'utf8');
+      filesPatched++;
+    }
+  }
+
+  return filesPatched;
+}
+
+// Only run the CLI side effect when this file is executed directly (`node
+// scripts/inject-csp-hashes.mjs`), not when imported by tests.
+if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
+  const filesPatched = run(join(process.cwd(), 'out'));
+  console.log(`[inject-csp-hashes] patched ${filesPatched} HTML file(s) in out/`);
+}
