@@ -50,7 +50,13 @@ for (const file of listHtmlFiles(outDir)) {
 
   const patched = html.replace(
     /(<meta http-equiv="Content-Security-Policy" content=")([^"]*)(")/,
-    (_full, pre, content, post) => `${pre}${content.replace(/script-src[^;]*/, scriptSrcValue)}${post}`
+    (_full, pre, content, post) =>
+      // The content here is HTML-entity-encoded (' -> &#x27;), and &#x27; itself
+      // contains a literal ';' — a naive `[^;]*` stops at that entity-internal
+      // semicolon instead of the real directive separator, truncating the
+      // match. Stop at the next directive ('; style-src') instead, since
+      // buildCsp() always places style-src immediately after script-src.
+      `${pre}${content.replace(/script-src[\s\S]*?(?=; style-src)/, scriptSrcValue)}${post}`
   );
 
   if (patched !== html) {
