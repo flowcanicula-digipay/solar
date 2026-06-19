@@ -550,11 +550,13 @@
     }
   },
   "notFound": {
+    "eyebrow": "SolarTNP · Biên Hòa · Việt Nam · Lỗi",
     "fourofour": "404",
     "tagline": "Trang này đã... mất điện.",
     "body": "Đường dẫn này không tồn tại. Hãy để chúng tôi đưa bạn về nơi có nắng.",
     "goHome": "Về trang chủ",
-    "contact": "Liên hệ"
+    "contact": "Liên hệ",
+    "footer": "solartnp.com · nguồn hàng đáng tin cậy, tiêu chuẩn nhật bản, tay nghề việt nam"
   },
   "meta": {
     "home": {

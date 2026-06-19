@@ -28,10 +28,14 @@ body {
 
   .animate-fade-up,
   .animate-pop-in,
-  .animate-hero-zoom {
+  .animate-hero-zoom,
+  .animate-float,
+  .animate-glow,
+  .animate-scale-in {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
     filter: none !important;
+    text-shadow: none !important;
   }
 }

@@ -49,6 +49,18 @@ const config: Config = {
           '0%': { transform: 'scale(1)' },
           '100%': { transform: 'scale(1.12)' },
         },
+        float: {
+          '0%, 100%': { transform: 'translateY(0) rotate(var(--rot, 0deg))', opacity: '0.35' },
+          '50%': { transform: 'translateY(-16px) rotate(var(--rot, 0deg))', opacity: '0.85' },
+        },
+        glow: {
+          '0%, 100%': { textShadow: '0 0 20px rgba(245,158,11,0.25)' },
+          '50%': { textShadow: '0 0 40px rgba(245,158,11,0.5)' },
+        },
+        'scale-in': {
+          '0%': { transform: 'scaleX(0)' },
+          '100%': { transform: 'scaleX(1)' },
+        },
       },
       animation: {
         radiance: 'radiance 4s ease-in-out infinite',
@@ -56,6 +68,9 @@ const config: Config = {
         'fade-up': 'fade-up 1s cubic-bezier(0.16,1,0.3,1) both',
         'pop-in': 'pop-in 0.7s cubic-bezier(0.16,1,0.3,1) both',
         'hero-zoom': 'hero-zoom 12s ease-out forwards',
+        float: 'float 7s ease-in-out infinite',
+        glow: 'glow 3.5s ease-in-out infinite',
+        'scale-in': 'scale-in 0.8s cubic-bezier(0.16,1,0.3,1) both',
       },
     },
   },

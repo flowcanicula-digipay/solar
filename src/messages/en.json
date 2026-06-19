@@ -550,11 +550,13 @@
     }
   },
   "notFound": {
+    "eyebrow": "SolarTNP · Biên Hòa · Vietnam · Error",
     "fourofour": "404",
     "tagline": "This page went off-grid.",
     "body": "The URL doesn't exist. Let's get you back somewhere sunny.",
     "goHome": "Go Home",
-    "contact": "Contact Us"
+    "contact": "Contact Us",
+    "footer": "solartnp.com · trusted sourcing, japanese standards, vietnamese craft"
   },
   "meta": {
     "home": {

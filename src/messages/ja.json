@@ -550,11 +550,13 @@
     }
   },
   "notFound": {
+    "eyebrow": "SolarTNP・ビエンホア・ベトナム・エラー",
     "fourofour": "404",
     "tagline": "このページはオフグリッドです。",
     "body": "このURLは存在しません。晴れた場所へお連れします。",
     "goHome": "ホームへ戻る",
-    "contact": "お問い合わせ"
+    "contact": "お問い合わせ",
+    "footer": "solartnp.com・信頼できる調達・日本基準・ベトナムの職人技"
   },
   "meta": {
     "home": {

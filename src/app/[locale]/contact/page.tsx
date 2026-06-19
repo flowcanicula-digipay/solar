@@ -41,27 +41,47 @@ export default async function ContactPage({
           alt=""
           fill
           priority
-          className="object-cover opacity-40"
+          className="animate-hero-zoom object-cover opacity-40 motion-reduce:animate-none"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-950/80 to-navy-950/45" />
 
         <div className="relative mx-auto max-w-7xl px-6">
-          <p className="text-xs font-semibold uppercase tracking-widest text-amber-400">
+          <p
+            className="animate-fade-up text-xs font-semibold uppercase tracking-widest text-amber-400"
+            style={{ animationDelay: '0ms' }}
+          >
             {common('heroLabel')}
           </p>
-          <h1 className="mt-4 max-w-2xl font-display text-4xl font-bold leading-tight md:text-5xl">
+          <h1
+            className="animate-fade-up mt-4 max-w-2xl font-display text-4xl font-bold leading-tight md:text-5xl"
+            style={{ animationDelay: '150ms' }}
+          >
             {t('hero.title')}
           </h1>
-          <p className="mt-5 max-w-xl text-lg text-cream-50/80">{t('hero.subtitle')}</p>
+          <p
+            className="animate-fade-up mt-5 max-w-xl text-lg text-cream-50/80"
+            style={{ animationDelay: '300ms' }}
+          >
+            {t('hero.subtitle')}
+          </p>
 
-          <div className="mt-7 flex items-center gap-3">
+          <div
+            className="animate-fade-up mt-7 flex items-center gap-3"
+            style={{ animationDelay: '450ms' }}
+          >
             <span className="h-px w-24 bg-cream-50/25" />
             <span className="h-1 w-1 rounded-full bg-amber-400" />
           </div>
-          <p className="mt-6 text-xs tracking-[0.2em] text-cream-50/45">
+          <p
+            className="animate-fade-up mt-6 text-xs tracking-[0.2em] text-cream-50/45"
+            style={{ animationDelay: '450ms' }}
+          >
             太陽光発電 ・ 日本基準 ・ ベトナムの職人技
           </p>
-          <p className="mt-2 font-display text-sm italic text-cream-50/55">
+          <p
+            className="animate-fade-up mt-2 font-display text-sm italic text-cream-50/55"
+            style={{ animationDelay: '600ms' }}
+          >
             Solar done properly. Built to last 25 years.
           </p>
         </div>
