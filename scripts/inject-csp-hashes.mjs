@@ -25,7 +25,7 @@ function listHtmlFiles(dir) {
 }
 
 function hashInlineScripts(html) {
-  const scriptRe = /<script([^>]*)>([\s\S]*?)<\/script>/gi;
+  const scriptRe = /<script([^>]*)>([\s\S]*?)<\/script\s*>/gi;
   const hashes = new Set();
   let match;
   while ((match = scriptRe.exec(html))) {
