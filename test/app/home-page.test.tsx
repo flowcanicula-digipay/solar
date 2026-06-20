@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { screen } from '@testing-library/react';
 import HomePage, { generateMetadata, generateStaticParams } from '@/app/[locale]/page';
 import { renderServerPage } from '../renderServerPage';
+import { triggerIntersections } from '../setup';
 
 describe('HomePage', () => {
   it('generates static params for all three locales', () => {
@@ -30,5 +31,17 @@ describe('HomePage', () => {
   it('renders correctly for the vi and ja locales too', async () => {
     await renderServerPage(HomePage, 'vi');
     expect(document.querySelector('h1')).toBeInTheDocument();
+  });
+
+  it('reveals the sourcing section once it scrolls into view', async () => {
+    const { container } = await renderServerPage(HomePage, 'en');
+    const sourcingLink = screen.getByRole('link', { name: 'Talk to Us About Sourcing' });
+    const sourcingSection = sourcingLink.closest('div');
+
+    expect(sourcingSection).toHaveClass('opacity-0');
+
+    triggerIntersections(true);
+
+    expect(sourcingSection).toHaveClass('opacity-100');
   });
 });

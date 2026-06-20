@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import SunIcon from '@/components/SunIcon';
 import WarrantyTimeline from '@/components/WarrantyTimeline';
+import Reveal from '@/components/Reveal';
 import { withBasePath } from '@/lib/assetPath';
 import { SHOW_PROJECTS } from '@/lib/featureFlags';
 
@@ -202,34 +203,33 @@ export default async function HomePage({
 
           <ol className="flex flex-col gap-24">
             {processSteps.map(({ key, src, Icon }, i) => (
-              <li
-                key={key}
-                className="grid items-center gap-12 lg:grid-cols-2"
-              >
-                <div className={i % 2 === 1 ? 'lg:order-2' : ''}>
-                  <div className="mb-4 flex items-center gap-3">
-                    <span className="font-display text-6xl font-bold leading-none text-royal-100">
-                      {String(i + 1).padStart(2, '0')}
-                    </span>
-                    <span className="h-10 w-px bg-royal-100" />
-                    <span className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-royal-600">
-                      <Icon className="h-5 w-5" aria-hidden="true" />
-                      {t(`process.${key}.title`)}
-                    </span>
+              <li key={key}>
+                <Reveal className="grid items-center gap-12 lg:grid-cols-2">
+                  <div className={i % 2 === 1 ? 'lg:order-2' : ''}>
+                    <div className="mb-4 flex items-center gap-3">
+                      <span className="font-display text-6xl font-bold leading-none text-royal-100">
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                      <span className="h-10 w-px bg-royal-100" />
+                      <span className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-royal-600">
+                        <Icon className="h-5 w-5" aria-hidden="true" />
+                        {t(`process.${key}.title`)}
+                      </span>
+                    </div>
+                    <h3 className="mb-4 font-display text-2xl font-bold text-navy-950 lg:text-3xl">
+                      {t(`process.${key}.headline`)}
+                    </h3>
+                    <p className="leading-relaxed text-charcoal/70">{t(`process.${key}.body`)}</p>
                   </div>
-                  <h3 className="mb-4 font-display text-2xl font-bold text-navy-950 lg:text-3xl">
-                    {t(`process.${key}.headline`)}
-                  </h3>
-                  <p className="leading-relaxed text-charcoal/70">{t(`process.${key}.body`)}</p>
-                </div>
-                <figure className="relative h-80 overflow-hidden rounded-2xl shadow-lg lg:h-[420px]">
-                  <Image
-                    src={src}
-                    alt={t(`process.${key}.imageAlt`)}
-                    fill
-                    className="object-cover"
-                  />
-                </figure>
+                  <figure className="relative h-80 overflow-hidden rounded-2xl shadow-lg lg:h-[420px]">
+                    <Image
+                      src={src}
+                      alt={t(`process.${key}.imageAlt`)}
+                      fill
+                      className="object-cover"
+                    />
+                  </figure>
+                </Reveal>
               </li>
             ))}
           </ol>
@@ -306,7 +306,7 @@ export default async function HomePage({
             </p>
           </div>
 
-          <div className="relative mt-16 overflow-hidden rounded-3xl px-8 py-10 text-cream-50 md:px-12 md:py-14">
+          <Reveal className="relative mt-16 overflow-hidden rounded-3xl px-8 py-10 text-cream-50 md:px-12 md:py-14">
             <Image
               src={withBasePath('/assets/images/cta/aftercare-bg.jpg')}
               alt=""
@@ -352,14 +352,14 @@ export default async function HomePage({
                 </div>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* Why Japanese Quality */}
       <section className="bg-royal-100 py-14 md:py-24">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 md:grid-cols-2">
-          <div>
+          <Reveal>
             <h2 className="font-display text-3xl font-bold text-navy-950">
               {t('japanese.title')}
             </h2>
@@ -372,15 +372,15 @@ export default async function HomePage({
                 </li>
               ))}
             </ul>
-          </div>
-          <div className="relative h-72 w-full overflow-hidden rounded-2xl bg-white">
+          </Reveal>
+          <Reveal delay={250} className="relative h-72 w-full overflow-hidden rounded-2xl bg-white">
             <Image
               src={withBasePath('/assets/images/quality/japanese-precision.jpg')}
               alt={t('japanese.imageAlt')}
               fill
               className="object-cover"
             />
-          </div>
+          </Reveal>
         </div>
       </section>
 
@@ -394,7 +394,7 @@ export default async function HomePage({
         />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-950/85 to-navy-950/55" />
 
-        <div className="relative mx-auto max-w-7xl px-6 py-20 md:py-28">
+        <Reveal className="relative mx-auto max-w-7xl px-6 py-20 md:py-28">
           <p className="text-xs font-semibold uppercase tracking-widest text-amber-400">
             {t('sourcing.label')}
           </p>
@@ -423,13 +423,13 @@ export default async function HomePage({
             <Ship className="h-4 w-4" aria-hidden="true" />
             {t('sourcing.cta')}
           </Link>
-        </div>
+        </Reveal>
       </section>
 
       {/* Final CTA */}
       <section className="bg-navy-950 py-16 text-cream-50 md:py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-2 md:items-center">
-          <div>
+          <Reveal>
             <SunIcon size={36} />
             <h2 className="mt-4 font-display text-3xl font-bold">{t('cta.title')}</h2>
             <p className="mt-3 max-w-md text-cream-50/70">{t('cta.body')}</p>
@@ -439,14 +439,14 @@ export default async function HomePage({
             >
               {cta('freeAssessment')}
             </Link>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
+          </Reveal>
+          <Reveal delay={250} className="grid grid-cols-2 gap-4">
             {ctaGridImages.map((src) => (
               <div key={src} className="relative h-32 overflow-hidden rounded-2xl sm:h-40">
                 <Image src={src} alt="" fill className="object-cover" />
               </div>
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
     </>
