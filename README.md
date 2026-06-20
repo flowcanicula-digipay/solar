@@ -103,11 +103,13 @@ does not auto-prefix the base path onto plain string `src` values — use the
 `withBasePath()` helper from `src/lib/assetPath.ts` for any hardcoded
 `/assets/...` path so it resolves under both deployment targets.
 
-## Owner action items before launch
+## Reminders for myself before launch
 
-Several values are intentionally left as `TODO` placeholders (pricing,
-Formspree form IDs, business hours, payback table figures). Search the repo
-for `TODO` to find them all before going live.
+This isn't a public-facing notice — just a note to self (and whoever else
+ends up working on this repo) so nothing placeholder ships by accident.
+Several values are intentionally left as `TODO` (pricing, Formspree form
+IDs, business hours, payback table figures). Search the repo for `TODO`
+before going live and fill them in for real.
 
 ## Author
 

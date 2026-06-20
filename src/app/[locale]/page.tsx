@@ -17,6 +17,7 @@ import {
 import SunIcon from '@/components/SunIcon';
 import WarrantyTimeline from '@/components/WarrantyTimeline';
 import { withBasePath } from '@/lib/assetPath';
+import { SHOW_PROJECTS } from '@/lib/featureFlags';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -68,9 +69,6 @@ const aboutFeatures = [
   { key: 'point3' as const, Icon: HardHat },
   { key: 'point4' as const, Icon: Handshake },
 ];
-
-// TODO: re-enable once we have more than the 4 seed installations to show
-const SHOW_PROJECTS = false;
 
 const ctaGridImages = [
   withBasePath('/assets/images/cta/grid-1.jpg'),

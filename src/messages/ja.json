@@ -40,6 +40,11 @@
       "en": "English",
       "vi": "Tiếng Việt",
       "ja": "日本語"
+    },
+    "cookieBanner": {
+      "message": "当サイトでは、言語とCookie設定を記憶するための機能的なCookieのみを使用しています。トラッキング、広告、アクセス解析のCookieは使用していません。",
+      "accept": "了解しました",
+      "privacyLink": "プライバシーポリシー"
     }
   },
   "home": {

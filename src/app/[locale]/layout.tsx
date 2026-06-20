@@ -6,6 +6,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { routing, type Locale } from '@/i18n/routing';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import CookieBanner from '@/components/CookieBanner';
 import SchemaJsonLd from '@/components/SchemaJsonLd';
 import { withBasePath } from '@/lib/assetPath';
 import { buildCsp } from '@/lib/csp';
@@ -100,6 +101,7 @@ export default async function LocaleLayout({
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
+          <CookieBanner />
         </NextIntlClientProvider>
       </body>
     </html>

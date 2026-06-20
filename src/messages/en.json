@@ -40,6 +40,11 @@
       "en": "English",
       "vi": "Tiếng Việt",
       "ja": "日本語"
+    },
+    "cookieBanner": {
+      "message": "We use a single functional cookie to remember your language and cookie preference. No tracking, advertising, or analytics cookies are used.",
+      "accept": "Got it",
+      "privacyLink": "Privacy Policy"
     }
   },
   "home": {

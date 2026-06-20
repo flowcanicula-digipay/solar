@@ -40,6 +40,11 @@
       "en": "English",
       "vi": "Tiếng Việt",
       "ja": "日本語"
+    },
+    "cookieBanner": {
+      "message": "Chúng tôi chỉ sử dụng một cookie chức năng duy nhất để ghi nhớ ngôn ngữ và lựa chọn cookie của bạn. Không sử dụng cookie theo dõi, quảng cáo hay phân tích.",
+      "accept": "Đã hiểu",
+      "privacyLink": "Chính sách bảo mật"
     }
   },
   "home": {
