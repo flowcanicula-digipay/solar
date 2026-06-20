@@ -15,7 +15,13 @@ export default function PageHero({
 
   return (
     <section className="relative flex min-h-[320px] items-center overflow-hidden py-16 text-cream-50 md:min-h-[380px] md:py-20">
-      <Image src={withBasePath(image)} alt="" fill priority className="object-cover" />
+      <Image
+        src={withBasePath(image)}
+        alt=""
+        fill
+        priority
+        className="animate-hero-zoom object-cover motion-reduce:animate-none"
+      />
       <div className="absolute inset-0 bg-navy-950/80" />
       <div className="relative mx-auto max-w-7xl px-6">
         <p

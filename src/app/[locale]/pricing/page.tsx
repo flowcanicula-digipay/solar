@@ -8,6 +8,7 @@ import PaybackTable from '@/components/PaybackTable';
 import PricingFAQ from '@/components/PricingFAQ';
 import PricingTiers from '@/components/PricingTiers';
 import PageHero from '@/components/PageHero';
+import Reveal from '@/components/Reveal';
 import { withBasePath } from '@/lib/assetPath';
 
 export function generateStaticParams() {
@@ -70,7 +71,7 @@ export default async function PricingPage({
           />
           <div className="absolute inset-0 bg-navy-950/60" />
         </div>
-        <div className="relative mx-auto max-w-7xl px-6">
+        <Reveal className="relative mx-auto max-w-7xl px-6">
           <div className="mb-12 text-center">
             <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-amber-400">
               {t('included.label')}
@@ -85,25 +86,27 @@ export default async function PricingPage({
                 key={item}
                 className="group relative h-40 w-[calc(50%-8px)] cursor-default overflow-hidden rounded-2xl sm:h-44 sm:w-[calc(33.333%-11px)] lg:w-[calc(25%-12px)]"
               >
-                <Image
-                  src={withBasePath(includedImages[i % includedImages.length])}
-                  alt=""
-                  aria-hidden="true"
-                  fill
-                  className="object-cover brightness-[0.45] transition-all duration-500 ease-out group-hover:scale-105 group-hover:brightness-[0.7]"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-navy-950/20 to-transparent" />
-                <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/10 transition-all duration-300 group-hover:ring-royal-600/70" />
-                <div className="absolute bottom-0 left-0 right-0 flex items-end gap-3 p-4">
-                  <div className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-royal-600/80 transition-colors duration-300 group-hover:bg-royal-600">
-                    <Check className="h-3.5 w-3.5 text-white" aria-hidden="true" />
+                <Reveal delay={i * 80} className="absolute inset-0">
+                  <Image
+                    src={withBasePath(includedImages[i % includedImages.length])}
+                    alt=""
+                    aria-hidden="true"
+                    fill
+                    className="object-cover brightness-[0.45] transition-all duration-500 ease-out group-hover:scale-105 group-hover:brightness-[0.7]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-navy-950/20 to-transparent" />
+                  <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/10 transition-all duration-300 group-hover:ring-royal-600/70" />
+                  <div className="absolute bottom-0 left-0 right-0 flex items-end gap-3 p-4">
+                    <div className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-royal-600/80 transition-colors duration-300 group-hover:bg-royal-600">
+                      <Check className="h-3.5 w-3.5 text-white" aria-hidden="true" />
+                    </div>
+                    <span className="text-sm font-medium leading-snug text-white">{item}</span>
                   </div>
-                  <span className="text-sm font-medium leading-snug text-white">{item}</span>
-                </div>
+                </Reveal>
               </li>
             ))}
           </ul>
-        </div>
+        </Reveal>
       </section>
 
       <section className="bg-cream-50 py-14 md:py-20">
@@ -128,7 +131,7 @@ export default async function PricingPage({
       </section>
 
       <section className="bg-navy-950 py-16 text-center text-cream-50">
-        <div className="mx-auto max-w-2xl px-6">
+        <Reveal className="mx-auto max-w-2xl px-6">
           <h2 className="font-display text-2xl font-bold lg:text-3xl">
             {t('finalCta.title')}
           </h2>
@@ -139,7 +142,7 @@ export default async function PricingPage({
           >
             {cta('freeAssessment')}
           </Link>
-        </div>
+        </Reveal>
       </section>
     </>
   );

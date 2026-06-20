@@ -24,4 +24,11 @@ describe('PageHero', () => {
     // Only the eyebrow + title paragraphs/headings should be present, no third text block.
     expect(container.querySelectorAll('p')).toHaveLength(1);
   });
+
+  it('applies the same slow zoom movement used on the contact/sourcing hero images', () => {
+    const { container } = renderWithIntl(
+      <PageHero image="/assets/images/banner/pricing-hero.png" title="Title" />
+    );
+    expect(container.querySelector('img')).toHaveClass('animate-hero-zoom', 'motion-reduce:animate-none');
+  });
 });
