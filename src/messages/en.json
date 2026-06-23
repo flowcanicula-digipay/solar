@@ -211,6 +211,21 @@
       },
       "imageAlt": "A SolarTNP technician performing after-sales maintenance on an installed system"
     },
+    "manifesto": {
+      "label": "Philosophy",
+      "pre": "We install solar as if we're coming back to service it",
+      "highlight1": "every year",
+      "mid": "for 25 years.",
+      "highlight2": "Because we will.",
+      "caption": "Every bolt torqued to spec. Every connection tested. Built for the long run."
+    },
+    "boldBanner": {
+      "heading1": "Sourced Right.",
+      "heading2": "Installed Right.",
+      "heading3": "Backed for 25 Years.",
+      "body1": "We're solar engineers first — site assessment, system design, and installation built around how Vietnamese homes and businesses actually use their power.",
+      "body2": "Once installed, nobody watches over your system for longer or more carefully. That's not a slogan. It's how we built the business."
+    },
     "cta": {
       "title": "Ready for a free site assessment?",
       "body": "Tell us about your roof and your electricity bill. We'll size a system that fits — no pressure, no inflated promises.",

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+  <!-- A solar panel angled south on a roof mount, catching the sun —
+       the product itself as a craftsman's mark, not a generic bolt/plug glyph -->
+
+  <!-- Sun (upper right, Vietnamese gold) -->
+  <circle cx="31.5" cy="5" r="2.4" fill="#FFCD00"/>
+  <line x1="31.5" y1="1.4" x2="31.5" y2="2.3" stroke="#D98A2B" stroke-width="0.9" stroke-linecap="round"/>
+  <line x1="34.2" y1="2.4" x2="33.4" y2="3.2" stroke="#D98A2B" stroke-width="0.9" stroke-linecap="round"/>
+  <line x1="35"   y1="5"   x2="34.1" y2="5"   stroke="#D98A2B" stroke-width="0.9" stroke-linecap="round"/>
+  <line x1="34.2" y1="7.6" x2="33.4" y2="6.8" stroke="#D98A2B" stroke-width="0.9" stroke-linecap="round"/>
+  <line x1="28.8" y1="2.4" x2="29.6" y2="3.2" stroke="#D98A2B" stroke-width="0.9" stroke-linecap="round"/>
+
+  <!-- Panel outer frame (amber-brown aluminum) -->
+  <path fill="#B86F1C" d="M4 13 L27 9.5 L27 23 L4 26.5 Z"/>
+
+  <!-- Panel PV glass surface (silicon blue) -->
+  <path fill="#5DADEC" d="M5.4 14 L25.6 10.8 L25.6 21.8 L5.4 25 Z"/>
+
+  <!-- Cell grid: 2 horizontal lines creating 3 rows -->
+  <line x1="5.4"  y1="17.7" x2="25.6" y2="14.5" stroke="#1A4870" stroke-width="0.65" opacity="0.65"/>
+  <line x1="5.4"  y1="21.3" x2="25.6" y2="18.1" stroke="#1A4870" stroke-width="0.65" opacity="0.65"/>
+
+  <!-- Cell grid: 2 vertical lines creating 3 columns -->
+  <line x1="12.1" y1="13.0" x2="12.1" y2="24.1" stroke="#1A4870" stroke-width="0.65" opacity="0.65"/>
+  <line x1="18.8" y1="11.9" x2="18.8" y2="23.0" stroke="#1A4870" stroke-width="0.65" opacity="0.65"/>
+
+  <!-- Glass glare — single diagonal stroke in top-left cell -->
+  <line x1="6.8" y1="14.8" x2="9.8" y2="16.6" stroke="white" stroke-width="0.7" opacity="0.3" stroke-linecap="round"/>
+
+  <!-- Mounting legs (racking hardware) -->
+  <line x1="13" y1="25.1" x2="11" y2="29" stroke="#8B5A2B" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="21" y1="23.9" x2="23" y2="29" stroke="#8B5A2B" stroke-width="1.3" stroke-linecap="round"/>
+
+  <!-- Roof rail (horizontal aluminum extrusion) -->
+  <rect x="7" y="29" width="20" height="2" rx="0.7" fill="#8B5A2B"/>
+</svg>

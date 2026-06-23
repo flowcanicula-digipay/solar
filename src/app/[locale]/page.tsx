@@ -8,15 +8,16 @@ import {
   Ruler,
   HardHat,
   ShieldCheck,
-  Factory,
-  Handshake,
   Ship,
-  ClipboardCheck,
   Globe2,
+  ChevronDown,
 } from 'lucide-react';
 import SunIcon from '@/components/SunIcon';
 import WarrantyTimeline from '@/components/WarrantyTimeline';
 import Reveal from '@/components/Reveal';
+import MarqueeTicker from '@/components/MarqueeTicker';
+import HeroWordSplit from '@/components/HeroWordSplit';
+import HeroSubtitleSplit from '@/components/HeroSubtitleSplit';
 import { withBasePath } from '@/lib/assetPath';
 import { SHOW_PROJECTS } from '@/lib/featureFlags';
 
@@ -46,29 +47,33 @@ const processSteps = [
     key: 'step1' as const,
     src: withBasePath('/assets/images/process/step1-consult.jpg'),
     Icon: PhoneCall,
+    motif: 'consultation.svg',
   },
   {
     key: 'step2' as const,
     src: withBasePath('/assets/images/process/step2-design.jpg'),
     Icon: Ruler,
+    motif: 'blueprint-seal.svg',
   },
   {
     key: 'step3' as const,
     src: withBasePath('/assets/images/process/step3-install.jpg'),
     Icon: HardHat,
+    motif: 'installation.svg',
   },
   {
     key: 'step4' as const,
     src: withBasePath('/assets/images/process/step4-support.jpg'),
     Icon: ShieldCheck,
+    motif: 'handover.svg',
   },
 ];
 
 const aboutFeatures = [
-  { key: 'point1' as const, Icon: Factory },
-  { key: 'point2' as const, Icon: ShieldCheck },
-  { key: 'point3' as const, Icon: HardHat },
-  { key: 'point4' as const, Icon: Handshake },
+  { key: 'point1' as const, motif: 'export-crate.svg' },
+  { key: 'point2' as const, motif: 'compass-seal.svg' },
+  { key: 'point3' as const, motif: 'luban-ruler.svg' },
+  { key: 'point4' as const, motif: 'heritage-bond.svg' },
 ];
 
 const ctaGridImages = [
@@ -77,6 +82,7 @@ const ctaGridImages = [
   withBasePath('/assets/images/cta/grid-3.jpg'),
   withBasePath('/assets/images/cta/grid-4.jpg'),
 ];
+
 
 export default async function HomePage({
   params,
@@ -89,145 +95,453 @@ export default async function HomePage({
   const t = await getTranslations('home');
   const cta = await getTranslations('common.cta');
 
+  const marqueeItems = [
+    'Trusted sourcing. Japanese standards. Vietnamese craft.',
+    'Nguồn hàng đáng tin cậy. Tiêu chuẩn Nhật Bản. Tay nghề Việt Nam.',
+    '信頼できる調達。日本基準。ベトナムの職人技。',
+  ];
+
   return (
     <>
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-navy-950 text-cream-50">
+      {/* ── HERO ─────────────────────────────────────────────────── */}
+      {/*
+       * Layout: items-end (content sits at bottom, image fills above) —
+       * matches SkogMoc's cinematic bottom-anchored hero composition.
+       */}
+      <section
+        className="relative flex min-h-[80vh] items-end overflow-hidden bg-navy-950 text-cream-50 md:min-h-screen"
+        aria-label={t('hero.imageAlt')}
+      >
+        {/* Layer 1 — hero photo: zooms OUT from 1.18→1 while fading in */}
         <Image
           src={withBasePath('/assets/images/hero/hero-bg.jpg')}
-          alt={t('hero.imageAlt')}
+          alt=""
           fill
           priority
-          className="animate-hero-zoom object-cover opacity-30 motion-reduce:animate-none"
+          className="animate-hero-image-cinematic object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/90 to-navy-950/40" />
 
-        <div className="relative mx-auto flex max-w-7xl flex-col px-6 py-24 md:py-32">
-          <div
-            className="radiance-ring animate-radiance pointer-events-none absolute -left-20 top-10 h-72 w-72 rounded-full bg-amber-400 blur-3xl"
-            aria-hidden="true"
+        {/* Layer 2 — panel grid texture */}
+        <div className="panel-grid-bg absolute inset-0" />
+
+        {/* Layer 3 — gradient: heavy at bottom (where text sits) */}
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/70 to-navy-950/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-950/60 via-transparent to-transparent" />
+
+        {/* Layer 4 — heritage-seal watermark (right, slow rotation) */}
+        <div
+          className="pointer-events-none absolute -right-40 top-1/2 hidden -translate-y-1/2 md:block"
+          aria-hidden="true"
+        >
+          <Image
+            src={withBasePath('/assets/motifs/heritage-seal.svg')}
+            alt=""
+            width={600}
+            height={600}
+            className="animate-spin-slow opacity-[0.055]"
           />
-          <h1
-            className="animate-fade-up relative max-w-2xl font-display text-4xl font-bold leading-tight md:text-5xl"
-            style={{ animationDelay: '150ms' }}
+        </div>
+
+        {/* Layer 5 — amber accent line: top-right, slides down (SkogMoc signature) */}
+        <div
+          className="animate-accent-slide-down absolute right-0 top-0 hidden h-36 w-2.5 bg-amber-400 md:block"
+          style={{ animationDelay: '0.2s' }}
+          aria-hidden="true"
+        />
+
+        {/* Layer 6 — amber radiance glow */}
+        <div
+          className="radiance-ring pointer-events-none absolute left-[6%] top-1/3 h-[380px] w-[380px] rounded-full bg-amber-400 opacity-[0.055] blur-[130px]"
+          aria-hidden="true"
+        />
+
+        {/* Layer 7 — concentric pulse rings */}
+        <div
+          className="pointer-events-none absolute left-[12%] top-[35%]"
+          aria-hidden="true"
+        >
+          <div className="animate-pulse-ring absolute h-52 w-52 -translate-x-1/2 -translate-y-1/2 rounded-full border border-amber-400/10" />
+          <div
+            className="animate-pulse-ring absolute h-52 w-52 -translate-x-1/2 -translate-y-1/2 rounded-full border border-amber-400/06"
+            style={{ animationDelay: '1.1s' }}
+          />
+        </div>
+
+        {/* Layer 8 — floating cultural motifs */}
+        <div
+          className="animate-float pointer-events-none absolute right-[18%] top-[12%] hidden lg:block"
+          style={{ '--rot': '-14deg', animationDelay: '3.5s', animationDuration: '8s' } as React.CSSProperties}
+          aria-hidden="true"
+        >
+          <Image
+            src={withBasePath('/assets/motifs/non-la.svg')}
+            alt=""
+            width={88}
+            height={88}
+            className="opacity-[0.22]"
+          />
+        </div>
+
+        <div
+          className="animate-float pointer-events-none absolute right-[10%] top-[55%] hidden md:block"
+          style={{ '--rot': '9deg', animationDelay: '4s', animationDuration: '9s' } as React.CSSProperties}
+          aria-hidden="true"
+        >
+          <Image
+            src={withBasePath('/assets/motifs/lotus.svg')}
+            alt=""
+            width={64}
+            height={64}
+            className="opacity-[0.18]"
+          />
+        </div>
+
+        <div
+          className="animate-float pointer-events-none absolute right-[40%] top-[20%] hidden xl:block"
+          style={{ '--rot': '-6deg', animationDelay: '4.5s', animationDuration: '11s' } as React.CSSProperties}
+          aria-hidden="true"
+        >
+          <Image
+            src={withBasePath('/assets/motifs/compass-seal.svg')}
+            alt=""
+            width={44}
+            height={44}
+            className="opacity-[0.12]"
+          />
+        </div>
+
+        {/* Content — bottom-anchored */}
+        <div className="relative mx-auto w-full max-w-7xl px-6 pb-14 pt-24 md:pb-20">
+          {/* Location eyebrow */}
+          <div
+            className="animate-fade-up mb-7 flex items-center gap-3"
+            style={{ animationDelay: '0.3s' }}
           >
-            {t('hero.title')}
+            <Image
+              src={withBasePath('/assets/motifs/viet-pin.svg')}
+              alt=""
+              width={16}
+              height={16}
+              className="opacity-60"
+            />
+            <span className="text-[10px] font-semibold uppercase tracking-[0.4em] text-amber-400/65">
+              Phú Nhuận · Hồ Chí Minh · Vietnam
+            </span>
+          </div>
+
+          {/* H1 — word explosion, SkogMoc style */}
+          <h1 className="max-w-4xl font-display font-bold leading-[1.04] tracking-tight">
+            <HeroWordSplit
+              text="Trusted sourcing."
+              className="text-[clamp(2.4rem,7vw,5rem)] text-cream-50"
+              baseDelay={0.65}
+            />
+            <HeroWordSplit
+              text="Japanese standards."
+              className="text-[clamp(2.4rem,7vw,5rem)] text-royal-100"
+              baseDelay={0.83}
+            />
+            {/* Line 3: "Vietnamese" + "craft." (amber glow) as individual words */}
+            <span className="block text-[clamp(2.4rem,7vw,5rem)] text-cream-50">
+              <span className="inline-block">
+                <span
+                  className="inline-block animate-word-explode-in"
+                  style={
+                    { animationDelay: '1.01s', '--wrot': '-14deg' } as React.CSSProperties
+                  }
+                >
+                  Vietnamese
+                </span>
+              </span>
+              {' '}
+              <span className="inline-block">
+                <span
+                  className="hero-craft-word inline-block text-amber-400"
+                  style={
+                    { animationDelay: '1.1s', '--wrot': '8deg' } as React.CSSProperties
+                  }
+                >
+                  craft.
+                </span>
+              </span>
+            </span>
           </h1>
-          <p
-            className="animate-fade-up relative mt-6 max-w-xl text-lg text-cream-50/80"
-            style={{ animationDelay: '420ms' }}
+
+          {/* Amber divider */}
+          <div
+            className="animate-scale-in mt-7 h-[2px] w-16 origin-left bg-amber-400"
+            style={{ animationDelay: '1.6s' }}
+          />
+
+          {/* Subtitle — word slide-up */}
+          <HeroSubtitleSplit
+            text={t('hero.subtitle')}
+            className="mt-5 max-w-[540px] text-base leading-relaxed text-cream-50/60 md:text-lg"
+          />
+
+          {/* CTAs — slide in from left */}
+          <div
+            className="animate-cta-slide-in mt-9 flex flex-wrap gap-4"
+            style={{ animationDelay: '1.8s' }}
           >
-            {t('hero.subtitle')}
-          </p>
-          <div className="relative mt-8 flex flex-wrap gap-4">
             <Link
               href="/contact"
-              className="animate-pop-in rounded-full bg-royal-600 px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:scale-105 hover:bg-royal-700"
-              style={{ animationDelay: '700ms' }}
+              className="rounded-full bg-royal-600 px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-royal-600/20 transition-all duration-200 hover:scale-[1.03] hover:bg-royal-700"
             >
               {t('hero.cta')}
             </Link>
             <a
               href="#process"
-              className="animate-pop-in rounded-full border-2 border-royal-600 px-6 py-3 text-sm font-semibold text-cream-50 transition-all duration-200 hover:scale-105 hover:bg-royal-100 hover:text-royal-700"
-              style={{ animationDelay: '850ms' }}
+              className="inline-flex items-center gap-2 rounded-full border border-cream-50/18 px-7 py-3 text-sm font-semibold text-cream-50/75 backdrop-blur-sm transition-all duration-200 hover:border-cream-50/35 hover:bg-cream-50/5 hover:text-cream-50"
             >
               {t('hero.secondaryCta')}
+              <ChevronDown className="h-4 w-4" aria-hidden="true" />
             </a>
           </div>
         </div>
+
+        {/* Scroll cue */}
+        <div
+          className="animate-fade-up pointer-events-none absolute bottom-6 right-6 hidden flex-col items-center gap-2 md:flex"
+          style={{ animationDelay: '2.4s' }}
+          aria-hidden="true"
+        >
+          <div className="h-10 w-px bg-gradient-to-b from-cream-50/30 to-transparent" />
+          <span className="text-[9px] font-semibold uppercase tracking-[0.45em] text-cream-50/25">
+            Scroll
+          </span>
+        </div>
       </section>
 
-      {/* About */}
-      <section id="about" aria-label={t('about.title')} className="bg-cream-50 py-14 md:py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="grid items-center gap-16 lg:grid-cols-2">
-            <div>
-              <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-royal-700">
-                {t('about.label')}
-              </p>
+      {/* ── MARQUEE ──────────────────────────────────────────────── */}
+      <MarqueeTicker items={marqueeItems} />
+
+      {/* ── MANIFESTO ────────────────────────────────────────────── */}
+      <section className="relative overflow-hidden bg-cream-50 py-20 md:py-28">
+        {/* Faint heritage-seal watermark */}
+        <div
+          className="pointer-events-none absolute -right-24 -top-24 opacity-[0.038]"
+          aria-hidden="true"
+        >
+          <Image
+            src={withBasePath('/assets/motifs/heritage-seal.svg')}
+            alt=""
+            width={560}
+            height={560}
+            className="animate-spin-slow"
+          />
+        </div>
+        <div className="lotus-dot-bg absolute inset-0 opacity-35" aria-hidden="true" />
+
+        <div className="relative mx-auto max-w-5xl px-6">
+          <Reveal>
+            <p className="mb-8 font-display text-[11px] font-semibold uppercase tracking-[0.45em] text-amber-600">
+              — {t('manifesto.label')}
+            </p>
+            <h2 className="font-display text-[clamp(1.85rem,5vw,3.6rem)] font-bold leading-[1.14] text-navy-950">
+              {t('manifesto.pre')}{' '}
+              <span className="text-amber-500">{t('manifesto.highlight1')}</span>{' '}
+              {t('manifesto.mid')}{' '}
+              <span className="text-amber-500">{t('manifesto.highlight2')}</span>
+            </h2>
+            <p className="mt-8 max-w-sm font-display text-base italic text-charcoal/45">
+              {t('manifesto.caption')}
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ── ABOUT / IDENTITY ─────────────────────────────────────── */}
+      <section id="about" aria-label={t('about.title')} className="relative overflow-hidden bg-cream-50 py-16 md:py-28">
+        {/* "25" ghost watermark */}
+        <span
+          className="pointer-events-none absolute right-0 top-0 -translate-y-1/4 translate-x-1/4 select-none font-display text-[22rem] font-bold leading-none text-navy-950/[0.032]"
+          aria-hidden="true"
+        >
+          25
+        </span>
+
+        <div className="lotus-dot-bg absolute inset-0 opacity-60" aria-hidden="true" />
+
+        <div className="relative mx-auto max-w-7xl px-6">
+          <div className="grid items-center gap-14 lg:grid-cols-2">
+            {/* Left: text */}
+            <Reveal>
+              <div className="mb-7 flex items-center gap-3">
+                <Image
+                  src={withBasePath('/assets/motifs/heritage-seal.svg')}
+                  alt=""
+                  width={42}
+                  height={42}
+                />
+                <div>
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.35em] text-royal-700">
+                    {t('about.label')}
+                  </p>
+                  <div className="mt-1 h-px w-12 bg-royal-600/30" />
+                </div>
+              </div>
+
               <h2 className="font-display text-3xl font-bold text-navy-950 lg:text-4xl">
                 {t('about.title')}
               </h2>
-              <p className="mb-10 mt-6 text-base leading-relaxed text-charcoal/70 lg:text-lg">
+
+              <p className="mb-3 mt-6 text-base leading-relaxed text-charcoal/68 lg:text-lg">
                 {t('about.body')}
               </p>
-              <p className="mb-10 -mt-4 font-display text-lg font-semibold text-navy-950">
+
+              <p className="mb-9 font-display text-lg font-semibold italic text-navy-950/80">
                 {t('about.closingLine')}
               </p>
-              <dl className="grid gap-4 sm:grid-cols-2">
-                {aboutFeatures.map(({ key, Icon }) => (
+
+              <dl className="grid gap-3 sm:grid-cols-2">
+                {aboutFeatures.map(({ key, motif }) => (
                   <div
                     key={key}
-                    className="flex gap-3 rounded-xl border border-navy-800/10 bg-white p-4"
+                    className="group flex gap-3 rounded-2xl border border-navy-800/10 bg-white p-4 transition-colors duration-200 hover:border-royal-600/20 hover:bg-royal-100/40"
                   >
-                    <Icon
-                      className="mt-0.5 h-5 w-5 flex-shrink-0 text-royal-600"
-                      aria-hidden="true"
-                    />
-                    <dt className="text-sm text-charcoal/80">{t(`about.${key}`)}</dt>
+                    <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl bg-cream-50 transition-colors group-hover:bg-amber-50">
+                      <Image
+                        src={withBasePath(`/assets/motifs/${motif}`)}
+                        alt=""
+                        width={22}
+                        height={22}
+                        aria-hidden="true"
+                      />
+                    </div>
+                    <dt className="pt-1 text-sm leading-relaxed text-charcoal/75">
+                      {t(`about.${key}`)}
+                    </dt>
                   </div>
                 ))}
               </dl>
-            </div>
-            <figure className="relative">
-              <div className="relative h-[420px] overflow-hidden rounded-2xl shadow-2xl sm:h-[520px]">
-                <Image
-                  src={withBasePath('/assets/images/about/team.jpg')}
-                  alt={t('about.imageAlt')}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="absolute -bottom-6 -left-6 hidden max-w-[220px] rounded-xl bg-royal-600 px-5 py-4 text-white shadow-xl sm:block">
-                <ShieldCheck className="h-6 w-6 text-amber-400" aria-hidden="true" />
-                <p className="mt-2 text-sm font-semibold leading-snug">{t('about.badge')}</p>
-              </div>
-            </figure>
+            </Reveal>
+
+            {/* Right: photo */}
+            <Reveal delay={200}>
+              <figure className="relative">
+                <div className="relative h-[440px] overflow-hidden rounded-3xl shadow-2xl shadow-navy-950/20 sm:h-[520px]">
+                  <Image
+                    src={withBasePath('/assets/images/about/team.jpg')}
+                    alt={t('about.imageAlt')}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/25 to-transparent" />
+                  {/* Corner motif */}
+                  <div className="absolute right-4 top-4 opacity-70">
+                    <Image
+                      src={withBasePath('/assets/motifs/non-la.svg')}
+                      alt=""
+                      width={36}
+                      height={36}
+                    />
+                  </div>
+                </div>
+
+                {/* Badge */}
+                <div className="absolute -bottom-5 -left-5 hidden max-w-[210px] rounded-2xl bg-royal-600 px-5 py-4 text-white shadow-xl shadow-royal-600/30 sm:block">
+                  <Image
+                    src={withBasePath('/assets/motifs/heritage-seal.svg')}
+                    alt=""
+                    width={28}
+                    height={28}
+                    className="mb-2"
+                  />
+                  <p className="text-sm font-semibold leading-snug">{t('about.badge')}</p>
+                </div>
+
+                {/* Accent line */}
+                <div className="absolute -right-3 top-8 hidden h-24 w-0.5 bg-gradient-to-b from-amber-400/60 to-transparent sm:block" />
+              </figure>
+            </Reveal>
           </div>
         </div>
       </section>
 
-      {/* How It Works */}
-      <section id="process" className="bg-white py-14 md:py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <header className="mx-auto mb-16 max-w-2xl text-center">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-royal-700">
+      {/* ── HOW IT WORKS ─────────────────────────────────────────── */}
+      <section id="process" className="relative overflow-hidden bg-white py-16 md:py-28">
+        {/* Faint lotus at center */}
+        <div
+          className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+          aria-hidden="true"
+        >
+          <Image
+            src={withBasePath('/assets/motifs/lotus.svg')}
+            alt=""
+            width={560}
+            height={560}
+            className="opacity-[0.025]"
+          />
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-6">
+          <Reveal className="mx-auto mb-20 max-w-2xl text-center">
+            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.35em] text-royal-700">
               {t('process.label')}
             </p>
             <h2 className="font-display text-3xl font-bold text-navy-950 lg:text-4xl">
               {t('process.title')}
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-base text-charcoal/70">{t('process.lead')}</p>
-          </header>
+            <p className="mx-auto mt-5 max-w-xl text-base text-charcoal/65">{t('process.lead')}</p>
+          </Reveal>
 
-          <ol className="flex flex-col gap-24">
-            {processSteps.map(({ key, src, Icon }, i) => (
+          <ol className="flex flex-col gap-28">
+            {processSteps.map(({ key, src, motif }, i) => (
               <li key={key}>
-                <Reveal className="grid items-center gap-12 lg:grid-cols-2">
+                <Reveal className="grid items-center gap-10 lg:grid-cols-2">
+                  {/* Text column */}
                   <div className={i % 2 === 1 ? 'lg:order-2' : ''}>
-                    <div className="mb-4 flex items-center gap-3">
-                      <span className="font-display text-6xl font-bold leading-none text-royal-100">
-                        {String(i + 1).padStart(2, '0')}
-                      </span>
-                      <span className="h-10 w-px bg-royal-100" />
-                      <span className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-royal-600">
-                        <Icon className="h-5 w-5" aria-hidden="true" />
-                        {t(`process.${key}.title`)}
-                      </span>
+                    {/* Step header: motif icon + huge number + label */}
+                    <div className="mb-6 flex items-end gap-5">
+                      <Image
+                        src={withBasePath(`/assets/motifs/${motif}`)}
+                        alt=""
+                        width={60}
+                        height={60}
+                        className="flex-shrink-0 opacity-90"
+                      />
+                      <div>
+                        <p className="text-[10px] font-semibold uppercase tracking-[0.32em] text-royal-600">
+                          {t(`process.${key}.title`)}
+                        </p>
+                        <span className="font-display text-[5.5rem] font-bold leading-none text-royal-100 select-none">
+                          {String(i + 1).padStart(2, '0')}
+                        </span>
+                      </div>
                     </div>
+
                     <h3 className="mb-4 font-display text-2xl font-bold text-navy-950 lg:text-3xl">
                       {t(`process.${key}.headline`)}
                     </h3>
-                    <p className="leading-relaxed text-charcoal/70">{t(`process.${key}.body`)}</p>
+                    <p className="leading-relaxed text-charcoal/65">
+                      {t(`process.${key}.body`)}
+                    </p>
+
+                    {/* Decorative amber tick */}
+                    <div className="mt-6 h-0.5 w-10 bg-amber-400/50" />
                   </div>
-                  <figure className="relative h-80 overflow-hidden rounded-2xl shadow-lg lg:h-[420px]">
+
+                  {/* Image column */}
+                  <figure
+                    className={`relative h-80 overflow-hidden rounded-3xl shadow-xl shadow-navy-950/10 lg:h-[420px] ${
+                      i % 2 === 1 ? 'lg:order-1' : ''
+                    }`}
+                  >
                     <Image
                       src={src}
                       alt={t(`process.${key}.imageAlt`)}
                       fill
                       className="object-cover"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-br from-navy-950/10 to-transparent" />
+                    {/* Step number ghost on image */}
+                    <span
+                      className="pointer-events-none absolute -bottom-4 -right-3 select-none font-display text-[8rem] font-bold leading-none text-white/[0.07]"
+                      aria-hidden="true"
+                    >
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
                   </figure>
                 </Reveal>
               </li>
@@ -236,88 +550,123 @@ export default async function HomePage({
         </div>
       </section>
 
-      {/* Projects */}
-      {SHOW_PROJECTS && (
-        <section id="projects" className="bg-cream-50 py-14 md:py-24">
-          <div className="mx-auto max-w-7xl px-6">
-            <h2 className="font-display text-3xl font-bold text-navy-950">
-              {t('projects.title')}
-            </h2>
-            <p className="mt-3 max-w-2xl text-charcoal/70">{t('projects.lead')}</p>
 
-            <div className="mt-12 grid gap-8 md:grid-cols-2">
+      {/* ── PROJECTS ─────────────────────────────────────────────── */}
+      {SHOW_PROJECTS && (
+        <section id="projects" className="relative overflow-hidden bg-cream-50 py-16 md:py-28">
+          <div className="lotus-dot-bg absolute inset-0 opacity-50" aria-hidden="true" />
+
+          <div className="relative mx-auto max-w-7xl px-6">
+            <Reveal className="mb-12">
+              <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.35em] text-royal-700">
+                {t('process.label')}
+              </p>
+              <h2 className="font-display text-3xl font-bold text-navy-950 lg:text-4xl">
+                {t('projects.title')}
+              </h2>
+              <p className="mt-4 max-w-2xl text-charcoal/65">{t('projects.lead')}</p>
+            </Reveal>
+
+            <div className="grid gap-6 md:grid-cols-2">
               {projectImages.map(({ src, key }) => (
-                <article key={key} className="overflow-hidden rounded-2xl bg-white shadow-sm">
-                  <div className="relative h-56 w-full">
-                    <Image
-                      src={src}
-                      alt={t(`projects.${key}.imageAlt`)}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="font-display text-xl font-semibold text-navy-950">
-                      {t(`projects.${key}.title`)}
-                    </h3>
-                    <p className="mt-1 text-sm font-semibold text-amber-400">
-                      {t(`projects.${key}.size`)}
-                    </p>
-                    <dl className="mt-4 space-y-1 text-sm text-charcoal/70">
-                      <div>{t(`projects.${key}.panels`)}</div>
-                      <div>{t(`projects.${key}.location`)}</div>
-                      <div>{t(`projects.${key}.duration`)}</div>
-                    </dl>
-                    <p className="mt-3 text-sm font-medium text-charcoal">
-                      {t(`projects.${key}.outcome`)}
-                    </p>
-                    <p className="mt-3 text-sm italic text-charcoal/60">
-                      {t(`projects.${key}.note`)}
-                    </p>
-                  </div>
-                </article>
+                <Reveal key={key}>
+                  <article className="group overflow-hidden rounded-3xl bg-white shadow-md shadow-navy-950/6 transition-shadow duration-300 hover:shadow-xl hover:shadow-navy-950/10">
+                    <div className="relative h-60 w-full overflow-hidden">
+                      <Image
+                        src={src}
+                        alt={t(`projects.${key}.imageAlt`)}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-navy-950/50 to-transparent" />
+                      <div className="absolute bottom-4 left-5">
+                        <span className="rounded-full bg-amber-400 px-3 py-1 text-xs font-bold text-navy-950">
+                          {t(`projects.${key}.size`)}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="p-6">
+                      <h3 className="font-display text-xl font-semibold text-navy-950">
+                        {t(`projects.${key}.title`)}
+                      </h3>
+                      <dl className="mt-3 space-y-1 text-sm text-charcoal/60">
+                        <div>{t(`projects.${key}.panels`)}</div>
+                        <div>{t(`projects.${key}.location`)}</div>
+                        <div>{t(`projects.${key}.duration`)}</div>
+                      </dl>
+                      <p className="mt-3 text-sm font-medium text-charcoal">
+                        {t(`projects.${key}.outcome`)}
+                      </p>
+                      <p className="mt-2 text-sm italic text-charcoal/50">
+                        {t(`projects.${key}.note`)}
+                      </p>
+                    </div>
+                  </article>
+                </Reveal>
               ))}
             </div>
 
-            <p className="mt-10 max-w-2xl text-sm text-charcoal/60">{t('projects.honestNote')}</p>
+            <Reveal>
+              <p className="mt-10 max-w-2xl text-sm italic text-charcoal/55">
+                {t('projects.honestNote')}
+              </p>
+            </Reveal>
           </div>
         </section>
       )}
 
-      {/* Warranty & After-Sales */}
-      <section className="bg-white py-14 md:py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <header className="mx-auto mb-12 max-w-2xl text-center">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-royal-700">
+      {/* ── WARRANTY & AFTER-SALES ───────────────────────────────── */}
+      <section className="relative overflow-hidden bg-white py-16 md:py-28">
+        {/* Lotus corner accent */}
+        <div
+          className="pointer-events-none absolute right-0 top-0 opacity-[0.04]"
+          aria-hidden="true"
+        >
+          <Image
+            src={withBasePath('/assets/motifs/lotus.svg')}
+            alt=""
+            width={280}
+            height={280}
+          />
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-6">
+          <Reveal className="mx-auto mb-14 max-w-2xl text-center">
+            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.35em] text-royal-700">
               {t('about.label')}
             </p>
             <h2 className="font-display text-3xl font-bold text-navy-950 lg:text-4xl">
               {t('warranty.title')}
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-base text-charcoal/70">
+            <p className="mx-auto mt-5 max-w-xl text-base text-charcoal/65">
               {t('warranty.lead')}
             </p>
-          </header>
+          </Reveal>
 
           <div className="mx-auto max-w-3xl">
             <WarrantyTimeline />
-            <p className="mt-6 text-center text-sm italic text-charcoal/60">
+            <p className="mt-6 text-center text-sm italic text-charcoal/50">
               {t('warranty.closingLine')}
             </p>
           </div>
 
-          <Reveal className="relative mt-16 overflow-hidden rounded-3xl px-8 py-10 text-cream-50 md:px-12 md:py-14">
+          {/* After-care callout */}
+          <Reveal className="relative mt-16 overflow-hidden rounded-3xl px-8 py-10 text-cream-50 md:px-14 md:py-14">
             <Image
               src={withBasePath('/assets/images/cta/aftercare-bg.jpg')}
               alt=""
               fill
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-navy-950/85" />
+            <div className="absolute inset-0 bg-navy-950/88" />
+            {/* Motif watermark */}
+            <div className="pointer-events-none absolute right-6 top-6 opacity-[0.06]" aria-hidden="true">
+              <Image src={withBasePath('/assets/motifs/handover.svg')} alt="" width={120} height={120} />
+            </div>
 
             <div className="relative">
               <div className="mx-auto max-w-3xl text-center">
-                <p className="text-xs font-semibold uppercase tracking-widest text-royal-100">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.35em] text-royal-100/80">
                   {t('warranty.afterCare.label')}
                 </p>
                 <h3 className="mt-4 font-display text-2xl font-bold lg:text-3xl">
@@ -325,30 +674,42 @@ export default async function HomePage({
                 </h3>
               </div>
 
-              <div className="mx-auto mt-10 grid max-w-3xl gap-px overflow-hidden rounded-2xl bg-cream-50/15 sm:grid-cols-2">
-                <div className="flex flex-col gap-3 bg-navy-950/70 p-6 backdrop-blur-sm">
+              <div className="mx-auto mt-10 grid max-w-3xl gap-px overflow-hidden rounded-2xl bg-cream-50/12 sm:grid-cols-2">
+                <div className="flex flex-col gap-3 bg-navy-950/72 p-6 backdrop-blur-sm">
                   <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-royal-600">
-                      <PhoneCall className="h-5 w-5 text-white" aria-hidden="true" />
+                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#F5E6C8]">
+                      <Image
+                        src={withBasePath('/assets/motifs/consultation.svg')}
+                        alt=""
+                        width={26}
+                        height={26}
+                        aria-hidden="true"
+                      />
                     </div>
                     <p className="text-xs font-semibold uppercase tracking-wide text-royal-100">
                       {t('warranty.afterCare.year1Label')}
                     </p>
                   </div>
-                  <p className="text-sm leading-relaxed text-cream-50/85">
+                  <p className="text-sm leading-relaxed text-cream-50/80">
                     {t('warranty.support12mo')}
                   </p>
                 </div>
-                <div className="flex flex-col gap-3 bg-navy-950/70 p-6 backdrop-blur-sm">
+                <div className="flex flex-col gap-3 bg-navy-950/72 p-6 backdrop-blur-sm">
                   <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-royal-600">
-                      <ClipboardCheck className="h-5 w-5 text-white" aria-hidden="true" />
+                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#F5E6C8]">
+                      <Image
+                        src={withBasePath('/assets/motifs/handover.svg')}
+                        alt=""
+                        width={26}
+                        height={26}
+                        aria-hidden="true"
+                      />
                     </div>
                     <p className="text-xs font-semibold uppercase tracking-wide text-royal-100">
                       {t('warranty.afterCare.year2Label')}
                     </p>
                   </div>
-                  <p className="text-sm leading-relaxed text-cream-50/85">{t('warranty.note')}</p>
+                  <p className="text-sm leading-relaxed text-cream-50/80">{t('warranty.note')}</p>
                 </div>
               </div>
             </div>
@@ -356,61 +717,169 @@ export default async function HomePage({
         </div>
       </section>
 
-      {/* Why Japanese Quality */}
-      <section className="bg-royal-100 py-14 md:py-24">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 md:grid-cols-2">
+      {/* ── JAPANESE QUALITY ─────────────────────────────────────── */}
+      <section className="relative overflow-hidden bg-navy-800 py-16 text-cream-50 md:py-28">
+        {/* Heritage seal rotating watermark */}
+        <div
+          className="pointer-events-none absolute -right-24 top-1/2 hidden -translate-y-1/2 md:block"
+          aria-hidden="true"
+        >
+          <Image
+            src={withBasePath('/assets/motifs/heritage-seal.svg')}
+            alt=""
+            width={520}
+            height={520}
+            className="animate-spin-slow opacity-[0.07]"
+          />
+        </div>
+
+        {/* Top amber accent line */}
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-amber-400/35 to-transparent" />
+
+        {/* Flag motif */}
+        <div
+          className="animate-float pointer-events-none absolute bottom-10 left-8 hidden xl:block"
+          style={{ '--rot': '-8deg', animationDelay: '1.2s' } as React.CSSProperties}
+          aria-hidden="true"
+        >
+          <Image
+            src={withBasePath('/assets/motifs/flag-vn.svg')}
+            alt=""
+            width={48}
+            height={48}
+            className="opacity-[0.16]"
+          />
+        </div>
+
+        <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-6 md:grid-cols-2">
           <Reveal>
-            <h2 className="font-display text-3xl font-bold text-navy-950">
+            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.35em] text-amber-400/75">
+              Japanese Engineering
+            </p>
+            <h2 className="font-display text-3xl font-bold text-cream-50 lg:text-4xl">
               {t('japanese.title')}
             </h2>
-            <p className="mt-4 text-charcoal/80">{t('japanese.body')}</p>
-            <ul className="mt-6 space-y-3">
+            <p className="mt-5 leading-relaxed text-cream-50/65">{t('japanese.body')}</p>
+            <ul className="mt-7 space-y-4">
               {(['point1', 'point2', 'point3'] as const).map((key) => (
-                <li key={key} className="flex gap-3 text-sm text-charcoal/80">
-                  <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-royal-600" />
+                <li key={key} className="flex gap-3 text-sm text-cream-50/75">
+                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-amber-400" />
                   {t(`japanese.${key}`)}
                 </li>
               ))}
             </ul>
           </Reveal>
-          <Reveal delay={250} className="relative h-72 w-full overflow-hidden rounded-2xl bg-white">
+
+          <Reveal delay={240} className="relative h-72 w-full overflow-hidden rounded-3xl shadow-2xl shadow-navy-950/40 md:h-[420px]">
             <Image
               src={withBasePath('/assets/images/quality/japanese-precision.jpg')}
               alt={t('japanese.imageAlt')}
               fill
               className="object-cover"
             />
+            <div className="absolute inset-0 bg-gradient-to-tr from-navy-950/35 to-transparent" />
+            {/* Heritage badge overlay */}
+            <div className="absolute right-4 top-4 flex flex-col items-center gap-1 rounded-xl bg-navy-950/75 px-3 py-3 backdrop-blur-sm">
+              <Image
+                src={withBasePath('/assets/motifs/heritage-seal.svg')}
+                alt=""
+                width={32}
+                height={32}
+              />
+              <p className="text-[8px] font-semibold uppercase tracking-wider text-cream-50/70">
+                Japanese<br />Standard
+              </p>
+            </div>
           </Reveal>
         </div>
+
+        {/* Bottom amber accent line */}
+        <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-amber-400/25 to-transparent" />
       </section>
 
-      {/* International Sourcing & Shipping */}
+      {/* ── BOLD BANNER ──────────────────────────────────────────── */}
+      <section className="relative overflow-hidden bg-navy-950 py-20 text-cream-50 md:py-28">
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent" />
+
+        {/* Faint lotus-seal counter-rotating watermark */}
+        <div
+          className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.025]"
+          aria-hidden="true"
+        >
+          <Image
+            src={withBasePath('/assets/motifs/heritage-bond.svg')}
+            alt=""
+            width={440}
+            height={440}
+          />
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-6">
+          <div className="grid items-center gap-16 lg:grid-cols-2">
+            <Reveal>
+              <h2 className="font-display text-[clamp(2.4rem,5.5vw,4.2rem)] font-bold leading-[1.06] tracking-tight">
+                <span className="block">{t('boldBanner.heading1')}</span>
+                <span className="block">{t('boldBanner.heading2')}</span>
+                <span className="block text-amber-400">{t('boldBanner.heading3')}</span>
+              </h2>
+            </Reveal>
+
+            <Reveal delay={180} className="space-y-5 lg:text-center">
+              <p className="text-base leading-relaxed text-cream-50/75 lg:text-lg">
+                {t('boldBanner.body1')}
+              </p>
+              <p className="text-base leading-relaxed text-cream-50/50 lg:text-lg">
+                {t('boldBanner.body2')}
+              </p>
+            </Reveal>
+          </div>
+        </div>
+
+        <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-amber-400/20 to-transparent" />
+      </section>
+
+      {/* ── INTERNATIONAL SOURCING ───────────────────────────────── */}
       <section className="relative overflow-hidden bg-navy-950 text-cream-50">
         <Image
           src={withBasePath('/assets/images/sourcing/sourcing-bg.jpg')}
           alt={t('sourcing.imageAlt')}
           fill
-          className="object-cover opacity-40"
+          className="object-cover opacity-35"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-950/85 to-navy-950/55" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-950/96 via-navy-950/82 to-navy-950/45" />
+
+        {/* Floating viet-pin motif */}
+        <div
+          className="animate-float pointer-events-none absolute right-10 top-10 hidden lg:block"
+          style={{ '--rot': '8deg', animationDelay: '1.6s' } as React.CSSProperties}
+          aria-hidden="true"
+        >
+          <Image
+            src={withBasePath('/assets/motifs/viet-pin.svg')}
+            alt=""
+            width={64}
+            height={64}
+            className="opacity-[0.18]"
+          />
+        </div>
 
         <Reveal className="relative mx-auto max-w-7xl px-6 py-20 md:py-28">
-          <p className="text-xs font-semibold uppercase tracking-widest text-amber-400">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.35em] text-amber-400">
             {t('sourcing.label')}
           </p>
           <h2 className="mt-4 max-w-2xl font-display text-3xl font-bold leading-tight lg:text-4xl">
             {t('sourcing.title')}
           </h2>
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-cream-50/80 lg:text-lg">
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-cream-50/70 lg:text-lg">
             {t('sourcing.body')}
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <span className="inline-flex items-center gap-2 rounded-full border border-cream-50/20 bg-cream-50/5 px-4 py-2 text-sm font-medium text-cream-50/90">
+            <span className="inline-flex items-center gap-2 rounded-full border border-cream-50/18 bg-cream-50/5 px-4 py-2 text-sm font-medium text-cream-50/85">
               <Globe2 className="h-4 w-4 text-amber-400" aria-hidden="true" />
               {t('sourcing.marketUS')}
             </span>
-            <span className="inline-flex items-center gap-2 rounded-full border border-cream-50/20 bg-cream-50/5 px-4 py-2 text-sm font-medium text-cream-50/90">
+            <span className="inline-flex items-center gap-2 rounded-full border border-cream-50/18 bg-cream-50/5 px-4 py-2 text-sm font-medium text-cream-50/85">
               <Globe2 className="h-4 w-4 text-amber-400" aria-hidden="true" />
               {t('sourcing.marketSEA')}
             </span>
@@ -418,7 +887,7 @@ export default async function HomePage({
 
           <Link
             href="/sourcing"
-            className="mt-8 inline-flex items-center gap-2 rounded-full border-2 border-royal-600 bg-royal-600/10 px-6 py-3 text-sm font-semibold text-cream-50 transition-colors hover:bg-royal-600 hover:text-white"
+            className="mt-9 inline-flex items-center gap-2 rounded-full border-2 border-royal-600 bg-royal-600/10 px-7 py-3 text-sm font-semibold text-cream-50 transition-colors duration-200 hover:bg-royal-600 hover:text-white"
           >
             <Ship className="h-4 w-4" aria-hidden="true" />
             {t('sourcing.cta')}
@@ -426,24 +895,44 @@ export default async function HomePage({
         </Reveal>
       </section>
 
-      {/* Final CTA */}
-      <section className="bg-navy-950 py-16 text-cream-50 md:py-24">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-2 md:items-center">
+      {/* ── FINAL CTA ────────────────────────────────────────────── */}
+      <section className="relative overflow-hidden bg-navy-950 py-16 text-cream-50 md:py-28">
+        {/* Lotus-seal watermark */}
+        <div
+          className="pointer-events-none absolute inset-0 flex items-center justify-center"
+          aria-hidden="true"
+        >
+          <Image
+            src={withBasePath('/assets/motifs/lotus-seal.svg')}
+            alt=""
+            width={520}
+            height={520}
+            className="animate-spin-slow opacity-[0.028]"
+            style={{ animationDirection: 'reverse' } as React.CSSProperties}
+          />
+        </div>
+
+        {/* Top accent */}
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-amber-400/20 to-transparent" />
+
+        <div className="relative mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-2 md:items-center">
           <Reveal>
-            <SunIcon size={36} />
-            <h2 className="mt-4 font-display text-3xl font-bold">{t('cta.title')}</h2>
-            <p className="mt-3 max-w-md text-cream-50/70">{t('cta.body')}</p>
+            <SunIcon size={38} />
+            <h2 className="mt-4 font-display text-3xl font-bold leading-tight">{t('cta.title')}</h2>
+            <p className="mt-3 max-w-md text-cream-50/62">{t('cta.body')}</p>
             <Link
               href="/contact"
-              className="mt-8 inline-block rounded-full bg-royal-600 px-8 py-3 text-sm font-semibold text-white hover:bg-royal-700"
+              className="mt-9 inline-block rounded-full bg-royal-600 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-royal-600/25 transition-all duration-200 hover:scale-[1.03] hover:bg-royal-700"
             >
               {cta('freeAssessment')}
             </Link>
           </Reveal>
-          <Reveal delay={250} className="grid grid-cols-2 gap-4">
+
+          <Reveal delay={220} className="grid grid-cols-2 gap-4">
             {ctaGridImages.map((src) => (
-              <div key={src} className="relative h-32 overflow-hidden rounded-2xl sm:h-40">
+              <div key={src} className="relative h-32 overflow-hidden rounded-2xl sm:h-44">
                 <Image src={src} alt="" fill className="object-cover" />
+                <div className="absolute inset-0 bg-navy-950/10" />
               </div>
             ))}
           </Reveal>

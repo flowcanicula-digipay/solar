@@ -18,6 +18,27 @@ body {
   animation: radiance 6s ease-in-out infinite;
 }
 
+/* Solar panel grid texture — used as hero background layer */
+.panel-grid-bg {
+  background-image:
+    linear-gradient(rgba(245, 158, 11, 0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 158, 11, 0.022) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+/* Lotus dot pattern — used in light-bg sections */
+.lotus-dot-bg {
+  background-image: radial-gradient(circle, rgba(0, 59, 175, 0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* ── Combined animation: word explosion then perpetual glow ── */
+.hero-craft-word {
+  animation:
+    word-explode-in 1.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) both,
+    glow 3.5s ease-in-out 2s infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .radiance-ring,
   .radiance-ring-slow {
@@ -31,11 +52,28 @@ body {
   .animate-hero-zoom,
   .animate-float,
   .animate-glow,
-  .animate-scale-in {
+  .animate-scale-in,
+  .animate-marquee,
+  .animate-spin-slow,
+  .animate-pulse-ring,
+  .animate-slide-up-fade,
+  .animate-word-explode-in,
+  .animate-word-slide-up,
+  .animate-accent-slide-down,
+  .animate-header-slide-in,
+  .animate-cta-slide-in,
+  .hero-craft-word {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
     filter: none !important;
     text-shadow: none !important;
+  }
+
+  /* Hero image needs explicit opacity when animation is suppressed */
+  .animate-hero-image-cinematic {
+    animation: none !important;
+    opacity: 0.18 !important;
+    transform: none !important;
   }
 }

@@ -1,30 +1,22 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import {
-  Wrench,
-  Droplets,
-  CircuitBoard,
-  Anchor,
-  Sun,
-  Factory,
-  ShieldCheck,
-  type LucideIcon,
-} from 'lucide-react';
+import { withBasePath } from '@/lib/assetPath';
 
 const rows: {
   key: 'row4' | 'row5' | 'row2' | 'row3' | 'row1';
-  Icon: LucideIcon;
+  motif: string;
   pct: number;
   highlight?: boolean;
   backedBySolarTNP: boolean;
 }[] = [
-  { key: 'row4', Icon: Wrench, pct: 8, backedBySolarTNP: true },
-  { key: 'row5', Icon: Droplets, pct: 8, backedBySolarTNP: true },
-  { key: 'row2', Icon: CircuitBoard, pct: 40, backedBySolarTNP: false },
-  { key: 'row3', Icon: Anchor, pct: 40, backedBySolarTNP: true },
-  { key: 'row1', Icon: Sun, pct: 100, highlight: true, backedBySolarTNP: false },
+  { key: 'row4', motif: 'journey-link.svg', pct: 8, backedBySolarTNP: true },
+  { key: 'row5', motif: 'viet-home.svg', pct: 8, backedBySolarTNP: true },
+  { key: 'row2', motif: 'blueprint-seal.svg', pct: 40, backedBySolarTNP: false },
+  { key: 'row3', motif: 'compass-seal.svg', pct: 40, backedBySolarTNP: true },
+  { key: 'row1', motif: 'solar-panel.svg', pct: 100, highlight: true, backedBySolarTNP: false },
 ];
 
 export default function WarrantyTimeline() {
@@ -50,7 +42,7 @@ export default function WarrantyTimeline() {
 
   return (
     <div ref={ref} className="flex flex-col gap-5">
-      {rows.map(({ key, Icon, pct, highlight, backedBySolarTNP }, i) => (
+      {rows.map(({ key, motif, pct, highlight, backedBySolarTNP }, i) => (
         <div
           key={key}
           className={`flex items-center gap-4 rounded-2xl p-5 transition-all duration-700 ease-out motion-reduce:transition-none ${
@@ -60,11 +52,14 @@ export default function WarrantyTimeline() {
         >
           <div
             className={`flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full ${
-              highlight ? 'bg-royal-600' : 'bg-royal-600/10'
+              highlight ? 'bg-[#F5E6C8]' : 'bg-royal-600/10'
             }`}
           >
-            <Icon
-              className={`h-5 w-5 ${highlight ? 'text-white' : 'text-royal-600'}`}
+            <Image
+              src={withBasePath(`/assets/motifs/${motif}`)}
+              alt=""
+              width={24}
+              height={24}
               aria-hidden="true"
             />
           </div>
@@ -91,11 +86,14 @@ export default function WarrantyTimeline() {
                     : 'border border-navy-800/15 bg-cream-50 text-navy-950'
                 }`}
               >
-                {backedBySolarTNP ? (
-                  <ShieldCheck className="h-3.5 w-3.5" aria-hidden="true" />
-                ) : (
-                  <Factory className="h-3.5 w-3.5" aria-hidden="true" />
-                )}
+                <Image
+                  src={withBasePath(backedBySolarTNP ? '/assets/motifs/heritage-seal.svg' : '/assets/motifs/lotus-seal.svg')}
+                  alt=""
+                  width={12}
+                  height={12}
+                  className={backedBySolarTNP ? 'brightness-0 invert opacity-80' : 'opacity-60'}
+                  aria-hidden="true"
+                />
                 {t(`${key}.provider`)}
               </span>
             </div>

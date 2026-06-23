@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Menu, X } from 'lucide-react';
-import { Link } from '@/i18n/navigation';
+import { Link, usePathname } from '@/i18n/navigation';
 import LanguageSwitcher from './LanguageSwitcher';
 import { withBasePath } from '@/lib/assetPath';
 
@@ -12,6 +12,9 @@ export default function Header() {
   const t = useTranslations('common.nav');
   const cta = useTranslations('common.cta');
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  // Delay the header so the hero animation plays first (matching SkogMoc pattern)
+  const headerDelay = pathname === '/' ? '2.8s' : '0s';
 
   const links = [
     { href: '/', label: t('home') },
@@ -22,7 +25,10 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 border-b border-navy-800/10 bg-cream-50/95 backdrop-blur">
+    <header
+      className="animate-header-slide-in sticky top-0 z-50 border-b border-navy-800/10 bg-cream-50/95 backdrop-blur"
+      style={{ animationDelay: headerDelay }}
+    >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center">
           <Image
