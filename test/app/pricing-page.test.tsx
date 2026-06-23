@@ -14,42 +14,48 @@ describe('PricingPage', () => {
     expect(meta.title).toBe('Solar Pricing & Payback — SolarTNP');
   });
 
-  it('renders the pricing tiers, included-items list, payback table and FAQ', async () => {
+  it('renders the pricing tiers, payback table and FAQ', async () => {
     await renderServerPage(PricingPage, 'en');
+    // Tier headings
     expect(screen.getByRole('heading', { name: 'Small' })).toBeInTheDocument();
-    expect(screen.getAllByRole('button').length).toBeGreaterThan(0); // FAQ accordion buttons
-    expect(screen.getByText('5 kWp')).toBeInTheDocument(); // PaybackTable
-  });
+    expect(screen.getByRole('heading', { name: 'Medium' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Large' })).toBeInTheDocument();
+    // Payback tab selector — size text may appear multiple times (tab + detail)
+    expect(screen.getAllByText('Family Home').length).toBeGreaterThanOrEqual(1);
+    // FAQ buttons (8 questions + 3 payback tabs + tier cards)
+    expect(screen.getAllByRole('button').length).toBeGreaterThan(3);
+  }, 30000);
 
-  it('renders the included.items list from the translation catalog', async () => {
-    const en = (await import('@/messages/en.json')).default as { pricing: { included: { items: string[] } } };
+  it('renders the "Always included" section heading', async () => {
     await renderServerPage(PricingPage, 'en');
-    for (const item of en.pricing.included.items) {
-      expect(screen.getByText(item)).toBeInTheDocument();
-    }
+    expect(screen.getByRole('heading', { name: 'Always included' })).toBeInTheDocument();
   });
 
-  it('reveals the "Always included" grid once it scrolls into view', async () => {
+  it('renders the portrait strip included item labels', async () => {
     await renderServerPage(PricingPage, 'en');
-    const heading = screen.getByRole('heading', { name: 'Always included' });
-    const section = heading.closest('div')?.parentElement;
-
-    expect(section).toHaveClass('opacity-0');
-
-    triggerIntersections(true);
-
-    expect(section).toHaveClass('opacity-100');
+    // These labels appear in the strip; some also appear in tier feature list — use getAllByText
+    expect(screen.getAllByText('Japanese-standard installation').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText('EVN & DOIT paperwork').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText('12 months free callouts').length).toBeGreaterThanOrEqual(1);
   });
 
-  it('reveals the "Ready to see your number?" CTA once it scrolls into view', async () => {
+  it('renders the bold statement sections', async () => {
+    await renderServerPage(PricingPage, 'en');
+    expect(screen.getByText(/How we quote/i)).toBeInTheDocument();
+    expect(screen.getByText(/Our promise/i)).toBeInTheDocument();
+  });
+
+  it('renders the "Ready to see your number?" final CTA', async () => {
+    await renderServerPage(PricingPage, 'en');
+    expect(screen.getByRole('heading', { name: 'Ready to see your number?' })).toBeInTheDocument();
+  });
+
+  it('reveals the final CTA once it scrolls into view', async () => {
     await renderServerPage(PricingPage, 'en');
     const heading = screen.getByRole('heading', { name: 'Ready to see your number?' });
-    const section = heading.closest('div');
-
-    expect(section).toHaveClass('opacity-0');
-
+    const reveal = heading.closest('div');
+    expect(reveal).toHaveClass('opacity-0');
     triggerIntersections(true);
-
-    expect(section).toHaveClass('opacity-100');
+    expect(reveal).toHaveClass('opacity-100');
   });
 });

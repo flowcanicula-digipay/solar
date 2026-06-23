@@ -59,8 +59,26 @@ vi.mock('@/i18n/navigation', () => ({
 // (`.variable`, `.className`).
 vi.mock('next/font/google', () => ({
   Playfair_Display: () => ({ variable: '--font-playfair', className: 'font-playfair' }),
-  Inter: () => ({ variable: '--font-inter', className: 'font-inter' }),
+  Inter: () => ({ variable: '--font-inter-mono', className: 'font-inter' }),
+  Cinzel: () => ({ variable: '--font-playfair', className: 'font-cinzel' }),
+  Fauna_One: () => ({ variable: '--font-inter', className: 'font-fauna-one' }),
 }));
+
+// gsap runs animations against a real DOM/viewport; stub it in tests.
+// timeline() must return an object whose .to() is chainable (returns itself).
+vi.mock('gsap', () => {
+  const tl = { to: vi.fn(), scrollTrigger: null, kill: vi.fn() };
+  tl.to.mockReturnValue(tl);
+  return {
+    default: {
+      set: vi.fn(),
+      to: vi.fn(),
+      timeline: vi.fn(() => tl),
+      registerPlugin: vi.fn(),
+    },
+  };
+});
+vi.mock('gsap/ScrollTrigger', () => ({ ScrollTrigger: {} }));
 
 // next/image requires Next's image-optimization request context to do
 // anything beyond rendering a plain <img>; since next.config.ts sets

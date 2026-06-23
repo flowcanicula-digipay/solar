@@ -3,51 +3,90 @@ import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import PricingFAQ from '@/components/PricingFAQ';
 import { renderWithIntl } from '../renderWithIntl';
+import { triggerIntersections } from '../setup';
 
 describe('PricingFAQ', () => {
-  it('renders all 8 questions collapsed by default', () => {
+  it('renders all 8 question buttons collapsed by default', () => {
     renderWithIntl(<PricingFAQ />);
     expect(
       screen.getByText("Under Vietnam's current rules, how much surplus power can I sell to EVN?")
     ).toBeInTheDocument();
-    expect(screen.getAllByRole('button')).toHaveLength(8);
-    for (const button of screen.getAllByRole('button')) {
+    const buttons = screen.getAllByRole('button');
+    expect(buttons).toHaveLength(8);
+    for (const button of buttons) {
       expect(button).toHaveAttribute('aria-expanded', 'false');
     }
   });
 
-  it('expands a question on click, revealing its answer', async () => {
+  it('expands a question on click (aria-expanded becomes true)', async () => {
     renderWithIntl(<PricingFAQ />);
     const user = userEvent.setup();
     const [firstQuestion] = screen.getAllByRole('button');
+    await user.click(firstQuestion);
+    expect(firstQuestion).toHaveAttribute('aria-expanded', 'true');
+  });
+
+  it('answer container gains max-h class when open', async () => {
+    const { container } = renderWithIntl(<PricingFAQ />);
+    const user = userEvent.setup();
+    const [firstQuestion] = screen.getAllByRole('button');
+
+    // Before click — all answer wrappers are collapsed
+    const answerDivs = container.querySelectorAll('.max-h-0');
+    expect(answerDivs.length).toBe(8);
 
     await user.click(firstQuestion);
 
-    expect(firstQuestion).toHaveAttribute('aria-expanded', 'true');
-    expect(screen.getByText(/Decree 135\/2024\/ND-CP/)).toBeInTheDocument();
+    // After click — one answer wrapper is expanded (no longer max-h-0)
+    expect(container.querySelectorAll('.max-h-0').length).toBe(7);
   });
 
   it('collapses the open question again on a second click', async () => {
-    renderWithIntl(<PricingFAQ />);
+    const { container } = renderWithIntl(<PricingFAQ />);
     const user = userEvent.setup();
     const [firstQuestion] = screen.getAllByRole('button');
 
     await user.click(firstQuestion);
-    await user.click(firstQuestion);
+    expect(container.querySelectorAll('.max-h-0').length).toBe(7);
 
+    await user.click(firstQuestion);
     expect(firstQuestion).toHaveAttribute('aria-expanded', 'false');
-    expect(screen.queryByText(/Decree 135\/2024\/ND-CP/)).not.toBeInTheDocument();
+    expect(container.querySelectorAll('.max-h-0').length).toBe(8);
   });
 
   it('only keeps one question open at a time', async () => {
-    renderWithIntl(<PricingFAQ />);
+    const { container } = renderWithIntl(<PricingFAQ />);
     const user = userEvent.setup();
-    const buttons = screen.getAllByRole('button');
+    const [first, second] = screen.getAllByRole('button');
 
-    await user.click(buttons[0]);
-    await user.click(buttons[1]);
+    await user.click(first);
+    await user.click(second);
 
-    expect(buttons[0]).toHaveAttribute('aria-expanded', 'false');
-    expect(buttons[1]).toHaveAttribute('aria-expanded', 'true');
+    expect(first).toHaveAttribute('aria-expanded', 'false');
+    expect(second).toHaveAttribute('aria-expanded', 'true');
+    expect(container.querySelectorAll('.max-h-0').length).toBe(7);
+  });
+
+  it('reveals FAQ rows once the IntersectionObserver fires', () => {
+    const { container } = renderWithIntl(<PricingFAQ />);
+    // Before visibility: at least one row div starts with opacity-0 + translate-y-4
+    const hiddenRows = container.querySelectorAll('.translate-y-4.opacity-0');
+    expect(hiddenRows.length).toBeGreaterThan(0);
+    triggerIntersections(true);
+    // After visibility: no row divs retain opacity-0 + translate-y-4
+    expect(container.querySelectorAll('.translate-y-4.opacity-0').length).toBe(0);
+  });
+
+  it('does not reveal rows when IntersectionObserver fires with isIntersecting=false', () => {
+    const { container } = renderWithIntl(<PricingFAQ />);
+    triggerIntersections(false);
+    const hiddenRows = container.querySelectorAll('.translate-y-4.opacity-0');
+    expect(hiddenRows.length).toBeGreaterThan(0);
+  });
+
+  it('renders the numeric question prefixes (01–08)', () => {
+    renderWithIntl(<PricingFAQ />);
+    expect(screen.getByText('01')).toBeInTheDocument();
+    expect(screen.getByText('08')).toBeInTheDocument();
   });
 });

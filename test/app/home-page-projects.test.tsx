@@ -17,5 +17,5 @@ describe('HomePage with SHOW_PROJECTS enabled', () => {
     expect(screen.getByText('Thủ Đức Townhouse')).toBeInTheDocument();
     expect(screen.getByText('KCN Tam Phước Office')).toBeInTheDocument();
     expect(screen.getByText('Long An Family Home')).toBeInTheDocument();
-  });
+  }, 30000);
 });

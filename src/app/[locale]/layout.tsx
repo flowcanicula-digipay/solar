@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Playfair_Display, Inter } from 'next/font/google';
+import { Cinzel, Fauna_One, Inter } from 'next/font/google';
 import { redirect } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
@@ -12,15 +12,24 @@ import { withBasePath } from '@/lib/assetPath';
 import { buildCsp } from '@/lib/csp';
 import '../globals.css';
 
-const playfair = Playfair_Display({
-  subsets: ['latin', 'vietnamese'],
+const cinzel = Cinzel({
+  subsets: ['latin'],
   variable: '--font-playfair',
   display: 'swap',
+  weight: ['400', '700', '900'],
 });
 
-const inter = Inter({
-  subsets: ['latin', 'vietnamese'],
+const faunaOne = Fauna_One({
+  subsets: ['latin'],
   variable: '--font-inter',
+  display: 'swap',
+  weight: '400',
+});
+
+/* Keep Inter for numeric/mono data (PaybackTable, stats) */
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter-mono',
   display: 'swap',
 });
 
@@ -91,7 +100,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${playfair.variable} ${inter.variable}`}>
+    <html lang={locale} className={`${cinzel.variable} ${faunaOne.variable} ${inter.variable}`}>
       <head>
         <meta httpEquiv="Content-Security-Policy" content={CSP} />
       </head>

@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { Mail, Phone, MapPin, Facebook } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { withBasePath } from '@/lib/assetPath';
+import { MailIcon, PhoneIcon, LocationIcon, FacebookIcon } from '@/components/icons/SiteIcons';
 
 export default function Footer() {
   const t = useTranslations('common.footer');
@@ -59,7 +59,7 @@ export default function Footer() {
             aria-label="Facebook"
             className="mt-4 inline-flex text-cream-50/60 transition-colors hover:text-amber-400"
           >
-            <Facebook size={18} />
+            <FacebookIcon size={18} />
           </a>
         </div>
 
@@ -107,15 +107,15 @@ export default function Footer() {
           </p>
           <ul className="mt-3 space-y-3 text-sm text-cream-50/80">
             <li className="flex items-start gap-2">
-              <Mail size={16} className="mt-0.5 flex-shrink-0 text-amber-400" aria-hidden="true" />
+              <MailIcon size={16} className="mt-0.5 flex-shrink-0 text-amber-400" />
               <span>{biz('email')}</span>
             </li>
             <li className="flex items-start gap-2">
-              <Phone size={16} className="mt-0.5 flex-shrink-0 text-amber-400" aria-hidden="true" />
+              <PhoneIcon size={16} className="mt-0.5 flex-shrink-0 text-amber-400" />
               <span>{biz('phone')}</span>
             </li>
             <li className="flex items-start gap-2">
-              <MapPin size={16} className="mt-0.5 flex-shrink-0 text-amber-400" aria-hidden="true" />
+              <LocationIcon size={16} className="mt-0.5 flex-shrink-0 text-amber-400" />
               <span>{biz('address')}</span>
             </li>
           </ul>

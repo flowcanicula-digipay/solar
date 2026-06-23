@@ -40,4 +40,29 @@ describe('Reveal', () => {
     expect(el).toHaveClass('grid', 'gap-4');
     expect(el.style.transitionDelay).toBe('150ms');
   });
+
+  it('does not reveal when IntersectionObserver fires with isIntersecting=false', () => {
+    const { container } = render(
+      <Reveal>
+        <p>Hello</p>
+      </Reveal>
+    );
+    triggerIntersections(false);
+    // Still hidden — the !isIntersecting branch was taken
+    expect(container.querySelector('.opacity-0')).not.toBeNull();
+  });
+
+  it('uses 0ms delay before visible and applies delay once visible', () => {
+    const { container } = render(
+      <Reveal delay={300}>
+        <p>Hello</p>
+      </Reveal>
+    );
+    const el = container.firstElementChild as HTMLElement;
+    // Before visible: transitionDelay is '0ms'
+    expect(el.style.transitionDelay).toBe('0ms');
+    triggerIntersections(true);
+    // After visible: transitionDelay matches the delay prop
+    expect(el.style.transitionDelay).toBe('300ms');
+  });
 });

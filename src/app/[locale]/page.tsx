@@ -8,12 +8,12 @@ import {
   Ruler,
   HardHat,
   ShieldCheck,
-  Ship,
-  Globe2,
   ChevronDown,
 } from 'lucide-react';
+import { GlobeUSIcon, GlobeSEAIcon, JunkBoatIcon } from '@/components/icons/SiteIcons';
 import SunIcon from '@/components/SunIcon';
 import WarrantyTimeline from '@/components/WarrantyTimeline';
+import AfterCareSection from '@/components/AfterCareSection';
 import Reveal from '@/components/Reveal';
 import MarqueeTicker from '@/components/MarqueeTicker';
 import HeroWordSplit from '@/components/HeroWordSplit';
@@ -650,72 +650,10 @@ export default async function HomePage({
             </p>
           </div>
 
-          {/* After-care callout */}
-          <Reveal className="relative mt-16 overflow-hidden rounded-3xl px-8 py-10 text-cream-50 md:px-14 md:py-14">
-            <Image
-              src={withBasePath('/assets/images/cta/aftercare-bg.jpg')}
-              alt=""
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-navy-950/88" />
-            {/* Motif watermark */}
-            <div className="pointer-events-none absolute right-6 top-6 opacity-[0.06]" aria-hidden="true">
-              <Image src={withBasePath('/assets/motifs/handover.svg')} alt="" width={120} height={120} />
-            </div>
-
-            <div className="relative">
-              <div className="mx-auto max-w-3xl text-center">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.35em] text-royal-100/80">
-                  {t('warranty.afterCare.label')}
-                </p>
-                <h3 className="mt-4 font-display text-2xl font-bold lg:text-3xl">
-                  {t('warranty.afterCare.title')}
-                </h3>
-              </div>
-
-              <div className="mx-auto mt-10 grid max-w-3xl gap-px overflow-hidden rounded-2xl bg-cream-50/12 sm:grid-cols-2">
-                <div className="flex flex-col gap-3 bg-navy-950/72 p-6 backdrop-blur-sm">
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#F5E6C8]">
-                      <Image
-                        src={withBasePath('/assets/motifs/consultation.svg')}
-                        alt=""
-                        width={26}
-                        height={26}
-                        aria-hidden="true"
-                      />
-                    </div>
-                    <p className="text-xs font-semibold uppercase tracking-wide text-royal-100">
-                      {t('warranty.afterCare.year1Label')}
-                    </p>
-                  </div>
-                  <p className="text-sm leading-relaxed text-cream-50/80">
-                    {t('warranty.support12mo')}
-                  </p>
-                </div>
-                <div className="flex flex-col gap-3 bg-navy-950/72 p-6 backdrop-blur-sm">
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#F5E6C8]">
-                      <Image
-                        src={withBasePath('/assets/motifs/handover.svg')}
-                        alt=""
-                        width={26}
-                        height={26}
-                        aria-hidden="true"
-                      />
-                    </div>
-                    <p className="text-xs font-semibold uppercase tracking-wide text-royal-100">
-                      {t('warranty.afterCare.year2Label')}
-                    </p>
-                  </div>
-                  <p className="text-sm leading-relaxed text-cream-50/80">{t('warranty.note')}</p>
-                </div>
-              </div>
-            </div>
-          </Reveal>
         </div>
       </section>
+
+      <AfterCareSection />
 
       {/* ── JAPANESE QUALITY ─────────────────────────────────────── */}
       <section className="relative overflow-hidden bg-navy-800 py-16 text-cream-50 md:py-28">
@@ -876,11 +814,11 @@ export default async function HomePage({
 
           <div className="mt-8 flex flex-wrap gap-3">
             <span className="inline-flex items-center gap-2 rounded-full border border-cream-50/18 bg-cream-50/5 px-4 py-2 text-sm font-medium text-cream-50/85">
-              <Globe2 className="h-4 w-4 text-amber-400" aria-hidden="true" />
+              <GlobeUSIcon size={16} className="text-amber-400" />
               {t('sourcing.marketUS')}
             </span>
             <span className="inline-flex items-center gap-2 rounded-full border border-cream-50/18 bg-cream-50/5 px-4 py-2 text-sm font-medium text-cream-50/85">
-              <Globe2 className="h-4 w-4 text-amber-400" aria-hidden="true" />
+              <GlobeSEAIcon size={16} className="text-amber-400" />
               {t('sourcing.marketSEA')}
             </span>
           </div>
@@ -889,7 +827,7 @@ export default async function HomePage({
             href="/sourcing"
             className="mt-9 inline-flex items-center gap-2 rounded-full border-2 border-royal-600 bg-royal-600/10 px-7 py-3 text-sm font-semibold text-cream-50 transition-colors duration-200 hover:bg-royal-600 hover:text-white"
           >
-            <Ship className="h-4 w-4" aria-hidden="true" />
+            <JunkBoatIcon size={16} />
             {t('sourcing.cta')}
           </Link>
         </Reveal>

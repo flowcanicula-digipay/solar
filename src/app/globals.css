@@ -39,6 +39,37 @@ body {
     glow 3.5s ease-in-out 2s infinite;
 }
 
+/* ── Window open/close animations (AfterCareSection) ── */
+@keyframes window-light {
+  0%, 14%  { background-color: transparent; box-shadow: none; }
+  22%, 78% { background-color: rgba(245, 158, 11, 0.14); box-shadow: inset 0 0 28px rgba(245, 158, 11, 0.10); }
+  86%, 100% { background-color: transparent; box-shadow: none; }
+}
+
+@keyframes shutter-open-l {
+  0%, 12%  { transform: scaleX(1); }
+  22%, 78% { transform: scaleX(0); }
+  88%, 100% { transform: scaleX(1); }
+}
+
+@keyframes shutter-open-r {
+  0%, 12%  { transform: scaleX(1); }
+  22%, 78% { transform: scaleX(0); }
+  88%, 100% { transform: scaleX(1); }
+}
+
+.window-glass {
+  animation: window-light var(--wdur, 5s) ease-in-out var(--wdel, 0s) infinite;
+}
+.window-shutter-l {
+  transform-origin: left center;
+  animation: shutter-open-l var(--wdur, 5s) ease-in-out var(--wdel, 0s) infinite;
+}
+.window-shutter-r {
+  transform-origin: right center;
+  animation: shutter-open-r var(--wdur, 5s) ease-in-out var(--wdel, 0s) infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .radiance-ring,
   .radiance-ring-slow {
@@ -68,6 +99,17 @@ body {
     transform: none !important;
     filter: none !important;
     text-shadow: none !important;
+  }
+
+  /* Window animations suppressed — show windows open static */
+  .window-glass {
+    animation: none !important;
+    background-color: rgba(245, 158, 11, 0.10) !important;
+  }
+  .window-shutter-l,
+  .window-shutter-r {
+    animation: none !important;
+    transform: scaleX(0) !important;
   }
 
   /* Hero image needs explicit opacity when animation is suppressed */

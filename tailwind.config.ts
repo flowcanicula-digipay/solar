@@ -24,9 +24,9 @@ const config: Config = {
         charcoal: '#2D2D2D',
       },
       fontFamily: {
-        display: ['var(--font-playfair)'],
-        sans: ['var(--font-inter)'],
-        mono: ['var(--font-inter-mono)'],
+        display: ['var(--font-playfair)', 'Georgia', 'serif'],
+        sans: ['var(--font-inter)', 'Georgia', 'serif'],
+        mono: ['var(--font-inter-mono)', 'ui-monospace', 'monospace'],
       },
       maxWidth: {
         '7xl': '1280px',
