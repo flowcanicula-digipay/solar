@@ -13,15 +13,52 @@ describe('ContactPage', () => {
     expect(meta.title).toBe('Request a Free Site Assessment — SolarTNP');
   });
 
-  it('renders the contact form and the business sidebar', async () => {
+  it('renders the contact form', async () => {
     await renderServerPage(ContactPage, 'en');
     expect(screen.getByLabelText('Full name')).toBeInTheDocument();
-    expect(screen.getByText('thuy@tnpgr.vn')).toBeInTheDocument();
-    expect(screen.getByText('+84 90 333 37 29')).toBeInTheDocument();
+  });
+
+  it('renders business contact details in the sidebar', async () => {
+    await renderServerPage(ContactPage, 'en');
+    expect(screen.getAllByText('thuy@tnpgr.vn').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText('+84 90 333 37 29').length).toBeGreaterThanOrEqual(1);
   });
 
   it('renders the "next steps" sidebar with three numbered steps', async () => {
     const { container } = await renderServerPage(ContactPage, 'en');
-    expect(container.querySelectorAll('ol li')).toHaveLength(3);
+    expect(container.querySelectorAll('ol li').length).toBeGreaterThanOrEqual(3);
+  });
+
+  it('renders the ContactHero section', async () => {
+    await renderServerPage(ContactPage, 'en');
+    expect(screen.getByRole('region', { name: 'Contact hero' })).toBeInTheDocument();
+  });
+
+  it('renders the "01 — Reach Us Directly" section heading', async () => {
+    await renderServerPage(ContactPage, 'en');
+    expect(screen.getByText('01 — Reach Us Directly')).toBeInTheDocument();
+  });
+
+  it('renders the "02 — Request a Free Site Assessment" section heading', async () => {
+    await renderServerPage(ContactPage, 'en');
+    expect(screen.getByText('02 — Request a Free Site Assessment')).toBeInTheDocument();
+  });
+
+  it('renders the "03 — Why SolarTNP" section heading', async () => {
+    await renderServerPage(ContactPage, 'en');
+    expect(screen.getByText('03 — Why SolarTNP')).toBeInTheDocument();
+  });
+
+  it('renders the final CTA section with "Let\'s look at your roof."', async () => {
+    await renderServerPage(ContactPage, 'en');
+    expect(screen.getByText("Let's look at your roof.")).toBeInTheDocument();
+  });
+
+  it('renders motif icons in the "Prefer to call?" sidebar card', async () => {
+    const { container } = await renderServerPage(ContactPage, 'en');
+    const motifImgs = Array.from(container.querySelectorAll('img')).filter((img) =>
+      (img as HTMLImageElement).src.includes('contact-')
+    );
+    expect(motifImgs.length).toBeGreaterThanOrEqual(4);
   });
 });

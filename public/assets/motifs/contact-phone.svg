@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+  <!-- A vintage handset receiver resting in a cradle — warm amber tones,
+       cultural weight of a personal call rather than a generic phone glyph -->
+  <!-- Cradle base -->
+  <rect x="5" y="26" width="26" height="5.5" rx="2.2" fill="#B86F1C"/>
+  <ellipse cx="18" cy="26" rx="13" ry="1.6" fill="#8B5A2B" opacity="0.45"/>
+  <!-- Cradle notches -->
+  <rect x="7.5" y="23.5" width="4.5" height="3" rx="1.2" fill="#D98A2B"/>
+  <rect x="24" y="23.5" width="4.5" height="3" rx="1.2" fill="#D98A2B"/>
+  <!-- Handset body -->
+  <path fill="#F5E6C8" d="M10 22.5 C8 20 7.5 15 9.5 11 C11 8 14 6.5 18 6.5 C22 6.5 25 8 26.5 11 C28.5 15 28 20 26 22.5 C24.5 24 21.5 24.5 18 24.5 C14.5 24.5 11.5 24 10 22.5Z"/>
+  <!-- Earpiece -->
+  <ellipse cx="18" cy="10.5" rx="4.5" ry="2.8" fill="#D98A2B" opacity="0.7"/>
+  <!-- Mouthpiece -->
+  <ellipse cx="18" cy="21" rx="4.5" ry="2.8" fill="#D98A2B" opacity="0.7"/>
+  <!-- Speaker dots earpiece -->
+  <circle cx="16.5" cy="10.3" r="0.55" fill="#8B5A2B" opacity="0.6"/>
+  <circle cx="18" cy="10.3" r="0.55" fill="#8B5A2B" opacity="0.6"/>
+  <circle cx="19.5" cy="10.3" r="0.55" fill="#8B5A2B" opacity="0.6"/>
+  <!-- Speaker dots mouthpiece -->
+  <circle cx="16.5" cy="21" r="0.55" fill="#8B5A2B" opacity="0.6"/>
+  <circle cx="18" cy="21" r="0.55" fill="#8B5A2B" opacity="0.6"/>
+  <circle cx="19.5" cy="21" r="0.55" fill="#8B5A2B" opacity="0.6"/>
+  <!-- Zalo star accent -->
+  <path fill="#FFCD00" d="M18 14.4 18.6 15.9 20.2 15.9 18.9 16.9 19.4 18.4 18 17.4 16.6 18.4 17.1 16.9 15.8 15.9 17.4 15.9Z"/>
+</svg>

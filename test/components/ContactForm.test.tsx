@@ -58,6 +58,29 @@ describe('ContactForm', () => {
     });
   });
 
+  it('renders the custom monthly bill dropdown with options', async () => {
+    renderWithIntl(<ContactForm />);
+    const user = userEvent.setup();
+
+    // trigger is the button labelled by the "Monthly electricity bill" label
+    const trigger = screen.getByRole('button', { name: /Monthly electricity bill/i });
+    await user.click(trigger);
+    expect(screen.getByRole('listbox')).toBeInTheDocument();
+    expect(screen.getByText('Over 2,000,000 VND')).toBeInTheDocument();
+  });
+
+  it('selects a different monthly bill option from the dropdown', async () => {
+    renderWithIntl(<ContactForm />);
+    const user = userEvent.setup();
+
+    await user.click(screen.getByRole('button', { name: /Monthly electricity bill/i }));
+    await user.click(screen.getByText('Over 2,000,000 VND'));
+
+    // listbox closes and trigger shows new selection
+    expect(screen.queryByRole('listbox')).not.toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /Monthly electricity bill/i })).toHaveTextContent('Over 2,000,000 VND');
+  });
+
   it('shows an error message when the request throws (network failure)', async () => {
     (fetch as ReturnType<typeof vi.fn>).mockRejectedValueOnce(new Error('network down'));
     renderWithIntl(<ContactForm />);

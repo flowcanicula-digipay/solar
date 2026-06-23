@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+  <!-- A folded letter on a lacquered tray — the considered written reply,
+       not a generic @ glyph. Warm amber paper, Vietnamese red wax seal. -->
+  <!-- Tray / surface shadow -->
+  <ellipse cx="18" cy="30.5" rx="12.5" ry="1.8" fill="#243329" opacity="0.18"/>
+  <!-- Envelope body -->
+  <rect x="4.5" y="11" width="27" height="18" rx="1.8" fill="#E2C896"/>
+  <!-- Envelope back fold lines for depth -->
+  <path fill="#C49A6C" opacity="0.5" d="M4.5 29 15 20.5 4.5 12Z"/>
+  <path fill="#C49A6C" opacity="0.5" d="M31.5 29 21 20.5 31.5 12Z"/>
+  <!-- Envelope flap (open V showing letter inside) -->
+  <path fill="#D9B872" d="M4.5 11 18 20.5 31.5 11Z"/>
+  <!-- Letter peeking above flap -->
+  <rect x="11" y="7" width="14" height="10" rx="1" fill="#F5E6C8"/>
+  <line x1="13.5" y1="10.5" x2="22.5" y2="10.5" stroke="#C49A6C" stroke-width="0.85" stroke-linecap="round" opacity="0.7"/>
+  <line x1="13.5" y1="12.5" x2="22.5" y2="12.5" stroke="#C49A6C" stroke-width="0.85" stroke-linecap="round" opacity="0.7"/>
+  <line x1="13.5" y1="14.5" x2="19" y2="14.5" stroke="#C49A6C" stroke-width="0.85" stroke-linecap="round" opacity="0.7"/>
+  <!-- Wax seal on flap -->
+  <circle cx="18" cy="20.5" r="4" fill="#DA251D"/>
+  <path fill="#FFCD00" d="M18 17.8 18.8 19.6 20.8 19.8 19.4 21.1 19.8 23 18 22 16.2 23 16.6 21.1 15.2 19.8 17.2 19.6Z"/>
+</svg>

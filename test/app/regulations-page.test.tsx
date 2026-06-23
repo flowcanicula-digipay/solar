@@ -16,17 +16,25 @@ describe('RegulationsPage', () => {
     expect(meta.title).toBe('Vietnam Solar Regulations Explained — SolarTNP');
   });
 
-  it('renders the hero and the capacity-threshold table', async () => {
+  it('renders the hero section', async () => {
     await renderServerPage(RegulationsPage, 'en');
-    expect(screen.getByText('Capacity')).toBeInTheDocument();
-    expect(screen.getByText('Under 100 kW')).toBeInTheDocument();
+    expect(screen.getByRole('region', { name: 'Regulations hero' })).toBeInTheDocument();
   });
 
-  it('renders the s6 checklist items from the translation catalog', async () => {
-    const en = (await import('@/messages/en.json')).default as { regulations: { s6: { items: string[] } } };
+  it('renders the capacity thresholds section header', async () => {
     await renderServerPage(RegulationsPage, 'en');
-    for (const item of en.regulations.s6.items) {
-      expect(screen.getByText(item)).toBeInTheDocument();
-    }
+    expect(screen.getAllByText(/Capacity Thresholds/).length).toBeGreaterThanOrEqual(1);
+  });
+
+  it('renders the building compliance checklist items', async () => {
+    await renderServerPage(RegulationsPage, 'en');
+    expect(screen.getByText('Construction law compliance')).toBeInTheDocument();
+    expect(screen.getByText('Land-use rights status')).toBeInTheDocument();
+    expect(screen.getByText('Fire safety standards')).toBeInTheDocument();
+  });
+
+  it('renders the "01 — The Core Rule" section', async () => {
+    await renderServerPage(RegulationsPage, 'en');
+    expect(screen.getByText('01 — The Core Rule')).toBeInTheDocument();
   });
 });

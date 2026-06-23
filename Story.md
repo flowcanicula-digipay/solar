@@ -93,7 +93,7 @@ say "we are just starting and we do fewer jobs and we do them properly."
 | Phone | +84 90 333 37 29 |
 | Markets | Vietnam (domestic installs); international equipment sourcing & shipping to the US and Southeast Asia |
 | Site languages | English (primary), Vietnamese, Japanese |
-| Stage | Early — 4 completed installations at launch |
+| Stage | Early — newly established |
 
 ---
 
@@ -276,7 +276,7 @@ and long-term thinking without overpromising.
   heritage language.
 - **How It Works**: The 8-phase journey condensed to 4 visible steps for the
   homepage (Consult → Design → Install → Support).
-- **Projects**: 4 completed installations — honest, specific, no inflation.
+- **Projects**: Real completed installations — honest, specific, no inflation.
   **Currently hidden** behind a `SHOW_PROJECTS` flag in `page.tsx` until there
   are enough installations to show; flip it back on when ready.
 - **Why Japanese Standards Matter**: Real photo of a precisely mounted array
@@ -449,8 +449,7 @@ Design brief:
 
 ## Tone & Voice
 
-**Honest and grounded, never inflated.** SolarTNP is new. It has 4 completed
-installations. The copy never pretends otherwise. Trust is earned through
+**Honest and grounded, never inflated.** SolarTNP is new. The copy never pretends otherwise. Trust is earned through
 specificity — real system sizes, real panel brand names, real warranty durations,
 real province locations. Vagueness is the enemy of credibility for a new company.
 
@@ -784,7 +783,7 @@ Playfair Display, amber sun icon with radiance pulse, brand-voiced tagline
 localised in all three languages, two CTA buttons, faint panel-grid background
 
 ### AC-4: Projects section is honest and specific
-- Exactly 4 project cards, matching the seed content above
+- Project cards matching the seed content above
 - Each card shows: system size (kWp), panel brand + wattage, location
   (district/city), install duration, one outcome stat
 - No fake testimonials — project facts only
